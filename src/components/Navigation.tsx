@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,20 +13,75 @@ const Navigation = () => {
   };
 
   const channels = [
-    { name: 'WhatsApp', path: '/channels/whatsapp', icon: '💬' },
-    { name: 'RCS Business Messaging', path: '/channels/rcs-business-messaging', icon: '📱' },
-    { name: 'Instagram Direct', path: '/channels/instagram-direct', icon: '📷' },
-    { name: 'Facebook Messenger', path: '/channels/facebook-messenger', icon: '💙' },
-    { name: 'Web Chat', path: '/channels/web', icon: '🌐' },
+    { 
+      name: 'WhatsApp', 
+      path: '/channels/whatsapp', 
+      icon: MessageSquare,
+      benefit: 'Reach 2B+ users with rich media & quick replies'
+    },
+    { 
+      name: 'RCS Business Messaging', 
+      path: '/channels/rcs-business-messaging', 
+      icon: Phone,
+      benefit: 'Next-gen SMS with buttons, carousels & branding'
+    },
+    { 
+      name: 'Instagram Direct', 
+      path: '/channels/instagram-direct', 
+      icon: Users,
+      benefit: 'Visual commerce & story-driven conversations'
+    },
+    { 
+      name: 'Facebook Messenger', 
+      path: '/channels/facebook-messenger', 
+      icon: MessageSquare,
+      benefit: 'Social selling with 1.3B active users'
+    },
+    { 
+      name: 'Web Chat', 
+      path: '/channels/web', 
+      icon: Zap,
+      benefit: 'Instant support on your website & mobile app'
+    },
   ];
 
   const industries = [
-    { name: 'Retail', path: '/industries/retail', icon: '🛍️' },
-    { name: 'Travel', path: '/industries/travel', icon: '✈️' },
-    { name: 'Fintech', path: '/industries/fintech', icon: '💳' },
-    { name: 'Ed Tech', path: '/industries/edtech', icon: '🎓' },
-    { name: 'Media & Entertainment', path: '/industries/media-entertainment', icon: '🎬' },
-    { name: 'Healthcare', path: '/industries/healthcare', icon: '🏥' },
+    { 
+      name: 'Retail', 
+      path: '/industries/retail', 
+      icon: ShoppingBag,
+      benefit: 'Product discovery, orders & customer service'
+    },
+    { 
+      name: 'Travel', 
+      path: '/industries/travel', 
+      icon: Plane,
+      benefit: 'Bookings, itineraries & real-time updates'
+    },
+    { 
+      name: 'Fintech', 
+      path: '/industries/fintech', 
+      icon: CreditCard,
+      benefit: 'Account queries, payments & compliance'
+    },
+    { 
+      name: 'Ed Tech', 
+      path: '/industries/edtech', 
+      icon: GraduationCap,
+      benefit: 'Course enrollment, support & engagement'
+    },
+    { 
+      name: 'Media & Entertainment', 
+      path: '/industries/media-entertainment', 
+      icon: Film,
+      benefit: 'Content discovery & subscriber support'
+    },
+    { 
+      name: 'Healthcare', 
+      path: '/industries/healthcare', 
+      icon: Activity,
+      benefit: 'Appointments, reminders & patient care'
+    },
   ];
 
   return (
@@ -36,8 +90,8 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">EverGrow</span>
-              <span className="text-2xl font-bold text-gray-800">Digital</span>
+              <span className="text-2xl font-bold text-brand-green-500">EverGrow</span>
+              <span className="text-2xl font-bold text-grey-900">Digital</span>
             </Link>
           </div>
 
@@ -45,26 +99,32 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <div className="relative group">
               <button 
-                className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
                 onClick={() => handleDropdown('channels')}
+                aria-label="By Channels menu"
               >
                 By Channels
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {activeDropdown === 'channels' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border z-50">
-                  <div className="py-2">
-                    {channels.map((channel) => (
-                      <Link
-                        key={channel.name}
-                        to={channel.path}
-                        className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        <span className="mr-3 text-lg">{channel.icon}</span>
-                        {channel.name}
-                      </Link>
-                    ))}
+                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-md shadow-xl border z-50">
+                  <div className="py-4">
+                    <div className="grid grid-cols-1 gap-1">
+                      {channels.map((channel) => (
+                        <Link
+                          key={channel.name}
+                          to={channel.path}
+                          className="flex items-start px-6 py-4 text-sm hover:bg-grey-50 transition-colors duration-250"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          <channel.icon className="mr-4 h-5 w-5 text-brand-green-500 mt-0.5" />
+                          <div>
+                            <div className="font-semibold text-grey-900 mb-1">{channel.name}</div>
+                            <div className="text-grey-500 text-xs">{channel.benefit}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -72,26 +132,32 @@ const Navigation = () => {
 
             <div className="relative group">
               <button 
-                className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
                 onClick={() => handleDropdown('industries')}
+                aria-label="By Industry menu"
               >
                 By Industry
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border z-50">
-                  <div className="py-2">
-                    {industries.map((industry) => (
-                      <Link
-                        key={industry.name}
-                        to={industry.path}
-                        className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        <span className="mr-3 text-lg">{industry.icon}</span>
-                        {industry.name}
-                      </Link>
-                    ))}
+                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-md shadow-xl border z-50">
+                  <div className="py-4">
+                    <div className="grid grid-cols-1 gap-1">
+                      {industries.map((industry) => (
+                        <Link
+                          key={industry.name}
+                          to={industry.path}
+                          className="flex items-start px-6 py-4 text-sm hover:bg-grey-50 transition-colors duration-250"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          <industry.icon className="mr-4 h-5 w-5 text-brand-green-500 mt-0.5" />
+                          <div>
+                            <div className="font-semibold text-grey-900 mb-1">{industry.name}</div>
+                            <div className="text-grey-500 text-xs">{industry.benefit}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -99,25 +165,25 @@ const Navigation = () => {
 
             <Link
               to="/ai-bots"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
             >
               AI Bots
             </Link>
             <Link
               to="/resources"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
             >
               Resources
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
             >
               Contact
             </Link>
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors"
+              className="btn-primary px-6 py-2 rounded-md text-sm font-medium focus-brand"
             >
               Book AI Audit
             </Link>
@@ -127,7 +193,8 @@ const Navigation = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-grey-700 hover:text-brand-green-500 focus:outline-none focus-brand"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -142,7 +209,7 @@ const Navigation = () => {
             <div className="space-y-1">
               <button
                 onClick={() => handleDropdown('channels-mobile')}
-                className="w-full flex items-center justify-between text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium"
+                className="w-full flex items-center justify-between text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-base font-medium"
               >
                 By Channels
                 <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'channels-mobile' ? 'rotate-180' : ''}`} />
@@ -153,10 +220,10 @@ const Navigation = () => {
                     <Link
                       key={channel.name}
                       to={channel.path}
-                      className="flex items-center text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm"
+                      className="flex items-center text-grey-600 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm"
                       onClick={() => setIsOpen(false)}
                     >
-                      <span className="mr-2">{channel.icon}</span>
+                      <channel.icon className="mr-3 h-4 w-4" />
                       {channel.name}
                     </Link>
                   ))}
@@ -167,7 +234,7 @@ const Navigation = () => {
             <div className="space-y-1">
               <button
                 onClick={() => handleDropdown('industries-mobile')}
-                className="w-full flex items-center justify-between text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium"
+                className="w-full flex items-center justify-between text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-base font-medium"
               >
                 By Industry
                 <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'industries-mobile' ? 'rotate-180' : ''}`} />
@@ -178,10 +245,10 @@ const Navigation = () => {
                     <Link
                       key={industry.name}
                       to={industry.path}
-                      className="flex items-center text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm"
+                      className="flex items-center text-grey-600 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm"
                       onClick={() => setIsOpen(false)}
                     >
-                      <span className="mr-2">{industry.icon}</span>
+                      <industry.icon className="mr-3 h-4 w-4" />
                       {industry.name}
                     </Link>
                   ))}
@@ -210,9 +277,10 @@ const Navigation = () => {
             >
               Contact
             </Link>
+
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium mt-4"
+              className="btn-primary block px-3 py-2 rounded-md text-base font-medium mt-4 text-center"
               onClick={() => setIsOpen(false)}
             >
               Book AI Audit

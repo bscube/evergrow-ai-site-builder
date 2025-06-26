@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +20,32 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Brand Colors
+				'brand-green': {
+					200: '#37D684',
+					500: '#00C15A',
+					600: '#009149',
+				},
+				'gradient-start': '#2F8CFF',
+				'gradient-end': '#9B5BFF',
+				'accent-yellow': '#FFC64F',
+				
+				// Greys
+				'grey': {
+					50: '#F9FAFB',
+					300: '#D1D5DB',
+					500: '#6B7280',
+					700: '#374151',
+					900: '#111827',
+				},
+				
+				// Status
+				'success': '#22C55E',
+				'warning': '#F59E0B',
+				'error': '#EF4444',
+				'info': '#0EA5E9',
+				
+				// Shadcn colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -52,16 +79,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
