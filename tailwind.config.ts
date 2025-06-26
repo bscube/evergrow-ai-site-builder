@@ -20,14 +20,12 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Brand Colors
+				// Brand Colors - Green & White Theme
 				'brand-green': {
 					200: '#37D684',
 					500: '#00C15A',
 					600: '#009149',
 				},
-				'gradient-start': '#2F8CFF',
-				'gradient-end': '#9B5BFF',
 				'accent-yellow': '#FFC64F',
 				
 				// Greys
@@ -39,20 +37,20 @@ export default {
 					900: '#111827',
 				},
 				
-				// Status
+				// Status (no blue)
 				'success': '#22C55E',
 				'warning': '#F59E0B',
 				'error': '#EF4444',
-				'info': '#0EA5E9',
+				'info': '#00C15A', // Changed from blue to green
 				
-				// Shadcn colors
+				// Shadcn colors - Updated primary to green
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: 'hsl(var(--primary))', // Now green
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -101,11 +99,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in-up': 'fade-in-up 0.6s ease-out'
 			}
 		}
 	},
