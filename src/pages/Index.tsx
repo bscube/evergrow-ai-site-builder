@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import FloatingCTA from '../components/FloatingCTA';
 import Footer from '../components/Footer';
@@ -125,6 +125,58 @@ const Index = () => {
     }
   ];
 
+  const aiAgentTypes = [
+    {
+      icon: Headphones,
+      title: "AI Support Agent",
+      description: "Streamline support without pre-built journeys",
+      capabilities: ["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"],
+      color: "blue"
+    },
+    {
+      icon: ShoppingCart,
+      title: "AI Sales Agent",
+      description: "Convert prospects into customers automatically",
+      capabilities: ["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"],
+      color: "green"
+    },
+    {
+      icon: Calendar,
+      title: "AI Booking Agent",
+      description: "Automate scheduling and appointment management",
+      capabilities: ["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"],
+      color: "purple"
+    },
+    {
+      icon: Target,
+      title: "AI Lead Qualification Agent",
+      description: "Identify and qualify high-value prospects",
+      capabilities: ["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"],
+      color: "orange"
+    }
+  ];
+
+  const aiFeatures = [
+    {
+      icon: Brain,
+      title: "Flexible Model Selection",
+      description: "Experiment with leading AI models like GPT, Llama, and Claude to find the best fit for your business needs",
+      benefit: "Choose the perfect AI model"
+    },
+    {
+      icon: Globe,
+      title: "Omnichannel Engagement",
+      description: "Deploy your AI Agent across Web, Chat, Voice, and more—effortlessly reaching customers on their preferred platforms",
+      benefit: "Unified customer experience"
+    },
+    {
+      icon: Languages,
+      title: "Multilingual Support",
+      description: "Break language barriers with AI that supports 100+ languages, ensuring seamless global communication",
+      benefit: "Global reach capabilities"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -187,6 +239,26 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust Badges Section */}
+      <section className="py-12 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h3 className="text-lg font-semibold text-grey-700 mb-4">Trusted by enterprises worldwide</h3>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-8 opacity-70">
+            <img src="/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png" alt="Security Compliance Badges" className="h-16 object-contain" />
+            <div className="flex items-center space-x-2">
+              <Shield className="h-6 w-6 text-brand-green-500" />
+              <span className="text-sm font-medium text-grey-600">SOC 2 Certified</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="h-6 w-6 text-brand-green-500" />
+              <span className="text-sm font-medium text-grey-600">99.9% Uptime SLA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 bg-grey-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,6 +269,67 @@ const Index = () => {
                   {stat.number}
                 </div>
                 <div className="text-grey-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Types Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+              <Bot className="w-4 h-4 mr-2" />
+              Watch Our AI Agents in Action
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Specialized AI Agents for Every Need
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Deploy intelligent agents that understand your business context and deliver personalized experiences
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {aiAgentTypes.map((agent, index) => (
+              <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className={`p-4 rounded-xl ${
+                      agent.color === 'blue' ? 'bg-blue-500/10' :
+                      agent.color === 'green' ? 'bg-brand-green-500/10' :
+                      agent.color === 'purple' ? 'bg-purple-500/10' :
+                      'bg-orange-500/10'
+                    }`}>
+                      <agent.icon className={`h-8 w-8 ${
+                        agent.color === 'blue' ? 'text-blue-500' :
+                        agent.color === 'green' ? 'text-brand-green-500' :
+                        agent.color === 'purple' ? 'text-purple-500' :
+                        'text-orange-500'
+                      }`} />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                        {agent.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
+                </div>
+                
+                <p className="text-grey-600 mb-6 leading-relaxed">
+                  {agent.description}
+                </p>
+                
+                <div className="grid grid-cols-2 gap-3">
+                  {agent.capabilities.map((capability, idx) => (
+                    <div key={idx} className="flex items-center text-grey-600">
+                      <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{capability}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -319,6 +452,68 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Analytics Dashboard Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Track Insights That Matter
+            </h2>
+            <p className="text-xl text-grey-600 max-w-4xl mx-auto">
+              Get custom dashboards that offer a comprehensive view of your agents' performance to optimize resources and streamline customer support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-brand-green-500/10 rounded-xl">
+                  <TrendingUp className="h-8 w-8 text-brand-green-500" />
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 ml-4">Identify Key Trends</h3>
+              </div>
+              <p className="text-grey-600 leading-relaxed">
+                Discover the most common questions your users ask and gain a deeper understanding of their needs
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-brand-green-500/10 rounded-xl">
+                  <BarChart3 className="h-8 w-8 text-brand-green-500" />
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 ml-4">Stay on Top of Metrics</h3>
+              </div>
+              <p className="text-grey-600 leading-relaxed">
+                From first-time resolution to customer satisfaction and NPS, have complete visibility into metrics that matter most
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-brand-green-500/10 rounded-xl">
+                  <Brain className="h-8 w-8 text-brand-green-500" />
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 ml-4">Insights Agent</h3>
+              </div>
+              <p className="text-grey-600 leading-relaxed">
+                Automate insights into agent performance, user sentiment, and SOP compliance for enhanced operations
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              View Analytics Demo
+              <BarChart3 className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Product Demo Section */}
       <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -339,6 +534,136 @@ const Index = () => {
                 </button>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Features Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Advanced AI Capabilities
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Powerful features that adapt to your business needs and scale with your growth
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {aiFeatures.map((feature, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30 group">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                    <feature.icon className="h-8 w-8 text-brand-green-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+                    <div className="text-brand-green-500 font-medium text-sm">
+                      {feature.benefit}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-grey-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI + Human Collaboration Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              AI + Human: The Best of Both Worlds
+            </h2>
+            <p className="text-xl text-grey-600 max-w-4xl mx-auto">
+              Empower your AI agents to collaborate with their human counterparts for high-touch scenarios with flexible live chat solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-brand-green-500/10 rounded-lg">
+                    <MessageSquare className="h-6 w-6 text-brand-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-grey-900 ml-4">Omnichannel Agent Inbox</h3>
+                </div>
+                <p className="text-grey-600 leading-relaxed">
+                  Centralize agent support so no interaction is ever missed. Help agents track interactions across channels and jump in to resolve queries faster
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-brand-green-500/10 rounded-lg">
+                    <Handshake className="h-6 w-6 text-brand-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-grey-900 ml-4">Seamless Handoff to Human Agents</h3>
+                </div>
+                <p className="text-grey-600 leading-relaxed">
+                  Smart escalation with full conversation context ensures customers never repeat themselves
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-brand-green-500/10 rounded-lg">
+                    <Settings className="h-6 w-6 text-brand-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-grey-900 ml-4">Work with Any Live Chat Tool</h3>
+                </div>
+                <p className="text-grey-600 leading-relaxed">
+                  Integrate with your existing tools and workflows without disrupting your current operations
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Experience Smart Agent Chat</h3>
+              <p className="text-white/90 mb-8 leading-relaxed">
+                See how AI and human agents work together to deliver exceptional customer experiences across all channels
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
+              >
+                Explore Smart Agent Chat
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Logos Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-grey-900 mb-4">Trusted Technology Partners</h3>
+            <p className="text-grey-600">Certified partnerships with leading platforms</p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-70">
+            <img src="/lovable-uploads/665274b0-11f1-46f6-9c20-29a4bc35a12b.png" alt="Botpress Certified Partner" className="h-20 object-contain" />
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-lg">M</span>
+              </div>
+              <span className="text-lg font-semibold text-grey-700">Meta Partner</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-orange-500 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-lg">H</span>
+              </div>
+              <span className="text-lg font-semibold text-grey-700">HubSpot Partner</span>
             </div>
           </div>
         </div>
