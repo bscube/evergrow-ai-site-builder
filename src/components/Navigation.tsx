@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,22 +14,22 @@ const Navigation = () => {
 
   const channels = [
     { 
+      name: 'AI Voice Agents', 
+      path: '/channels/voice-agents', 
+      icon: Mic,
+      benefit: 'Phone automation with natural voice AI'
+    },
+    { 
       name: 'WhatsApp', 
       path: '/channels/whatsapp', 
       icon: MessageSquare,
       benefit: 'Reach 2B+ users with rich media & quick replies'
     },
     { 
-      name: 'RCS Business Messaging', 
-      path: '/channels/rcs-business-messaging', 
-      icon: Phone,
-      benefit: 'Next-gen SMS with buttons, carousels & branding'
-    },
-    { 
-      name: 'Instagram Direct', 
-      path: '/channels/instagram-direct', 
-      icon: Users,
-      benefit: 'Visual commerce & story-driven conversations'
+      name: 'Website Chat', 
+      path: '/channels/web', 
+      icon: Zap,
+      benefit: 'Instant support on your website & mobile app'
     },
     { 
       name: 'Facebook Messenger', 
@@ -38,10 +38,10 @@ const Navigation = () => {
       benefit: 'Social selling with 1.3B active users'
     },
     { 
-      name: 'Web Chat', 
-      path: '/channels/web', 
-      icon: Zap,
-      benefit: 'Instant support on your website & mobile app'
+      name: 'Instagram Direct', 
+      path: '/channels/instagram-direct', 
+      icon: Users,
+      benefit: 'Visual commerce & story-driven conversations'
     },
   ];
 

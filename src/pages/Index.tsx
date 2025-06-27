@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import FloatingCTA from '../components/FloatingCTA';
 import Footer from '../components/Footer';
@@ -95,6 +94,37 @@ const Index = () => {
     }
   ];
 
+  const voiceAgentFeatures = [
+    {
+      icon: Mic,
+      title: "Natural Voice Conversations",
+      description: "AI agents that understand context, emotion, and intent through advanced speech recognition.",
+      metrics: "98% accuracy",
+      visual: "sound-wave"
+    },
+    {
+      icon: Phone,
+      title: "24/7 Phone Support",
+      description: "Automated phone answering with intelligent call routing and escalation protocols.",
+      metrics: "< 3 ring pickup",
+      visual: "phone-interface"
+    },
+    {
+      icon: Headphones,
+      title: "Empathetic AI Listening",
+      description: "Voice AI that detects sentiment, adapts tone, and provides personalized responses.",
+      metrics: "85% satisfaction",
+      visual: "emotion-detection"
+    },
+    {
+      icon: Volume2,
+      title: "Seamless Handoffs",
+      description: "Smart routing to human agents with full conversation context and customer history.",
+      metrics: "0 repeat info",
+      visual: "handoff-flow"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -108,31 +138,31 @@ const Index = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
               <Sparkles className="w-4 h-4 mr-2" />
-              AI Chatbots for Every Channel & Industry
+              AI Voice & Chat Agents for Every Channel & Industry
             </div>
             
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
-              <span className="text-grey-900">Turn Conversations</span>
+              <span className="text-grey-900">Transform Every</span>
               <br />
-              <span className="text-brand-green-500">Into Customers</span>
+              <span className="text-brand-green-500">Customer Touchpoint</span>
             </h1>
             
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-grey-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-              WhatsApp, Instagram, and web chatbots that convert visitors into customers automatically. Deploy in 24 hours, see ROI in 14 days.
+              Deploy AI voice and chat agents across phone, WhatsApp, website, and social media. Handle 80% of inquiries automatically while delighting customers 24/7.
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Book Free AI Audit
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
+              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
               </button>
@@ -146,7 +176,7 @@ const Index = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
-                14-day free trial
+                30-day free trial
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
@@ -173,12 +203,128 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Product Demo Section */}
+      {/* AI Voice Agents Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+              <Mic className="w-4 h-4 mr-2" />
+              AI Voice Agents
+            </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
-              See AI Chatbots in Action
+              Voice-First Customer Experience
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto mb-12">
+              Handle phone calls, voice queries, and complex conversations with AI agents that sound human and understand context.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {voiceAgentFeatures.map((feature, index) => (
+              <div key={index} className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
+                {/* Animated Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center">
+                      <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                        <feature.icon className="h-8 w-8 text-brand-green-500" />
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                          {feature.title}
+                        </h3>
+                        <div className="text-brand-green-500 font-semibold text-sm">
+                          {feature.metrics}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Visual Indicator */}
+                    <div className="relative w-16 h-16">
+                      {feature.visual === 'sound-wave' && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="flex space-x-1">
+                            {[...Array(5)].map((_, i) => (
+                              <div
+                                key={i}
+                                className="w-1 bg-brand-green-500 rounded-full animate-pulse"
+                                style={{
+                                  height: `${Math.random() * 20 + 10}px`,
+                                  animationDelay: `${i * 0.1}s`
+                                }}
+                              ></div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      {feature.visual === 'phone-interface' && (
+                        <div className="absolute inset-0 bg-brand-green-500/10 rounded-full flex items-center justify-center group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                          <Phone className="h-6 w-6 text-brand-green-500" />
+                        </div>
+                      )}
+                      {feature.visual === 'emotion-detection' && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-8 h-8 border-2 border-brand-green-500 rounded-full animate-ping"></div>
+                          <div className="absolute w-4 h-4 bg-brand-green-500 rounded-full"></div>
+                        </div>
+                      )}
+                      {feature.visual === 'handoff-flow' && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <ArrowRight className="h-6 w-6 text-brand-green-500 animate-pulse" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <p className="text-grey-600 leading-relaxed mb-6">
+                    {feature.description}
+                  </p>
+                  
+                  <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
+                    <span className="text-sm">Learn more</span>
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Voice Demo CTA */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Experience Voice AI in Action</h3>
+              <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+                Call our AI voice agent demo line or book a personalized session to see how voice automation can transform your customer experience.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+1234567890"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Demo Line
+                </a>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300"
+                >
+                  Book Live Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Demo Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              See AI Agents in Action
             </h2>
             <p className="text-xl text-grey-600 max-w-3xl mx-auto">
               Watch how our AI agents handle real customer conversations across multiple channels
@@ -199,7 +345,7 @@ const Index = () => {
       </section>
 
       {/* Features Grid */}
-      <section className="py-24 bg-grey-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
@@ -212,7 +358,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
                 <div className="flex items-center mb-6">
                   <div className="p-4 bg-brand-green-500/10 rounded-xl">
                     <feature.icon className="h-8 w-8 text-brand-green-500" />
@@ -235,7 +381,7 @@ const Index = () => {
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
@@ -262,7 +408,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-grey-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
@@ -275,7 +421,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-grey-200 hover:border-brand-green-500/30">
                 <div className="text-2xl font-bold text-brand-green-500 mb-4">
                   {testimonial.metric}
                 </div>
@@ -305,7 +451,7 @@ const Index = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Get a free AI audit and see exactly how chatbots will boost your conversions
+            Get a free AI audit and see exactly how voice and chat agents will boost your conversions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -342,7 +488,7 @@ const Index = () => {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-grey-50 rounded-xl overflow-hidden border border-grey-200">
+              <div key={index} className="bg-grey-50 rounded-xl overflow-hidden border border-grey-200 hover:border-brand-green-500/30 transition-colors duration-300">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-grey-100 transition-colors duration-200"
