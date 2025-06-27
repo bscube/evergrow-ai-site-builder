@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
@@ -626,7 +627,7 @@ const Index = () => {
                         Dynamic Call Routing
                       </h3>
                       <div className="text-brand-green-500 font-semibold text-sm">
-                        < 3 ring pickup
+                        &lt; 3 ring pickup
                       </div>
                     </div>
                   </div>
