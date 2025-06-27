@@ -275,183 +275,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* AI Agent Types Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              Watch Our AI Agents in Action
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
-              Specialized AI Agents for Every Need
-            </h2>
-            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
-              Deploy intelligent agents that understand your business context and deliver personalized experiences
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {aiAgentTypes.map((agent, index) => (
-              <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-center">
-                    <div className={`p-4 rounded-xl ${
-                      agent.color === 'blue' ? 'bg-blue-500/10' :
-                      agent.color === 'green' ? 'bg-brand-green-500/10' :
-                      agent.color === 'purple' ? 'bg-purple-500/10' :
-                      'bg-orange-500/10'
-                    }`}>
-                      <agent.icon className={`h-8 w-8 ${
-                        agent.color === 'blue' ? 'text-blue-500' :
-                        agent.color === 'green' ? 'text-brand-green-500' :
-                        agent.color === 'purple' ? 'text-purple-500' :
-                        'text-orange-500'
-                      }`} />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
-                        {agent.title}
-                      </h3>
-                    </div>
-                  </div>
-                  <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
-                </div>
-                
-                <p className="text-grey-600 mb-6 leading-relaxed">
-                  {agent.description}
-                </p>
-                
-                <div className="grid grid-cols-2 gap-3">
-                  {agent.capabilities.map((capability, idx) => (
-                    <div key={idx} className="flex items-center text-grey-600">
-                      <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{capability}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Voice Agents Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
-              <Mic className="w-4 h-4 mr-2" />
-              AI Voice Agents
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
-              Voice-First Customer Experience
-            </h2>
-            <p className="text-xl text-grey-600 max-w-3xl mx-auto mb-12">
-              Handle phone calls, voice queries, and complex conversations with AI agents that sound human and understand context.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {voiceAgentFeatures.map((feature, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center">
-                      <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
-                        <feature.icon className="h-8 w-8 text-brand-green-500" />
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
-                          {feature.title}
-                        </h3>
-                        <div className="text-brand-green-500 font-semibold text-sm">
-                          {feature.metrics}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Visual Indicator */}
-                    <div className="relative w-16 h-16">
-                      {feature.visual === 'sound-wave' && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="flex space-x-1">
-                            {[...Array(5)].map((_, i) => (
-                              <div
-                                key={i}
-                                className="w-1 bg-brand-green-500 rounded-full animate-pulse"
-                                style={{
-                                  height: `${Math.random() * 20 + 10}px`,
-                                  animationDelay: `${i * 0.1}s`
-                                }}
-                              ></div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                      {feature.visual === 'phone-interface' && (
-                        <div className="absolute inset-0 bg-brand-green-500/10 rounded-full flex items-center justify-center group-hover:bg-brand-green-500/20 transition-colors duration-300">
-                          <Phone className="h-6 w-6 text-brand-green-500" />
-                        </div>
-                      )}
-                      {feature.visual === 'emotion-detection' && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-8 h-8 border-2 border-brand-green-500 rounded-full animate-ping"></div>
-                          <div className="absolute w-4 h-4 bg-brand-green-500 rounded-full"></div>
-                        </div>
-                      )}
-                      {feature.visual === 'handoff-flow' && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <ArrowRight className="h-6 w-6 text-brand-green-500 animate-pulse" />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <p className="text-grey-600 leading-relaxed mb-6">
-                    {feature.description}
-                  </p>
-                  
-                  <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
-                    <span className="text-sm">Learn more</span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Voice Demo CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Experience Voice AI in Action</h3>
-              <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-                Call our AI voice agent demo line or book a personalized session to see how voice automation can transform your customer experience.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+1234567890"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Demo Line
-                </a>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300"
-                >
-                  Book Live Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Analytics Dashboard Section */}
       <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -462,6 +285,18 @@ const Index = () => {
             <p className="text-xl text-grey-600 max-w-4xl mx-auto">
               Get custom dashboards that offer a comprehensive view of your agents' performance to optimize resources and streamline customer support
             </p>
+          </div>
+
+          {/* Dashboard Visualization */}
+          <div className="mb-16">
+            <div className="relative max-w-6xl mx-auto">
+              <img 
+                src="/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png" 
+                alt="Analytics Dashboard showing agent performance metrics, sentiment analysis, and SOP adherence" 
+                className="w-full rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
@@ -510,6 +345,376 @@ const Index = () => {
               View Analytics Demo
               <BarChart3 className="ml-2 h-5 w-5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agent Types Section - Enhanced with Haptik Images */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+              <Bot className="w-4 h-4 mr-2" />
+              Watch Our AI Agents in Action
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Specialized AI Agents for Every Need
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Deploy intelligent agents that understand your business context and deliver personalized experiences
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="p-4 rounded-xl bg-blue-500/10">
+                    <Headphones className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                      AI Support Agent
+                    </h3>
+                  </div>
+                </div>
+                <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif" 
+                  alt="AI Support Agent handling customer queries"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              
+              <p className="text-grey-600 mb-6 leading-relaxed">
+                Streamline support without pre-built journeys
+              </p>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"].map((capability, idx) => (
+                  <div key={idx} className="flex items-center text-grey-600">
+                    <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{capability}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="p-4 rounded-xl bg-brand-green-500/10">
+                    <ShoppingCart className="h-8 w-8 text-brand-green-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                      AI Sales Agent
+                    </h3>
+                  </div>
+                </div>
+                <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/02SalesAgent.gif?width=1815&height=666&name=02SalesAgent.gif" 
+                  alt="AI Sales Agent converting prospects into customers"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              
+              <p className="text-grey-600 mb-6 leading-relaxed">
+                Convert prospects into customers automatically
+              </p>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"].map((capability, idx) => (
+                  <div key={idx} className="flex items-center text-grey-600">
+                    <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{capability}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="p-4 rounded-xl bg-purple-500/10">
+                    <Calendar className="h-8 w-8 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                      AI Booking Agent
+                    </h3>
+                  </div>
+                </div>
+                <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/03BookingAgent.gif?width=1815&height=666&name=03BookingAgent.gif" 
+                  alt="AI Booking Agent managing appointments and scheduling"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              
+              <p className="text-grey-600 mb-6 leading-relaxed">
+                Automate scheduling and appointment management
+              </p>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"].map((capability, idx) => (
+                  <div key={idx} className="flex items-center text-grey-600">
+                    <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{capability}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="p-4 rounded-xl bg-orange-500/10">
+                    <Target className="h-8 w-8 text-orange-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                      AI Lead Qualification Agent
+                    </h3>
+                  </div>
+                </div>
+                <ChevronRight className="h-5 w-5 text-grey-400 group-hover:text-brand-green-500 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/04%20Lead%20Qualification%20Agent.gif?width=1815&height=666&name=04%20Lead%20Qualification%20Agent.gif" 
+                  alt="AI Lead Qualification Agent identifying high-value prospects"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              
+              <p className="text-grey-600 mb-6 leading-relaxed">
+                Identify and qualify high-value prospects
+              </p>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"].map((capability, idx) => (
+                  <div key={idx} className="flex items-center text-grey-600">
+                    <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{capability}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Voice Agents Section - Enhanced with Haptik Images */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+              <Mic className="w-4 h-4 mr-2" />
+              AI Voice Agents
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Voice-First Customer Experience
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto mb-12">
+              Handle phone calls, voice queries, and complex conversations with AI agents that sound human and understand context.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                      <Mic className="h-8 w-8 text-brand-green-500" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                        Natural Voice Conversations
+                      </h3>
+                      <div className="text-brand-green-500 font-semibold text-sm">
+                        98% accuracy
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img 
+                    src="https://www.haptik.ai/hs-fs/hubfs/01%20Voice%20First%20AI.gif?width=900&height=441&name=01%20Voice%20First%20AI.gif" 
+                    alt="Voice-first AI conversations"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                
+                <p className="text-grey-600 leading-relaxed mb-6">
+                  AI agents that understand context, emotion, and intent through advanced speech recognition.
+                </p>
+                
+                <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
+                  <span className="text-sm">Learn more</span>
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                      <Headphones className="h-8 w-8 text-brand-green-500" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                        Effortless Assistance
+                      </h3>
+                      <div className="text-brand-green-500 font-semibold text-sm">
+                        24/7 availability
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img 
+                    src="https://www.haptik.ai/hs-fs/hubfs/02%20Effortless%20Assistance.gif?width=1815&height=1020&name=02%20Effortless%20Assistance.gif" 
+                    alt="Effortless AI assistance"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                
+                <p className="text-grey-600 leading-relaxed mb-6">
+                  Voice AI that detects sentiment, adapts tone, and provides personalized responses with empathy.
+                </p>
+                
+                <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
+                  <span className="text-sm">Learn more</span>
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                      <Phone className="h-8 w-8 text-brand-green-500" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                        Dynamic Call Routing
+                      </h3>
+                      <div className="text-brand-green-500 font-semibold text-sm">
+                        < 3 ring pickup
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img 
+                    src="https://www.haptik.ai/hs-fs/hubfs/03%20Dynamic%20Call%20Routing.gif?width=1830&height=942&name=03%20Dynamic%20Call%20Routing.gif" 
+                    alt="Dynamic call routing system"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                
+                <p className="text-grey-600 leading-relaxed mb-6">
+                  Automated phone answering with intelligent call routing and escalation protocols.
+                </p>
+                
+                <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
+                  <span className="text-sm">Learn more</span>
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-white to-grey-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-grey-200 hover:border-brand-green-500/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-green-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
+                      <Volume2 className="h-8 w-8 text-brand-green-500" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-xl font-bold text-grey-900 group-hover:text-brand-green-600 transition-colors duration-300">
+                        Empathetic AI Listening
+                      </h3>
+                      <div className="text-brand-green-500 font-semibold text-sm">
+                        85% satisfaction
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img 
+                    src="https://www.haptik.ai/hs-fs/hubfs/04%20An%20Empathetic%2c%20Intelligent%20Listener.gif?width=1815&height=1020&name=04%20An%20Empathetic%2c%20Intelligent%20Listener.gif" 
+                    alt="Empathetic AI listening and responding"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                
+                <p className="text-grey-600 leading-relaxed mb-6">
+                  Smart routing to human agents with full conversation context and customer history.
+                </p>
+                
+                <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
+                  <span className="text-sm">Learn more</span>
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Voice Demo CTA */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Experience Voice AI in Action</h3>
+              <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+                Call our AI voice agent demo line or book a personalized session to see how voice automation can transform your customer experience.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+1234567890"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Demo Line
+                </a>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300"
+                >
+                  Book Live Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -576,7 +781,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* AI + Human Collaboration Section */}
+      {/* AI + Human Collaboration Section - Enhanced */}
       <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -627,14 +832,25 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
+            <div className="relative">
+              <img 
+                src="https://www.haptik.ai/hs-fs/hubfs/03%20Omnichannel%20Agent.png?width=3000&name=03%20Omnichannel%20Agent.png" 
+                alt="Omnichannel agent collaboration interface"
+                className="w-full rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">Experience Smart Agent Chat</h3>
-              <p className="text-white/90 mb-8 leading-relaxed">
+              <p className="text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
                 See how AI and human agents work together to deliver exceptional customer experiences across all channels
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
               >
                 Explore Smart Agent Chat
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -665,42 +881,6 @@ const Index = () => {
               </div>
               <span className="text-lg font-semibold text-grey-700">HubSpot Partner</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
-              Why Choose EverGrow Digital?
-            </h2>
-            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
-              Enterprise-grade AI with the simplicity your team needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30">
-                <div className="flex items-center mb-6">
-                  <div className="p-4 bg-brand-green-500/10 rounded-xl">
-                    <feature.icon className="h-8 w-8 text-brand-green-500" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-grey-900 ml-4">{feature.title}</h3>
-                </div>
-                <p className="text-grey-600 text-lg mb-6 leading-relaxed">{feature.description}</p>
-                <div className="grid grid-cols-2 gap-3">
-                  {feature.highlights.map((highlight, idx) => (
-                    <div key={idx} className="flex items-center text-grey-600">
-                      <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
