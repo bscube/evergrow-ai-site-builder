@@ -4,181 +4,166 @@ import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare,
 import Navigation from '../components/Navigation';
 import FloatingCTA from '../components/FloatingCTA';
 import Footer from '../components/Footer';
-
 const Index = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  const stats = [
-    { number: '500+', label: 'Active Clients' },
-    { number: '99.9%', label: 'Uptime SLA' },
-    { number: '50M+', label: 'Messages Processed' },
-    { number: '24/7', label: 'Support Available' },
-  ];
-
-  const features = [
-    {
-      icon: MessageSquare,
-      title: 'Multi-Channel AI',
-      description: 'Deploy across WhatsApp, Instagram, Facebook, RCS, and web chat from one unified platform.',
-      highlights: ['WhatsApp Business API', 'Instagram DM automation', 'Facebook Messenger bots', 'Web chat widgets']
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Sub-2 second response times ensure your customers never wait for answers.',
-      highlights: ['< 2s response time', 'Real-time processing', 'Instant query resolution', '24/7 availability']
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Deep insights into conversations, conversions, and customer journey optimization.',
-      highlights: ['Conversation analytics', 'Conversion tracking', 'Customer insights', 'Performance metrics']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-      highlights: ['SOC 2 certified', 'End-to-end encryption', 'GDPR compliant', 'Data protection']
-    }
-  ];
-
-  const industries = [
-    { name: 'Retail', metric: '↑40% Sales', icon: '🛍️' },
-    { name: 'Travel', metric: '↑60% Bookings', icon: '✈️' },
-    { name: 'Fintech', metric: '↑75% Leads', icon: '💳' },
-    { name: 'Healthcare', metric: '↑85% Efficiency', icon: '🏥' },
-    { name: 'Education', metric: '↑50% Engagement', icon: '📚' },
-    { name: 'Media', metric: '↑65% Retention', icon: '🎬' }
-  ];
-
-  const testimonials = [
-    {
-      quote: "EverGrow's AI bots increased our WhatsApp conversions by 65%. The setup was seamless and support is outstanding.",
-      author: "Sarah Chen",
-      role: "Head of Digital Marketing",
-      company: "RetailPlus",
-      metric: "↑65% Conversion"
-    },
-    {
-      quote: "Our booking automation now handles 80% of reservations automatically. Customer satisfaction has never been higher.",
-      author: "Marcus Rodriguez",
-      role: "Operations Director", 
-      company: "TravelEase",
-      metric: "↑80% Automation"
-    },
-    {
-      quote: "The multi-channel approach helped us reach customers where they are. ROI was positive within 2 weeks.",
-      author: "Emily Watson",
-      role: "Customer Success Lead",
-      company: "FinanceForward", 
-      metric: "↑90% Satisfaction"
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'How quickly can we deploy AI bots?',
-      answer: 'Most implementations go live within 24-48 hours. Our rapid deployment includes bot configuration, testing, and team training.'
-    },
-    {
-      question: 'What channels do your AI bots support?',
-      answer: 'WhatsApp Business API, Instagram Direct, Facebook Messenger, RCS Business Messaging, and web chat - all from one dashboard.'
-    },
-    {
-      question: 'What\'s included in the free AI audit?',
-      answer: 'Process analysis, ROI projections, channel recommendations, competitor analysis, and a custom implementation roadmap.'
-    },
-    {
-      question: 'How do you ensure data security?',
-      answer: 'SOC 2 Type II compliance, end-to-end encryption, GDPR/CCPA adherence with enterprise-grade security protocols.'
-    }
-  ];
-
-  const voiceAgentFeatures = [
-    {
-      icon: Mic,
-      title: "Natural Voice Conversations",
-      description: "AI agents that understand context, emotion, and intent through advanced speech recognition.",
-      metrics: "98% accuracy",
-      visual: "sound-wave"
-    },
-    {
-      icon: Phone,
-      title: "24/7 Phone Support",
-      description: "Automated phone answering with intelligent call routing and escalation protocols.",
-      metrics: "< 3 ring pickup",
-      visual: "phone-interface"
-    },
-    {
-      icon: Headphones,
-      title: "Empathetic AI Listening",
-      description: "Voice AI that detects sentiment, adapts tone, and provides personalized responses.",
-      metrics: "85% satisfaction",
-      visual: "emotion-detection"
-    },
-    {
-      icon: Volume2,
-      title: "Seamless Handoffs",
-      description: "Smart routing to human agents with full conversation context and customer history.",
-      metrics: "0 repeat info",
-      visual: "handoff-flow"
-    }
-  ];
-
-  const aiAgentTypes = [
-    {
-      icon: Headphones,
-      title: "AI Support Agent",
-      description: "Streamline support without pre-built journeys",
-      capabilities: ["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"],
-      color: "blue"
-    },
-    {
-      icon: ShoppingCart,
-      title: "AI Sales Agent",
-      description: "Convert prospects into customers automatically",
-      capabilities: ["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"],
-      color: "green"
-    },
-    {
-      icon: Calendar,
-      title: "AI Booking Agent",
-      description: "Automate scheduling and appointment management",
-      capabilities: ["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"],
-      color: "purple"
-    },
-    {
-      icon: Target,
-      title: "AI Lead Qualification Agent",
-      description: "Identify and qualify high-value prospects",
-      capabilities: ["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"],
-      color: "orange"
-    }
-  ];
-
-  const aiFeatures = [
-    {
-      icon: Brain,
-      title: "Flexible Model Selection",
-      description: "Experiment with leading AI models like GPT, Llama, and Claude to find the best fit for your business needs",
-      benefit: "Choose the perfect AI model"
-    },
-    {
-      icon: Globe,
-      title: "Omnichannel Engagement",
-      description: "Deploy your AI Agent across Web, Chat, Voice, and more—effortlessly reaching customers on their preferred platforms",
-      benefit: "Unified customer experience"
-    },
-    {
-      icon: Languages,
-      title: "Multilingual Support",
-      description: "Break language barriers with AI that supports 100+ languages, ensuring seamless global communication",
-      benefit: "Global reach capabilities"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
+  const stats = [{
+    number: '500+',
+    label: 'Active Clients'
+  }, {
+    number: '99.9%',
+    label: 'Uptime SLA'
+  }, {
+    number: '50M+',
+    label: 'Messages Processed'
+  }, {
+    number: '24/7',
+    label: 'Support Available'
+  }];
+  const features = [{
+    icon: MessageSquare,
+    title: 'Multi-Channel AI',
+    description: 'Deploy across WhatsApp, Instagram, Facebook, RCS, and web chat from one unified platform.',
+    highlights: ['WhatsApp Business API', 'Instagram DM automation', 'Facebook Messenger bots', 'Web chat widgets']
+  }, {
+    icon: Zap,
+    title: 'Lightning Fast',
+    description: 'Sub-2 second response times ensure your customers never wait for answers.',
+    highlights: ['< 2s response time', 'Real-time processing', 'Instant query resolution', '24/7 availability']
+  }, {
+    icon: BarChart3,
+    title: 'Advanced Analytics',
+    description: 'Deep insights into conversations, conversions, and customer journey optimization.',
+    highlights: ['Conversation analytics', 'Conversion tracking', 'Customer insights', 'Performance metrics']
+  }, {
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
+    highlights: ['SOC 2 certified', 'End-to-end encryption', 'GDPR compliant', 'Data protection']
+  }];
+  const industries = [{
+    name: 'Retail',
+    metric: '↑40% Sales',
+    icon: '🛍️'
+  }, {
+    name: 'Travel',
+    metric: '↑60% Bookings',
+    icon: '✈️'
+  }, {
+    name: 'Fintech',
+    metric: '↑75% Leads',
+    icon: '💳'
+  }, {
+    name: 'Healthcare',
+    metric: '↑85% Efficiency',
+    icon: '🏥'
+  }, {
+    name: 'Education',
+    metric: '↑50% Engagement',
+    icon: '📚'
+  }, {
+    name: 'Media',
+    metric: '↑65% Retention',
+    icon: '🎬'
+  }];
+  const testimonials = [{
+    quote: "EverGrow's AI bots increased our WhatsApp conversions by 65%. The setup was seamless and support is outstanding.",
+    author: "Sarah Chen",
+    role: "Head of Digital Marketing",
+    company: "RetailPlus",
+    metric: "↑65% Conversion"
+  }, {
+    quote: "Our booking automation now handles 80% of reservations automatically. Customer satisfaction has never been higher.",
+    author: "Marcus Rodriguez",
+    role: "Operations Director",
+    company: "TravelEase",
+    metric: "↑80% Automation"
+  }, {
+    quote: "The multi-channel approach helped us reach customers where they are. ROI was positive within 2 weeks.",
+    author: "Emily Watson",
+    role: "Customer Success Lead",
+    company: "FinanceForward",
+    metric: "↑90% Satisfaction"
+  }];
+  const faqs = [{
+    question: 'How quickly can we deploy AI bots?',
+    answer: 'Most implementations go live within 24-48 hours. Our rapid deployment includes bot configuration, testing, and team training.'
+  }, {
+    question: 'What channels do your AI bots support?',
+    answer: 'WhatsApp Business API, Instagram Direct, Facebook Messenger, RCS Business Messaging, and web chat - all from one dashboard.'
+  }, {
+    question: 'What\'s included in the free AI audit?',
+    answer: 'Process analysis, ROI projections, channel recommendations, competitor analysis, and a custom implementation roadmap.'
+  }, {
+    question: 'How do you ensure data security?',
+    answer: 'SOC 2 Type II compliance, end-to-end encryption, GDPR/CCPA adherence with enterprise-grade security protocols.'
+  }];
+  const voiceAgentFeatures = [{
+    icon: Mic,
+    title: "Natural Voice Conversations",
+    description: "AI agents that understand context, emotion, and intent through advanced speech recognition.",
+    metrics: "98% accuracy",
+    visual: "sound-wave"
+  }, {
+    icon: Phone,
+    title: "24/7 Phone Support",
+    description: "Automated phone answering with intelligent call routing and escalation protocols.",
+    metrics: "< 3 ring pickup",
+    visual: "phone-interface"
+  }, {
+    icon: Headphones,
+    title: "Empathetic AI Listening",
+    description: "Voice AI that detects sentiment, adapts tone, and provides personalized responses.",
+    metrics: "85% satisfaction",
+    visual: "emotion-detection"
+  }, {
+    icon: Volume2,
+    title: "Seamless Handoffs",
+    description: "Smart routing to human agents with full conversation context and customer history.",
+    metrics: "0 repeat info",
+    visual: "handoff-flow"
+  }];
+  const aiAgentTypes = [{
+    icon: Headphones,
+    title: "AI Support Agent",
+    description: "Streamline support without pre-built journeys",
+    capabilities: ["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"],
+    color: "blue"
+  }, {
+    icon: ShoppingCart,
+    title: "AI Sales Agent",
+    description: "Convert prospects into customers automatically",
+    capabilities: ["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"],
+    color: "green"
+  }, {
+    icon: Calendar,
+    title: "AI Booking Agent",
+    description: "Automate scheduling and appointment management",
+    capabilities: ["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"],
+    color: "purple"
+  }, {
+    icon: Target,
+    title: "AI Lead Qualification Agent",
+    description: "Identify and qualify high-value prospects",
+    capabilities: ["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"],
+    color: "orange"
+  }];
+  const aiFeatures = [{
+    icon: Brain,
+    title: "Flexible Model Selection",
+    description: "Experiment with leading AI models like GPT, Llama, and Claude to find the best fit for your business needs",
+    benefit: "Choose the perfect AI model"
+  }, {
+    icon: Globe,
+    title: "Omnichannel Engagement",
+    description: "Deploy your AI Agent across Web, Chat, Voice, and more—effortlessly reaching customers on their preferred platforms",
+    benefit: "Unified customer experience"
+  }, {
+    icon: Languages,
+    title: "Multilingual Support",
+    description: "Break language barriers with AI that supports 100+ languages, ensuring seamless global communication",
+    benefit: "Global reach capabilities"
+  }];
+  return <div className="min-h-screen bg-white">
       <Navigation />
       <FloatingCTA />
       
@@ -207,10 +192,7 @@ const Index = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                 Book Free AI Audit
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -263,14 +245,12 @@ const Index = () => {
       <section className="py-16 bg-grey-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-white">
+            {stats.map((stat, index) => <div key={index} className="text-white">
                 <div className="text-3xl lg:text-4xl font-bold text-brand-green-500 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-grey-300">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -290,12 +270,8 @@ const Index = () => {
           {/* Dashboard Visualization */}
           <div className="mb-16">
             <div className="relative max-w-6xl mx-auto">
-              <img 
-                src="/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png" 
-                alt="Analytics Dashboard showing agent performance metrics, sentiment analysis, and SOP adherence" 
-                className="w-full rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              
+              
             </div>
           </div>
 
@@ -308,11 +284,7 @@ const Index = () => {
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Identify Key Trends</h3>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/01.png?width=1121&height=1052&name=01.png" 
-                  alt="Identify Key Trends visualization"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/01.png?width=1121&height=1052&name=01.png" alt="Identify Key Trends visualization" className="w-full rounded-lg" />
               </div>
               <p className="text-grey-600 leading-relaxed">
                 Discover the most common questions your users ask and gain a deeper understanding of their needs
@@ -327,11 +299,7 @@ const Index = () => {
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Stay on Top of Metrics</h3>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/02.png?width=1121&height=1052&name=02.png" 
-                  alt="Stay on Top of Metrics visualization"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/02.png?width=1121&height=1052&name=02.png" alt="Stay on Top of Metrics visualization" className="w-full rounded-lg" />
               </div>
               <p className="text-grey-600 leading-relaxed">
                 From first-time resolution to customer satisfaction and NPS, have complete visibility into metrics that matter most
@@ -346,11 +314,7 @@ const Index = () => {
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Insights Agent</h3>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/03.png?width=1122&height=1052&name=03.png" 
-                  alt="Insights Agent visualization"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/03.png?width=1122&height=1052&name=03.png" alt="Insights Agent visualization" className="w-full rounded-lg" />
               </div>
               <p className="text-grey-600 leading-relaxed">
                 Automate insights into agent performance, user sentiment, and SOP compliance for enhanced operations
@@ -359,10 +323,7 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
               View Analytics Demo
               <BarChart3 className="ml-2 h-5 w-5" />
             </Link>
@@ -403,11 +364,7 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif" 
-                  alt="AI Support Agent handling customer queries"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif" alt="AI Support Agent handling customer queries" className="w-full rounded-lg" />
               </div>
               
               <p className="text-grey-600 mb-6 leading-relaxed">
@@ -415,12 +372,10 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3">
-                {["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"].map((capability, idx) => (
-                  <div key={idx} className="flex items-center text-grey-600">
+                {["Instant issue resolution", "24/7 availability", "Multi-language support", "Escalation protocols"].map((capability, idx) => <div key={idx} className="flex items-center text-grey-600">
                     <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
                     <span className="text-sm">{capability}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -440,11 +395,7 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/02SalesAgent.gif?width=1815&height=666&name=02SalesAgent.gif" 
-                  alt="AI Sales Agent converting prospects into customers"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/02SalesAgent.gif?width=1815&height=666&name=02SalesAgent.gif" alt="AI Sales Agent converting prospects into customers" className="w-full rounded-lg" />
               </div>
               
               <p className="text-grey-600 mb-6 leading-relaxed">
@@ -452,12 +403,10 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3">
-                {["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"].map((capability, idx) => (
-                  <div key={idx} className="flex items-center text-grey-600">
+                {["Lead qualification", "Product recommendations", "Order processing", "Upselling strategies"].map((capability, idx) => <div key={idx} className="flex items-center text-grey-600">
                     <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
                     <span className="text-sm">{capability}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -477,11 +426,7 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/03BookingAgent.gif?width=1815&height=666&name=03BookingAgent.gif" 
-                  alt="AI Booking Agent managing appointments and scheduling"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/03BookingAgent.gif?width=1815&height=666&name=03BookingAgent.gif" alt="AI Booking Agent managing appointments and scheduling" className="w-full rounded-lg" />
               </div>
               
               <p className="text-grey-600 mb-6 leading-relaxed">
@@ -489,12 +434,10 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3">
-                {["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"].map((capability, idx) => (
-                  <div key={idx} className="flex items-center text-grey-600">
+                {["Calendar integration", "Automated reminders", "Rescheduling", "Availability tracking"].map((capability, idx) => <div key={idx} className="flex items-center text-grey-600">
                     <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
                     <span className="text-sm">{capability}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -514,11 +457,7 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img 
-                  src="https://www.haptik.ai/hs-fs/hubfs/04%20Lead%20Qualification%20Agent.gif?width=1815&height=666&name=04%20Lead%20Qualification%20Agent.gif" 
-                  alt="AI Lead Qualification Agent identifying high-value prospects"
-                  className="w-full rounded-lg"
-                />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/04%20Lead%20Qualification%20Agent.gif?width=1815&height=666&name=04%20Lead%20Qualification%20Agent.gif" alt="AI Lead Qualification Agent identifying high-value prospects" className="w-full rounded-lg" />
               </div>
               
               <p className="text-grey-600 mb-6 leading-relaxed">
@@ -526,12 +465,10 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3">
-                {["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"].map((capability, idx) => (
-                  <div key={idx} className="flex items-center text-grey-600">
+                {["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"].map((capability, idx) => <div key={idx} className="flex items-center text-grey-600">
                     <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2 flex-shrink-0" />
                     <span className="text-sm">{capability}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -576,11 +513,7 @@ const Index = () => {
                 </div>
                 
                 <div className="mb-6">
-                  <img 
-                    src="https://www.haptik.ai/hs-fs/hubfs/01%20Voice%20First%20AI.gif?width=900&height=441&name=01%20Voice%20First%20AI.gif" 
-                    alt="Voice-first AI conversations"
-                    className="w-full rounded-lg"
-                  />
+                  <img src="https://www.haptik.ai/hs-fs/hubfs/01%20Voice%20First%20AI.gif?width=900&height=441&name=01%20Voice%20First%20AI.gif" alt="Voice-first AI conversations" className="w-full rounded-lg" />
                 </div>
                 
                 <p className="text-grey-600 leading-relaxed mb-6">
@@ -615,11 +548,7 @@ const Index = () => {
                 </div>
                 
                 <div className="mb-6">
-                  <img 
-                    src="https://www.haptik.ai/hs-fs/hubfs/02%20Effortless%20Assistance.gif?width=1815&height=1020&name=02%20Effortless%20Assistance.gif" 
-                    alt="Effortless AI assistance"
-                    className="w-full rounded-lg"
-                  />
+                  <img src="https://www.haptik.ai/hs-fs/hubfs/02%20Effortless%20Assistance.gif?width=1815&height=1020&name=02%20Effortless%20Assistance.gif" alt="Effortless AI assistance" className="w-full rounded-lg" />
                 </div>
                 
                 <p className="text-grey-600 leading-relaxed mb-6">
@@ -654,11 +583,7 @@ const Index = () => {
                 </div>
                 
                 <div className="mb-6">
-                  <img 
-                    src="https://www.haptik.ai/hs-fs/hubfs/03%20Dynamic%20Call%20Routing.gif?width=1830&height=942&name=03%20Dynamic%20Call%20Routing.gif" 
-                    alt="Dynamic call routing system"
-                    className="w-full rounded-lg"
-                  />
+                  <img src="https://www.haptik.ai/hs-fs/hubfs/03%20Dynamic%20Call%20Routing.gif?width=1830&height=942&name=03%20Dynamic%20Call%20Routing.gif" alt="Dynamic call routing system" className="w-full rounded-lg" />
                 </div>
                 
                 <p className="text-grey-600 leading-relaxed mb-6">
@@ -693,11 +618,7 @@ const Index = () => {
                 </div>
                 
                 <div className="mb-6">
-                  <img 
-                    src="https://www.haptik.ai/hs-fs/hubfs/04%20An%20Empathetic%2c%20Intelligent%20Listener.gif?width=1815&height=1020&name=04%20An%20Empathetic%2c%20Intelligent%20Listener.gif" 
-                    alt="Empathetic AI listening and responding"
-                    className="w-full rounded-lg"
-                  />
+                  <img src="https://www.haptik.ai/hs-fs/hubfs/04%20An%20Empathetic%2c%20Intelligent%20Listener.gif?width=1815&height=1020&name=04%20An%20Empathetic%2c%20Intelligent%20Listener.gif" alt="Empathetic AI listening and responding" className="w-full rounded-lg" />
                 </div>
                 
                 <p className="text-grey-600 leading-relaxed mb-6">
@@ -720,17 +641,11 @@ const Index = () => {
                 Call our AI voice agent demo line or book a personalized session to see how voice automation can transform your customer experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+1234567890"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
-                >
+                <a href="tel:+1234567890" className="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Demo Line
                 </a>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300">
                   Book Live Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -778,8 +693,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {aiFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30 group">
+            {aiFeatures.map((feature, index) => <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-brand-green-500/30 group">
                 <div className="flex items-center mb-6">
                   <div className="p-4 bg-brand-green-500/10 rounded-xl group-hover:bg-brand-green-500/20 transition-colors duration-300">
                     <feature.icon className="h-8 w-8 text-brand-green-500" />
@@ -796,8 +710,7 @@ const Index = () => {
                 <p className="text-grey-600 leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -854,11 +767,7 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <img 
-                src="https://www.haptik.ai/hs-fs/hubfs/03%20Omnichannel%20Agent.png?width=3000&name=03%20Omnichannel%20Agent.png" 
-                alt="Omnichannel agent collaboration interface"
-                className="w-full rounded-2xl shadow-2xl"
-              />
+              <img src="https://www.haptik.ai/hs-fs/hubfs/03%20Omnichannel%20Agent.png?width=3000&name=03%20Omnichannel%20Agent.png" alt="Omnichannel agent collaboration interface" className="w-full rounded-2xl shadow-2xl" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl"></div>
             </div>
           </div>
@@ -869,10 +778,7 @@ const Index = () => {
               <p className="text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
                 See how AI and human agents work together to deliver exceptional customer experiences across all channels
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
-              >
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300">
                 Explore Smart Agent Chat
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -919,16 +825,11 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="bg-white border-2 border-grey-200 hover:border-brand-green-500 rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer group"
-              >
+            {industries.map((industry, index) => <div key={index} className="bg-white border-2 border-grey-200 hover:border-brand-green-500 rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer group">
                 <div className="text-3xl mb-4">{industry.icon}</div>
                 <h3 className="font-semibold text-grey-900 mb-2 group-hover:text-brand-green-500 transition-colors">{industry.name}</h3>
                 <div className="text-sm font-medium text-brand-green-500">{industry.metric}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -946,8 +847,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-grey-200 hover:border-brand-green-500/30">
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-grey-200 hover:border-brand-green-500/30">
                 <div className="text-2xl font-bold text-brand-green-500 mb-4">
                   {testimonial.metric}
                 </div>
@@ -964,8 +864,7 @@ const Index = () => {
                     <div className="text-brand-green-500 text-sm font-medium">{testimonial.company}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -980,19 +879,11 @@ const Index = () => {
             Get a free AI audit and see exactly how voice and chat agents will boost your conversions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-            >
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Get Free AI Audit
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105"
-            >
+            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
               <MessageSquare className="mr-2 h-5 w-5" />
               Chat on WhatsApp
             </a>
@@ -1013,37 +904,24 @@ const Index = () => {
           </div>
 
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-grey-50 rounded-xl overflow-hidden border border-grey-200 hover:border-brand-green-500/30 transition-colors duration-300">
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-grey-100 transition-colors duration-200"
-                >
+            {faqs.map((faq, index) => <div key={index} className="bg-grey-50 rounded-xl overflow-hidden border border-grey-200 hover:border-brand-green-500/30 transition-colors duration-300">
+                <button onClick={() => setExpandedFaq(expandedFaq === index ? null : index)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-grey-100 transition-colors duration-200">
                   <h3 className="text-lg font-semibold text-grey-900">
                     {faq.question}
                   </h3>
-                  <ChevronDown 
-                    className={`h-5 w-5 text-brand-green-500 transform transition-transform duration-200 ${
-                      expandedFaq === index ? 'rotate-180' : ''
-                    }`} 
-                  />
+                  <ChevronDown className={`h-5 w-5 text-brand-green-500 transform transition-transform duration-200 ${expandedFaq === index ? 'rotate-180' : ''}`} />
                 </button>
-                {expandedFaq === index && (
-                  <div className="px-6 pb-4">
+                {expandedFaq === index && <div className="px-6 pb-4">
                     <p className="text-grey-600 leading-relaxed">
                       {faq.answer}
                     </p>
-                  </div>
-                )}
-              </div>
-            ))}
+                  </div>}
+              </div>)}
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
