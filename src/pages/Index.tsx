@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
@@ -308,6 +307,13 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Identify Key Trends</h3>
               </div>
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/01.png?width=1121&height=1052&name=01.png" 
+                  alt="Identify Key Trends visualization"
+                  className="w-full rounded-lg"
+                />
+              </div>
               <p className="text-grey-600 leading-relaxed">
                 Discover the most common questions your users ask and gain a deeper understanding of their needs
               </p>
@@ -320,6 +326,13 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Stay on Top of Metrics</h3>
               </div>
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/02.png?width=1121&height=1052&name=02.png" 
+                  alt="Stay on Top of Metrics visualization"
+                  className="w-full rounded-lg"
+                />
+              </div>
               <p className="text-grey-600 leading-relaxed">
                 From first-time resolution to customer satisfaction and NPS, have complete visibility into metrics that matter most
               </p>
@@ -331,6 +344,13 @@ const Index = () => {
                   <Brain className="h-8 w-8 text-brand-green-500" />
                 </div>
                 <h3 className="text-xl font-bold text-grey-900 ml-4">Insights Agent</h3>
+              </div>
+              <div className="mb-6">
+                <img 
+                  src="https://www.haptik.ai/hs-fs/hubfs/03.png?width=1122&height=1052&name=03.png" 
+                  alt="Insights Agent visualization"
+                  className="w-full rounded-lg"
+                />
               </div>
               <p className="text-grey-600 leading-relaxed">
                 Automate insights into agent performance, user sentiment, and SOP compliance for enhanced operations
