@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import FloatingCTA from '../components/FloatingCTA';
 import Footer from '../components/Footer';
+
 const Index = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [leadMagnetForm, setLeadMagnetForm] = useState({
+    name: '',
+    email: '',
+    company: '',
+    whatsapp: ''
+  });
+
+  const handleLeadMagnetSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log('Lead magnet form submitted:', leadMagnetForm);
+    // You can add actual form submission logic here
+  };
+
   const stats = [{
     number: '500+',
     label: 'Active Clients'
@@ -19,6 +34,7 @@ const Index = () => {
     number: '24/7',
     label: 'Support Available'
   }];
+
   const features = [{
     icon: MessageSquare,
     title: 'Multi-Channel AI',
@@ -40,6 +56,7 @@ const Index = () => {
     description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
     highlights: ['SOC 2 certified', 'End-to-end encryption', 'GDPR compliant', 'Data protection']
   }];
+
   const industries = [{
     name: 'Retail',
     metric: '↑40% Sales',
@@ -65,6 +82,7 @@ const Index = () => {
     metric: '↑65% Retention',
     icon: '🎬'
   }];
+
   const testimonials = [{
     quote: "EverGrow's AI bots increased our WhatsApp conversions by 65%. The setup was seamless and support is outstanding.",
     author: "Sarah Chen",
@@ -84,6 +102,7 @@ const Index = () => {
     company: "FinanceForward",
     metric: "↑90% Satisfaction"
   }];
+
   const faqs = [{
     question: 'How quickly can we deploy AI bots?',
     answer: 'Most implementations go live within 24-48 hours. Our rapid deployment includes bot configuration, testing, and team training.'
@@ -97,6 +116,7 @@ const Index = () => {
     question: 'How do you ensure data security?',
     answer: 'SOC 2 Type II compliance, end-to-end encryption, GDPR/CCPA adherence with enterprise-grade security protocols.'
   }];
+
   const voiceAgentFeatures = [{
     icon: Mic,
     title: "Natural Voice Conversations",
@@ -122,6 +142,7 @@ const Index = () => {
     metrics: "0 repeat info",
     visual: "handoff-flow"
   }];
+
   const aiAgentTypes = [{
     icon: Headphones,
     title: "AI Support Agent",
@@ -147,6 +168,7 @@ const Index = () => {
     capabilities: ["Lead scoring", "Data enrichment", "Qualification criteria", "CRM integration"],
     color: "orange"
   }];
+
   const aiFeatures = [{
     icon: Brain,
     title: "Flexible Model Selection",
@@ -163,10 +185,221 @@ const Index = () => {
     description: "Break language barriers with AI that supports 100+ languages, ensuring seamless global communication",
     benefit: "Global reach capabilities"
   }];
+
   return <div className="min-h-screen bg-white">
       <Navigation />
       <FloatingCTA />
       
+      {/* Enhanced Hero Section */}
+      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-transparent"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI Sales & Support Agents Live in 48 Hours
+            </div>
+            
+            {/* Main Headline - Updated per Pravin's feedback */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+              <span className="text-grey-900">AI-Powered Sales &</span>
+              <br />
+              <span className="text-brand-green-500">Support Agents</span>
+              <br />
+              <span className="text-grey-900">That Boost Conversions</span>
+            </h1>
+            
+            {/* Subheadline - Updated per Pravin's feedback */}
+            <p className="text-xl sm:text-2xl text-grey-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+              Deploy custom AI agents for your industry — drive leads, engage customers 24/7, and see results in days, not months.
+            </p>
+            
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                <Play className="mr-2 h-5 w-5" />
+                See AI in Action
+              </button>
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
+                Book Free AI Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+            
+            {/* Enhanced Trust Indicators */}
+            <div className="mb-8">
+              <p className="text-sm text-grey-500 mb-4">Trusted by leading brands across industries</p>
+              <div className="flex flex-wrap items-center justify-center gap-8 opacity-80">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">J</span>
+                  </div>
+                  <span className="text-sm font-medium text-grey-600">Jio Haptik Partner</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">V</span>
+                  </div>
+                  <span className="text-sm font-medium text-grey-600">Vibgyor</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-green-600 rounded flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">E</span>
+                  </div>
+                  <span className="text-sm font-medium text-grey-600">Everbright</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-grey-500">
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                Live in 48 hours
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                ROI tracked from Day 1
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                Industry-specific AI
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Quick Stats Section */}
+      <section className="py-16 bg-brand-green-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                5000+
+              </div>
+              <div className="text-green-100">Monthly Leads Handled</div>
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                30%
+              </div>
+              <div className="text-green-100">Boost in Conversions</div>
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                35%
+              </div>
+              <div className="text-green-100">Cost Savings</div>
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                450+
+              </div>
+              <div className="text-green-100">Support Tickets Resolved</div>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/case-studies" className="inline-flex items-center text-white hover:text-green-100 font-medium">
+              See full results
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Magnet Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+                <Download className="w-4 h-4 mr-2" />
+                Free Download
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-grey-900 mb-4">
+                🚀 The 2025 AI Agent Playbook
+              </h2>
+              <p className="text-xl text-grey-600 mb-8">
+                How Top Companies Drive Sales, Save Costs, and Win Customers with AI
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-grey-700">Real metrics from AI implementations</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-grey-700">Actionable AI use cases per industry</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-grey-700">Step-by-step deployment plan</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-grey-700">Bonus: AI ROI calculator link</span>
+                </div>
+              </div>
+            </div>
+            
+            <form onSubmit={handleLeadMagnetSubmit} className="max-w-md mx-auto">
+              <div className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    value={leadMagnetForm.name}
+                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, name: e.target.value})}
+                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Business Email"
+                    value={leadMagnetForm.email}
+                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, email: e.target.value})}
+                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Company (Optional)"
+                    value={leadMagnetForm.company}
+                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, company: e.target.value})}
+                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="WhatsApp (Optional)"
+                    value={leadMagnetForm.whatsapp}
+                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, whatsapp: e.target.value})}
+                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  ✅ Get My Free AI Playbook Now
+                </button>
+              </div>
+            </form>
+            
+            <p className="text-center text-sm text-grey-500 mt-6">
+              Trusted by brands across the Middle East — see what AI can do for your business today.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Modern Hero Section */}
       <section className="relative pt-32 pb-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-transparent"></div>
@@ -924,4 +1157,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
