@@ -1,46 +1,14 @@
-
-# EverGrow Digital - Robots.txt
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*?*utm_*
-Disallow: /*?*ref=*
-
-# Specific crawlers
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 5
-
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
-User-agent: LinkedInBot
+User-agent: facebookexternalhit
 Allow: /
 
-# Sitemap location
-Sitemap: https://evergrowdigital.com/sitemap.xml
+User-agent: *
+Allow: /
