@@ -1,60 +1,137 @@
 
 import React from 'react';
-import { CheckCircle, ArrowRight, MessageSquare, BarChart3, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { MessageSquare, ArrowRight, CheckCircle, Zap, Users, BarChart3, Bot, Phone, Calendar, ShoppingCart, Target, Play, Star, TrendingUp, Shield, Globe, Languages, Headphones } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
 const WhatsApp = () => {
   const features = [
     {
-      title: 'Rich Media Support',
-      description: 'Send images, videos, documents, and interactive buttons to create engaging conversations.'
+      icon: MessageSquare,
+      title: "WhatsApp Business API",
+      description: "Official WhatsApp Business API integration with advanced automation capabilities",
+      benefits: ["Verified business profile", "Rich media support", "Template messages", "Webhook integration"]
     },
     {
-      title: 'Business API Integration',
-      description: 'Fully integrated with WhatsApp Business API for enterprise-grade messaging.'
+      icon: Bot,
+      title: "AI-Powered Responses",
+      description: "Intelligent chatbots that understand context and provide human-like responses",
+      benefits: ["Natural language processing", "Context awareness", "Multi-turn conversations", "Smart escalation"]
     },
     {
-      title: 'Template Messages',
-      description: 'Pre-approved message templates for notifications, confirmations, and updates.'
+      icon: Zap,
+      title: "Instant Automation",
+      description: "Automate customer support, sales inquiries, and booking processes",
+      benefits: ["24/7 availability", "Instant responses", "Lead qualification", "Appointment booking"]
     },
     {
-      title: 'End-to-End Encryption',
-      description: 'All messages are encrypted to ensure customer data privacy and security.'
+      icon: BarChart3,
+      title: "Advanced Analytics",
+      description: "Track performance, measure ROI, and optimize your WhatsApp strategy",
+      benefits: ["Message analytics", "Conversion tracking", "Customer insights", "Performance reports"]
     }
   ];
 
   const useCases = [
     {
-      title: 'Customer Support',
-      description: 'Handle customer inquiries, complaints, and support tickets automatically.',
-      icon: MessageSquare
+      icon: ShoppingCart,
+      title: "E-commerce Sales",
+      description: "Product catalogs, order tracking, and customer support",
+      image: "https://www.haptik.ai/hs-fs/hubfs/02SalesAgent.gif?width=1815&height=666&name=02SalesAgent.gif",
+      results: "40% increase in sales conversions"
     },
     {
-      title: 'Order Management',
-      description: 'Process orders, send confirmations, and provide delivery updates.',
-      icon: BarChart3
+      icon: Calendar,
+      title: "Appointment Booking",
+      description: "Automated scheduling for restaurants, salons, and clinics",
+      image: "https://www.haptik.ai/hs-fs/hubfs/03BookingAgent.gif?width=1815&height=666&name=03BookingAgent.gif",
+      results: "80% booking automation rate"
     },
     {
-      title: 'Lead Qualification',
-      description: 'Qualify leads and schedule appointments with potential customers.',
-      icon: Shield
+      icon: Headphones,
+      title: "Customer Support",
+      description: "24/7 support with intelligent query resolution",
+      image: "https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif",
+      results: "95% first-contact resolution"
     },
     {
-      title: 'Payment Processing',
-      description: 'Secure payment collection and transaction confirmations.',
-      icon: Zap
+      icon: Target,
+      title: "Lead Generation",
+      description: "Qualify leads and nurture prospects automatically",
+      image: "https://www.haptik.ai/hs-fs/hubfs/04%20Lead%20Qualification%20Agent.gif?width=1815&height=666&name=04%20Lead%20Qualification%20Agent.gif",
+      results: "60% more qualified leads"
     }
   ];
 
-  const benefits = [
-    '2 billion active users worldwide',
-    '98% message open rate',
-    '45% higher engagement than email',
-    'Available in 180+ countries',
-    'Instant message delivery',
-    'Rich media support'
+  const testimonials = [
+    {
+      quote: "Our WhatsApp bot handles 5000+ customer inquiries monthly, saving our team 40 hours per week while improving response times.",
+      author: "Ahmed Al-Rashid",
+      role: "Customer Success Manager",
+      company: "Dubai Retail Co.",
+      metric: "5000+ monthly inquiries"
+    },
+    {
+      quote: "WhatsApp automation increased our restaurant bookings by 75%. Customers love the instant confirmation and reminders.",
+      author: "Priya Sharma", 
+      role: "Operations Manager",
+      company: "Spice Garden Restaurant",
+      metric: "75% booking increase"
+    },
+    {
+      quote: "The multilingual support in Arabic and English helped us reach 30% more customers across the UAE market.",
+      author: "Omar Hassan",
+      role: "Digital Marketing Director", 
+      company: "Gulf Properties",
+      metric: "30% market expansion"
+    }
+  ];
+
+  const integrations = [
+    {
+      name: "WhatsApp Business API",
+      description: "Official API with full feature access",
+      logo: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=64&h=64&fit=crop&crop=center"
+    },
+    {
+      name: "Meta Business",
+      description: "Integrated with Facebook ecosystem", 
+      logo: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=64&h=64&fit=crop&crop=center"
+    },
+    {
+      name: "CRM Integration",
+      description: "Sync with Salesforce, HubSpot, Zoho",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=64&h=64&fit=crop&crop=center"
+    },
+    {
+      name: "Payment Gateways",
+      description: "Process payments within WhatsApp",
+      logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=64&h=64&fit=crop&crop=center"
+    }
+  ];
+
+  const capabilities = [
+    {
+      icon: Globe,
+      title: "Multi-language Support",
+      description: "Arabic, English, Hindi, and 100+ languages supported"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security", 
+      description: "End-to-end encryption and GDPR compliance"
+    },
+    {
+      icon: Phone,
+      title: "Voice Integration",
+      description: "Seamless handoff to voice calls when needed"
+    },
+    {
+      icon: TrendingUp,
+      title: "Scalable Infrastructure",
+      description: "Handle thousands of concurrent conversations"
+    }
   ];
 
   return (
@@ -62,158 +139,315 @@ const WhatsApp = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-white to-blue-50 py-20">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-green-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  WhatsApp AI Bot
-                  <span className="text-green-600"> Solutions</span>
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Connect with 2 billion WhatsApp users worldwide. Automate customer support, sales, and bookings with AI-powered chatbots that feel naturally human.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  Try WhatsApp Bot
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <button className="border-2 border-green-600 hover:bg-green-50 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center transition-all duration-300">
-                  <MessageSquare className="mr-2 h-5 w-5" />
-                  Live Demo
-                </button>
-              </div>
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 rounded-full text-green-600 text-sm font-medium mb-8">
+              <MessageSquare className="w-4 h-4 mr-2" />
+              WhatsApp Business API Certified
             </div>
-
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-6">
-                <div className="bg-green-500 text-white p-4 rounded-t-xl flex items-center">
-                  <MessageSquare className="h-6 w-6 mr-3" />
-                  <div>
-                    <h3 className="font-semibold">Customer Support Bot</h3>
-                    <p className="text-sm opacity-90">Online now</p>
-                  </div>
-                </div>
-                <div className="p-4 space-y-4">
-                  <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm text-gray-800">Hi! I need help with my order #12345</p>
-                  </div>
-                  <div className="bg-green-100 rounded-lg p-3 max-w-xs ml-auto">
-                    <p className="text-sm text-gray-800">I'd be happy to help! Let me check your order status...</p>
-                  </div>
-                  <div className="bg-green-100 rounded-lg p-3 max-w-xs ml-auto">
-                    <p className="text-sm text-gray-800">Great news! Your order is being prepared and will be shipped today. You'll receive tracking info shortly.</p>
-                  </div>
-                  <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm text-gray-800">Perfect! Thank you so much! 👍</p>
-                  </div>
-                </div>
+            
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+              <span className="text-grey-900">Transform Your</span>
+              <br />
+              <span className="text-green-500">WhatsApp</span>
+              <br />
+              <span className="text-grey-900">Into a Sales Machine</span>
+            </h1>
+            
+            <p className="text-xl sm:text-2xl text-grey-600 mb-12 leading-relaxed">
+              Deploy intelligent WhatsApp bots that handle customer inquiries, process orders, and book appointments 24/7 across the Middle East.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button className="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                <Play className="mr-2 h-5 w-5" />
+                See WhatsApp Bot Demo
+              </button>
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
+                Get WhatsApp Bot
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+            
+            <div className="flex items-center justify-center gap-6 text-sm text-grey-500">
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                Official WhatsApp Partner
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                Arabic & English Support
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                UAE Compliance Ready
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
+      {/* Quick Stats */}
+      <section className="py-16 bg-green-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">5000+</div>
+              <div className="text-green-100">Monthly WhatsApp Leads</div>
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">85%</div>
+              <div className="text-green-100">Response Rate</div> 
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-green-100">Availability</div>
+            </div>
+            <div className="text-white">
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">40%</div>
+              <div className="text-green-100">Cost Reduction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Features */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              WhatsApp Bot Features
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              WhatsApp Automation Features
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Enterprise-grade WhatsApp automation with advanced AI capabilities
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Everything you need to turn WhatsApp into your most powerful sales and support channel
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-green-500/30 group">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-green-500/10 rounded-xl group-hover:bg-green-500/20 transition-colors duration-300">
+                    <feature.icon className="h-8 w-8 text-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-grey-900 ml-4 group-hover:text-green-600 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                </div>
+                
+                <p className="text-grey-600 mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                <div className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-grey-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Use Cases */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              WhatsApp Bot Use Cases
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              WhatsApp Success Stories
             </h2>
-            <p className="text-xl text-gray-600">
-              Transform every aspect of your customer communication
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              See how businesses across the UAE are using WhatsApp automation to drive results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-green-500/30 group">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-green-500/10 rounded-xl">
+                    <useCase.icon className="h-8 w-8 text-green-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-grey-900 group-hover:text-green-600 transition-colors duration-300">
+                      {useCase.title}
+                    </h3>
+                    <div className="text-green-500 font-semibold text-sm">
+                      {useCase.results}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img src={useCase.image} alt={useCase.title} className="w-full rounded-lg" />
+                </div>
+                
+                <p className="text-grey-600 leading-relaxed">
+                  {useCase.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Advanced WhatsApp Capabilities
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Enterprise-grade features designed for the Middle East market
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="p-4 bg-green-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <useCase.icon className="h-8 w-8 text-green-600" />
+            {capabilities.map((capability, index) => (
+              <div key={index} className="text-center group">
+                <div className="p-6 bg-green-500/10 rounded-2xl mb-6 group-hover:bg-green-500/20 transition-colors duration-300 inline-block">
+                  <capability.icon className="h-12 w-12 text-green-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase.title}</h3>
-                <p className="text-gray-600 text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-bold text-grey-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+                  {capability.title}
+                </h3>
+                <p className="text-grey-600">
+                  {capability.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      {/* Integrations */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose WhatsApp for Business?
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                WhatsApp is the world's most popular messaging platform with unmatched reach and engagement rates.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Seamless integrations
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Connect with your existing tools and workflows
+            </p>
+          </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h3>
-                <div className="space-y-4">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <div className="text-3xl font-bold text-green-600">24 hours</div>
-                    <div className="text-sm text-gray-600">Setup time</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-green-500/30 text-center group">
+                <div className="w-16 h-16 bg-grey-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/10 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-green-500 rounded"></div>
+                </div>
+                <h3 className="text-lg font-bold text-grey-900 mb-2 group-hover:text-green-600 transition-colors duration-300">
+                  {integration.name}
+                </h3>
+                <p className="text-grey-600 text-sm">
+                  {integration.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              UAE Success Stories
+            </h2>
+            <p className="text-xl text-grey-600">
+              Real results from businesses across the Emirates
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-grey-200 hover:border-green-500/30">
+                <div className="text-2xl font-bold text-green-500 mb-4">
+                  {testimonial.metric}
+                </div>
+                <blockquote className="text-grey-700 text-lg mb-6 leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-green-500" />
                   </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <div className="text-3xl font-bold text-green-600">98%</div>
-                    <div className="text-sm text-gray-600">Message open rate</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <div className="text-3xl font-bold text-green-600">60%</div>
-                    <div className="text-sm text-gray-600">Cost reduction</div>
+                  <div className="ml-4">
+                    <div className="font-semibold text-grey-900">{testimonial.author}</div>
+                    <div className="text-grey-600 text-sm">{testimonial.role}</div>
+                    <div className="text-green-500 text-sm font-medium">{testimonial.company}</div>
                   </div>
                 </div>
-                <Link
-                  to="/contact"
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center justify-center mt-6 w-full transition-colors"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Try WhatsApp AI in Action
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Experience how our WhatsApp bots handle real customer conversations
+            </p>
+          </div>
+          
+          <div className="relative max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Interactive WhatsApp Demo</h3>
+                  <p className="text-green-100 mb-6">
+                    Chat with our AI bot to see how it handles inquiries, qualifies leads, and books appointments - all within WhatsApp.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href="https://wa.me/971123456789?text=Hi, I'd like to see your WhatsApp AI demo" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-white text-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300"
+                    >
+                      <MessageSquare className="mr-2 h-5 w-5" />
+                      Chat Demo Bot
+                    </a>
+                    <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-green-500 font-semibold rounded-lg transition-colors duration-300">
+                      Book Live Demo
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
+                
+                <div className="relative">
+                  <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="space-y-4">
+                      <div className="bg-white/20 rounded-lg p-3">
+                        <div className="text-sm text-green-100">Customer:</div>
+                        <div className="text-white">"Hi, I need help with my order"</div>
+                      </div>
+                      <div className="bg-green-400/30 rounded-lg p-3">
+                        <div className="text-sm text-green-100">AI Bot:</div>
+                        <div className="text-white">"I'd be happy to help! Can you share your order number?"</div>
+                      </div>
+                      <div className="text-center text-green-100 text-sm">
+                        <Play className="h-4 w-4 inline mr-2" />
+                        Try it live →
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -221,30 +455,22 @@ const WhatsApp = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className="py-24 bg-gradient-to-r from-green-500 to-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Start Your WhatsApp AI Bot Today
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your WhatsApp?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of businesses using WhatsApp bots to automate customer service, increase sales, and improve customer satisfaction.
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            Join thousands of UAE businesses using WhatsApp automation to boost sales and improve customer service
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center transition-all duration-300 hover:scale-105"
-            >
-              Get Free WhatsApp Bot Audit
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+              Get WhatsApp Bot
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-white hover:bg-white hover:text-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center transition-all duration-300 hover:scale-105"
-            >
+            <a href="https://wa.me/971123456789" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
               <MessageSquare className="mr-2 h-5 w-5" />
-              Chat Now
+              Chat with Expert
             </a>
           </div>
         </div>

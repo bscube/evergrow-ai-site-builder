@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { MessageSquare, Phone, Mail, MapPin, Calendar, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,54 +8,202 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     company: '',
-    industry: '',
+    phone: '',
     message: '',
-    preferredChannel: ''
+    industry: '',
+    projectType: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
-    alert('Thank you! We\'ll contact you within 24 hours to schedule your free AI audit.');
-  };
+  const benefits = [
+    {
+      icon: Clock,
+      title: "48-Hour Deployment",
+      description: "Get your AI agent live and converting leads in just 2 days"
+    },
+    {
+      icon: BarChart3,
+      title: "ROI Guaranteed",
+      description: "Track measurable results from day one with detailed analytics"
+    },
+    {
+      icon: Bot,
+      title: "Industry-Specific AI",
+      description: "Custom-trained agents that understand your business context"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "SOC 2 compliant with bank-grade security and encryption"
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "EverGrow's AI agent increased our lead conversion by 65% in the first month. The setup was incredibly smooth.",
+      author: "Sarah Chen",
+      role: "Head of Digital Marketing",
+      company: "RetailPlus",
+      rating: 5
+    },
+    {
+      quote: "We're now handling 80% of customer inquiries automatically while maintaining high satisfaction scores.",
+      author: "Marcus Rodriguez", 
+      role: "Operations Director",
+      company: "TravelEase",
+      rating: 5
+    },
+    {
+      quote: "The WhatsApp integration alone saved us 15 hours per week in customer support time.",
+      author: "Emily Watson",
+      role: "Customer Success Lead", 
+      company: "FinanceForward",
+      rating: 5
+    }
+  ];
+
+  const contactMethods = [
+    {
+      icon: MessageSquare,
+      title: "WhatsApp",
+      description: "Chat with our AI specialist instantly",
+      action: "Chat Now",
+      link: "https://wa.me/971123456789",
+      highlight: true
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      description: "Speak with our team directly",
+      action: "Call Now",
+      link: "tel:+971123456789"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      description: "Send us your requirements",
+      action: "Email Us",
+      link: "mailto:hello@evergrowdigital.com"
+    },
+    {
+      icon: Calendar,
+      title: "Schedule Call",
+      description: "Book a convenient time slot",
+      action: "Book Meeting",
+      link: "#"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Book Your Free AI Audit
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how AI chatbots can transform your customer experience. Get personalized recommendations for your industry and use case.
-          </p>
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-brand-green-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Free AI Consultation Available
+            </div>
+            
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-8">
+              <span className="text-grey-900">Ready to Transform Your</span>
+              <br />
+              <span className="text-brand-green-500">Customer Experience?</span>
+            </h1>
+            
+            <p className="text-xl text-grey-600 mb-12 leading-relaxed">
+              Get a free AI audit and discover exactly how our agents will boost your conversions. 
+              No commitments, just actionable insights.
+            </p>
+            
+            <div className="flex items-center justify-center gap-6 text-sm text-grey-500 mb-8">
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                Free consultation
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                48-hour deployment
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
+                ROI guarantee
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-20">
+      {/* Contact Methods */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactMethods.map((method, index) => (
+              <a
+                key={index}
+                href={method.link}
+                className={`group p-6 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  method.highlight 
+                    ? 'border-brand-green-500 bg-brand-green-500/5 hover:bg-brand-green-500/10' 
+                    : 'border-grey-200 bg-white hover:border-brand-green-500/30'
+                }`}
+              >
+                <div className={`p-3 rounded-lg mb-4 ${
+                  method.highlight ? 'bg-brand-green-500/10' : 'bg-grey-100 group-hover:bg-brand-green-500/10'
+                }`}>
+                  <method.icon className={`h-6 w-6 ${
+                    method.highlight ? 'text-brand-green-500' : 'text-grey-600 group-hover:text-brand-green-500'
+                  }`} />
+                </div>
+                <h3 className="text-lg font-bold text-grey-900 mb-2">{method.title}</h3>
+                <p className="text-grey-600 mb-4 text-sm">{method.description}</p>
+                <div className={`inline-flex items-center text-sm font-medium ${
+                  method.highlight ? 'text-brand-green-500' : 'text-grey-600 group-hover:text-brand-green-500'
+                }`}>
+                  {method.action}
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today</h2>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-grey-900 mb-4">
+                  Get Your Free AI Consultation
+                </h2>
+                <p className="text-grey-600">
+                  Tell us about your business and we'll show you exactly how AI agents can boost your results.
+                </p>
+              </div>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-grey-700 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -64,14 +212,15 @@ const Contact = () => {
                       name="name"
                       required
                       value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
+                  
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                    <label htmlFor="email" className="block text-sm font-medium text-grey-700 mb-2">
+                      Business Email *
                     </label>
                     <input
                       type="email"
@@ -79,16 +228,32 @@ const Contact = () => {
                       name="email"
                       required
                       value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="your@email.com"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
+                      placeholder="your@company.com"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-grey-700 mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      required
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
+                      placeholder="Your company"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-grey-700 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -96,174 +261,209 @@ const Contact = () => {
                       id="phone"
                       name="phone"
                       value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="Your company"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
+                      placeholder="+971 XX XXX XXXX"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="industry" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="industry" className="block text-sm font-medium text-grey-700 mb-2">
                       Industry
                     </label>
                     <select
                       id="industry"
                       name="industry"
                       value={formData.industry}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
                     >
                       <option value="">Select your industry</option>
-                      <option value="retail">Retail</option>
-                      <option value="travel">Travel</option>
-                      <option value="fintech">Fintech</option>
-                      <option value="edtech">Ed Tech</option>
+                      <option value="retail">Retail & E-commerce</option>
+                      <option value="realestate">Real Estate</option>
+                      <option value="travel">Travel & Tourism</option>
+                      <option value="fintech">Fintech & Banking</option>
                       <option value="healthcare">Healthcare</option>
+                      <option value="education">Education</option>
                       <option value="media">Media & Entertainment</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
+                  
                   <div>
-                    <label htmlFor="preferredChannel" className="block text-sm font-medium text-gray-700 mb-2">
-                      Preferred Channel
+                    <label htmlFor="projectType" className="block text-sm font-medium text-grey-700 mb-2">
+                      Project Type
                     </label>
                     <select
-                      id="preferredChannel"
-                      name="preferredChannel"
-                      value={formData.preferredChannel}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      id="projectType"
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
                     >
-                      <option value="">Select preferred channel</option>
-                      <option value="whatsapp">WhatsApp</option>
-                      <option value="rcs">RCS Business Messaging</option>
-                      <option value="instagram">Instagram Direct</option>
-                      <option value="facebook">Facebook Messenger</option>
-                      <option value="web">Web Chat</option>
-                      <option value="multiple">Multiple Channels</option>
+                      <option value="">What do you need?</option>
+                      <option value="sales-agent">AI Sales Agent</option>
+                      <option value="support-agent">AI Support Agent</option>
+                      <option value="booking-agent">AI Booking Agent</option>
+                      <option value="lead-qualification">Lead Qualification</option>
+                      <option value="voice-agent">Voice AI Agent</option>
+                      <option value="custom">Custom Solution</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell us about your needs
+                  <label htmlFor="message" className="block text-sm font-medium text-grey-700 mb-2">
+                    Tell us about your project
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
                     value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="Describe your current customer service challenges and what you'd like to achieve with AI chatbots..."
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
+                    placeholder="Describe your current challenges and what you'd like to achieve with AI agents..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
                 >
-                  Book Free AI Audit
+                  Get Free AI Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
 
-                <p className="text-sm text-gray-500 text-center">
-                  By submitting this form, you agree to our privacy policy and terms of service.
+                <p className="text-sm text-grey-500 text-center">
+                  We'll respond within 2 hours during business hours
                 </p>
               </form>
             </div>
 
-            {/* Contact Info */}
+            {/* Benefits & Testimonials */}
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+              
+              {/* Why Choose Us */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-grey-900 mb-6">Why Choose EverGrow Digital?</h3>
+                
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-blue-600 mr-4 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Email Us</h4>
-                      <p className="text-gray-600">hello@evergrowdigital.com</p>
-                      <p className="text-sm text-gray-500">We'll respond within 2 hours</p>
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="p-3 bg-brand-green-500/10 rounded-lg mr-4 flex-shrink-0">
+                        <benefit.icon className="h-6 w-6 text-brand-green-500" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-grey-900 mb-2">{benefit.title}</h4>
+                        <p className="text-grey-600">{benefit.description}</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-blue-600 mr-4 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Call Us</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
-                      <p className="text-sm text-gray-500">Mon-Fri, 9am-6pm EST</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-blue-600 mr-4 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Visit Us</h4>
-                      <p className="text-gray-600">123 Business Ave<br />Tech City, TC 12345</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-blue-600 mr-4 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Response Time</h4>
-                      <p className="text-gray-600">Free audit within 24 hours</p>
-                      <p className="text-sm text-gray-500">Setup completed in 48 hours</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">What to Expect</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <span className="text-blue-600 font-bold text-sm">1</span>
+              {/* Testimonials */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-grey-900 mb-6">What Our Clients Say</h3>
+                
+                <div className="space-y-6">
+                  {testimonials.map((testimonial, index) => (
+                    <div key={index} className="border-l-4 border-brand-green-500 pl-6">
+                      <div className="flex items-center mb-2">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                      <blockquote className="text-grey-700 mb-3 italic">
+                        "{testimonial.quote}"
+                      </blockquote>
+                      <div>
+                        <div className="font-semibold text-grey-900">{testimonial.author}</div>
+                        <div className="text-sm text-grey-600">{testimonial.role}</div>
+                        <div className="text-sm text-brand-green-500 font-medium">{testimonial.company}</div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Discovery Call</h4>
-                      <p className="text-sm text-gray-600">15-minute call to understand your needs</p>
-                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="bg-gradient-to-r from-brand-green-500 to-brand-green-600 rounded-2xl p-8 text-white">
+                <h3 className="text-xl font-bold mb-6">Proven Results</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">5000+</div>
+                    <div className="text-green-100 text-sm">Monthly Leads</div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <span className="text-blue-600 font-bold text-sm">2</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">AI Audit Report</h4>
-                      <p className="text-sm text-gray-600">Customized recommendations for your industry</p>
-                    </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">30%</div>
+                    <div className="text-green-100 text-sm">Conversion Boost</div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <span className="text-blue-600 font-bold text-sm">3</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Live Demo</h4>
-                      <p className="text-sm text-gray-600">See your AI bot in action with real scenarios</p>
-                    </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">48hrs</div>
+                    <div className="text-green-100 text-sm">Go Live Time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">35%</div>
+                    <div className="text-green-100 text-sm">Cost Savings</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Office Info */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-6">Visit Our Office</h3>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <MapPin className="h-6 w-6 text-brand-green-500 mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium text-grey-900">Dubai Office</div>
+                    <div className="text-grey-600">Business Bay, Dubai, UAE</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <div className="text-grey-600">+971 123 456 789</div>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-6 w-6 text-brand-green-500 mr-3 flex-shrink-0" />
+                  <div className="text-grey-600">hello@evergrowdigital.com</div>
+                </div>
+              </div>
+              
+              <div className="bg-grey-50 rounded-lg p-6">
+                <h4 className="font-bold text-grey-900 mb-4">Business Hours</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-grey-600">Monday - Friday</span>
+                    <span className="text-grey-900 font-medium">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-grey-600">Saturday</span>
+                    <span className="text-grey-900 font-medium">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-grey-600">Sunday</span>
+                    <span className="text-grey-900 font-medium">Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-grey-100 rounded-2xl h-64 lg:h-auto flex items-center justify-center">
+              <div className="text-center text-grey-500">
+                <MapPin className="h-12 w-12 mx-auto mb-4" />
+                <p>Interactive Map Coming Soon</p>
               </div>
             </div>
           </div>
