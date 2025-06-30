@@ -1,25 +1,13 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake, Download } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import FloatingCTA from '../components/FloatingCTA';
 import Footer from '../components/Footer';
 
 const Index = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-  const [leadMagnetForm, setLeadMagnetForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    whatsapp: ''
-  });
-
-  const handleLeadMagnetSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Lead magnet form submitted:', leadMagnetForm);
-    // You can add actual form submission logic here
-  };
 
   const stats = [{
     number: '500+',
@@ -305,151 +293,6 @@ const Index = () => {
               See full results
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead Magnet Section */}
-      <section className="py-24 bg-grey-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
-                <Download className="w-4 h-4 mr-2" />
-                Free Download
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-grey-900 mb-4">
-                🚀 The 2025 AI Agent Playbook
-              </h2>
-              <p className="text-xl text-grey-600 mb-8">
-                How Top Companies Drive Sales, Save Costs, and Win Customers with AI
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left">
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-grey-700">Real metrics from AI implementations</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-grey-700">Actionable AI use cases per industry</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-grey-700">Step-by-step deployment plan</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-grey-700">Bonus: AI ROI calculator link</span>
-                </div>
-              </div>
-            </div>
-            
-            <form onSubmit={handleLeadMagnetSubmit} className="max-w-md mx-auto">
-              <div className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    value={leadMagnetForm.name}
-                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, name: e.target.value})}
-                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Business Email"
-                    value={leadMagnetForm.email}
-                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, email: e.target.value})}
-                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Company (Optional)"
-                    value={leadMagnetForm.company}
-                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, company: e.target.value})}
-                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="WhatsApp (Optional)"
-                    value={leadMagnetForm.whatsapp}
-                    onChange={(e) => setLeadMagnetForm({...leadMagnetForm, whatsapp: e.target.value})}
-                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  ✅ Get My Free AI Playbook Now
-                </button>
-              </div>
-            </form>
-            
-            <p className="text-center text-sm text-grey-500 mt-6">
-              Trusted by brands across the Middle East — see what AI can do for your business today.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Modern Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-transparent"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI Voice & Chat Agents for Every Channel & Industry
-            </div>
-            
-            {/* Main Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
-              <span className="text-grey-900">Transform Every</span>
-              <br />
-              <span className="text-brand-green-500">Customer Touchpoint</span>
-            </h1>
-            
-            {/* Subheadline */}
-            <p className="text-xl sm:text-2xl text-grey-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Deploy AI voice and chat agents across phone, WhatsApp, website, and social media. Handle 80% of inquiries automatically while delighting customers 24/7.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                Book Free AI Audit
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </button>
-            </div>
-            
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-grey-500">
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
-                No setup fees
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
-                30-day free trial
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
-                Cancel anytime
-              </div>
-            </div>
           </div>
         </div>
       </section>
