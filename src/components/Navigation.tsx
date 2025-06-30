@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,32 +15,50 @@ const Navigation = () => {
 
   const channels = [
     { 
-      name: 'AI Voice Agents', 
-      path: '/channels/voice-agents', 
-      icon: Mic,
-      benefit: 'Phone automation with natural voice AI'
+      name: 'AI Support Agent', 
+      path: '/ai-agents/support', 
+      icon: Headphones,
+      benefit: 'Streamline support without pre-built journeys'
     },
     { 
-      name: 'WhatsApp', 
+      name: 'AI Sales Agent', 
+      path: '/ai-agents/sales', 
+      icon: Target,
+      benefit: 'Convert prospects into customers automatically'
+    },
+    { 
+      name: 'AI Booking Agent', 
+      path: '/ai-agents/booking', 
+      icon: Calendar,
+      benefit: 'Automate scheduling and appointment management'
+    },
+    { 
+      name: 'AI Lead Qualification', 
+      path: '/ai-agents/lead-qualification', 
+      icon: Target,
+      benefit: 'Identify and qualify high-value prospects'
+    },
+    { 
+      name: 'WhatsApp Enterprise', 
       path: '/channels/whatsapp', 
       icon: MessageSquare,
       benefit: 'Reach 2B+ users with rich media & quick replies'
     },
     { 
       name: 'Website Chat', 
-      path: '/channels/web', 
+      path: '/channels/website-chatbot', 
       icon: Zap,
       benefit: 'Instant support on your website & mobile app'
     },
     { 
       name: 'Facebook Messenger', 
-      path: '/channels/facebook-messenger', 
+      path: '/channels/facebook-chatbot', 
       icon: MessageSquare,
       benefit: 'Social selling with 1.3B active users'
     },
     { 
       name: 'Instagram Direct', 
-      path: '/channels/instagram-direct', 
+      path: '/channels/instagram-chatbots', 
       icon: Users,
       benefit: 'Visual commerce & story-driven conversations'
     },
@@ -53,8 +72,8 @@ const Navigation = () => {
       benefit: 'Product discovery, orders & customer service'
     },
     { 
-      name: 'Travel', 
-      path: '/industries/travel', 
+      name: 'Travel & Hospitality', 
+      path: '/industries/travel-and-hospitality', 
       icon: Plane,
       benefit: 'Bookings, itineraries & real-time updates'
     },
@@ -65,8 +84,8 @@ const Navigation = () => {
       benefit: 'Account queries, payments & compliance'
     },
     { 
-      name: 'Ed Tech', 
-      path: '/industries/edtech', 
+      name: 'Education', 
+      path: '/industries/education', 
       icon: GraduationCap,
       benefit: 'Course enrollment, support & engagement'
     },
@@ -164,12 +183,6 @@ const Navigation = () => {
             </div>
 
             <Link
-              to="/ai-bots"
-              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
-            >
-              AI Bots
-            </Link>
-            <Link
               to="/resources"
               className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
             >
@@ -256,13 +269,6 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link
-              to="/ai-bots"
-              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              AI Bots
-            </Link>
             <Link
               to="/resources"
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
