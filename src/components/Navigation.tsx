@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Navigation = () => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  const channels = [
+  const aiAgents = [
     { 
       name: 'AI Support Agent', 
       path: '/ai-agents/support', 
@@ -38,16 +38,13 @@ const Navigation = () => {
       icon: Target,
       benefit: 'Identify and qualify high-value prospects'
     },
-    { 
-      name: 'WhatsApp Enterprise', 
-      path: '/channels/whatsapp', 
-      icon: MessageSquare,
-      benefit: 'Reach 2B+ users with rich media & quick replies'
-    },
+  ];
+
+  const channels = [
     { 
       name: 'Website Chat', 
       path: '/channels/website-chatbot', 
-      icon: Zap,
+      icon: Globe,
       benefit: 'Instant support on your website & mobile app'
     },
     { 
@@ -61,6 +58,12 @@ const Navigation = () => {
       path: '/channels/instagram-chatbots', 
       icon: Users,
       benefit: 'Visual commerce & story-driven conversations'
+    },
+    { 
+      name: 'WhatsApp', 
+      path: '/channels/whatsapp', 
+      icon: MessageSquare,
+      benefit: 'Reach 2B+ users with rich media & quick replies'
     },
   ];
 
@@ -116,6 +119,39 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <div className="relative group">
+              <button 
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                onClick={() => handleDropdown('ai-agents')}
+                aria-label="AI Agents menu"
+              >
+                AI Agents
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {activeDropdown === 'ai-agents' && (
+                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-md shadow-xl border z-50">
+                  <div className="py-4">
+                    <div className="grid grid-cols-1 gap-1">
+                      {aiAgents.map((agent) => (
+                        <Link
+                          key={agent.name}
+                          to={agent.path}
+                          className="flex items-start px-6 py-4 text-sm hover:bg-grey-50 transition-colors duration-250"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          <agent.icon className="mr-4 h-5 w-5 text-brand-green-500 mt-0.5" />
+                          <div>
+                            <div className="font-semibold text-grey-900 mb-1">{agent.name}</div>
+                            <div className="text-grey-500 text-xs">{agent.benefit}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="relative group">
               <button 
                 className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
@@ -219,6 +255,31 @@ const Navigation = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="space-y-1">
+              <button
+                onClick={() => handleDropdown('ai-agents-mobile')}
+                className="w-full flex items-center justify-between text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-base font-medium"
+              >
+                AI Agents
+                <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'ai-agents-mobile' ? 'rotate-180' : ''}`} />
+              </button>
+              {activeDropdown === 'ai-agents-mobile' && (
+                <div className="pl-4 space-y-1">
+                  {aiAgents.map((agent) => (
+                    <Link
+                      key={agent.name}
+                      to={agent.path}
+                      className="flex items-center text-grey-600 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <agent.icon className="mr-3 h-4 w-4" />
+                      {agent.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <div className="space-y-1">
               <button
                 onClick={() => handleDropdown('channels-mobile')}

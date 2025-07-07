@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,39 +18,55 @@ const Footer = () => {
               Transforming customer experiences with AI-powered chatbots across every channel and industry.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-grey-500 hover:text-brand-green-500 transition-colors" aria-label="LinkedIn">
+              <a 
+                href="https://www.linkedin.com/company/evergrow-digital" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-grey-500 hover:text-brand-green-500 transition-colors" 
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-grey-500 hover:text-brand-green-500 transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
+              <a 
+                href="https://www.instagram.com/evergrowdigital/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-grey-500 hover:text-brand-green-500 transition-colors" 
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-grey-500 hover:text-brand-green-500 transition-colors" aria-label="Facebook">
+              <a 
+                href="https://www.facebook.com/evergrowdigital/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-grey-500 hover:text-brand-green-500 transition-colors" 
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
+          </div>
+
+          {/* AI Agents */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">AI Agents</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ai-agents/support" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Support Agent</Link></li>
+              <li><Link to="/ai-agents/sales" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Sales Agent</Link></li>
+              <li><Link to="/ai-agents/booking" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Booking Agent</Link></li>
+              <li><Link to="/ai-agents/lead-qualification" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Lead Qualification</Link></li>
+            </ul>
           </div>
 
           {/* Channels */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Channels</h3>
             <ul className="space-y-2 text-sm">
+              <li><Link to="/channels/website-chatbot" className="text-grey-300 hover:text-brand-green-500 transition-colors">Website Chat</Link></li>
               <li><Link to="/channels/whatsapp" className="text-grey-300 hover:text-brand-green-500 transition-colors">WhatsApp</Link></li>
-              <li><Link to="/channels/rcs-business-messaging" className="text-grey-300 hover:text-brand-green-500 transition-colors">RCS Business Messaging</Link></li>
-              <li><Link to="/channels/instagram-direct" className="text-grey-300 hover:text-brand-green-500 transition-colors">Instagram Direct</Link></li>
-              <li><Link to="/channels/facebook-messenger" className="text-grey-300 hover:text-brand-green-500 transition-colors">Facebook Messenger</Link></li>
-              <li><Link to="/channels/web" className="text-grey-300 hover:text-brand-green-500 transition-colors">Web Chat</Link></li>
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Industries</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/industries/retail" className="text-grey-300 hover:text-brand-green-500 transition-colors">Retail</Link></li>
-              <li><Link to="/industries/travel" className="text-grey-300 hover:text-brand-green-500 transition-colors">Travel</Link></li>
-              <li><Link to="/industries/fintech" className="text-grey-300 hover:text-brand-green-500 transition-colors">Fintech</Link></li>
-              <li><Link to="/industries/edtech" className="text-grey-300 hover:text-brand-green-500 transition-colors">Ed Tech</Link></li>
-              <li><Link to="/industries/healthcare" className="text-grey-300 hover:text-brand-green-500 transition-colors">Healthcare</Link></li>
+              <li><Link to="/channels/instagram-chatbots" className="text-grey-300 hover:text-brand-green-500 transition-colors">Instagram Direct</Link></li>
+              <li><Link to="/channels/facebook-chatbot" className="text-grey-300 hover:text-brand-green-500 transition-colors">Facebook Messenger</Link></li>
             </ul>
           </div>
 
@@ -60,15 +76,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-brand-green-500" />
-                <span className="text-grey-300">hello@evergrowdigital.com</span>
+                <span className="text-grey-300">tellus@evergrowdigital.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-brand-green-500" />
-                <span className="text-grey-300">+1 (555) 123-4567</span>
+                <span className="text-grey-300">+971562432412</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 text-brand-green-500 mt-0.5" />
-                <span className="text-grey-300">123 Business Ave<br />Tech City, TC 12345</span>
+                <span className="text-grey-300">EVERGROW DIGITAL MARKETING<br />MANAGEMENT LLC<br />Al Khaleej Building, Near Karama Park<br />M6. Dubai, UAE</span>
               </div>
             </div>
           </div>
@@ -77,7 +93,7 @@ const Footer = () => {
         <div className="border-t border-grey-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-grey-500">
-              © 2024 EverGrowDigital. All rights reserved.
+              © 2024 EverGrow Digital. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-sm text-grey-500 hover:text-brand-green-500 transition-colors">Privacy Policy</Link>
