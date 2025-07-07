@@ -17,6 +17,13 @@ import Sales from "./pages/ai-agents/Sales";
 import Booking from "./pages/ai-agents/Booking";
 import LeadQualification from "./pages/ai-agents/LeadQualification";
 import Retail from "./pages/industries/Retail";
+import Travel from "./pages/industries/Travel";
+import Fintech from "./pages/industries/Fintech";
+import Education from "./pages/industries/Education";
+import MediaEntertainment from "./pages/industries/MediaEntertainment";
+import Healthcare from "./pages/industries/Healthcare";
+import GenerativeAIEcommerce from "./pages/blog/GenerativeAIEcommerce";
+import AIAgentsBanking from "./pages/blog/AIAgentsBanking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +48,13 @@ const App = () => (
             <Route path="/channels/instagram-chatbots" element={<InstagramChatbot />} />
             <Route path="/channels/website-chatbot" element={<WebsiteChatbot />} />
             <Route path="/industries/retail" element={<Retail />} />
+            <Route path="/industries/travel" element={<Travel />} />
+            <Route path="/industries/fintech" element={<Fintech />} />
+            <Route path="/industries/education" element={<Education />} />
+            <Route path="/industries/media-entertainment" element={<MediaEntertainment />} />
+            <Route path="/industries/healthcare" element={<Healthcare />} />
+            <Route path="/blog/generative-ai-ecommerce-marketing-applications" element={<GenerativeAIEcommerce />} />
+            <Route path="/blog/ai-agents-use-cases-in-banking" element={<AIAgentsBanking />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
