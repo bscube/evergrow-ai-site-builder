@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, CheckCircle, ArrowRight, Star, Users, Zap, Shield, MessageSquare, Phone, BarChart3, ChevronDown, ChevronRight, Bot, Sparkles, Globe, TrendingUp, Mic, Volume2, Headphones, Database, Brain, Languages, UserPlus, ShoppingCart, Calendar, Target, PieChart, LineChart, Settings, Handshake } from 'lucide-react';
@@ -198,8 +197,8 @@ const Index = () => {
               <span className="text-grey-900">That Boost Conversions</span>
             </h1>
             
-            {/* Subheadline - Updated per Pravin's feedback */}
-            <p className="text-xl sm:text-2xl text-grey-600 mb-12 leading-relaxed max-w-3xl mx-auto">
+            {/* Subheadline - Updated color for better readability */}
+            <p className="text-xl sm:text-2xl text-grey-700 mb-12 leading-relaxed max-w-3xl mx-auto">
               Deploy custom AI agents for your industry — drive leads, engage customers 24/7, and see results in days, not months.
             </p>
             
