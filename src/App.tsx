@@ -16,6 +16,7 @@ import Support from "./pages/ai-agents/Support";
 import Sales from "./pages/ai-agents/Sales";
 import Booking from "./pages/ai-agents/Booking";
 import LeadQualification from "./pages/ai-agents/LeadQualification";
+import Retail from "./pages/industries/Retail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/channels/facebook-chatbot" element={<FacebookChatbot />} />
             <Route path="/channels/instagram-chatbots" element={<InstagramChatbot />} />
             <Route path="/channels/website-chatbot" element={<WebsiteChatbot />} />
+            <Route path="/industries/retail" element={<Retail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

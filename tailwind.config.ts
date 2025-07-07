@@ -28,11 +28,12 @@ export default {
 				},
 				'accent-yellow': '#FFC64F',
 				
-				// Greys
+				// Greys - Updated for better readability
 				'grey': {
 					50: '#F9FAFB',
 					300: '#D1D5DB',
 					500: '#6B7280',
+					600: '#4B5563', // Darker for better readability
 					700: '#374151',
 					900: '#111827',
 				},
