@@ -24,6 +24,8 @@ import MediaEntertainment from "./pages/industries/MediaEntertainment";
 import Healthcare from "./pages/industries/Healthcare";
 import GenerativeAIEcommerce from "./pages/blog/GenerativeAIEcommerce";
 import AIAgentsBanking from "./pages/blog/AIAgentsBanking";
+import AIVoiceAgents from "./pages/blog/AIVoiceAgents";
+import AIAgentsVsChatbots from "./pages/blog/AIAgentsVsChatbots";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +57,8 @@ const App = () => (
             <Route path="/industries/healthcare" element={<Healthcare />} />
             <Route path="/blog/generative-ai-ecommerce-marketing-applications" element={<GenerativeAIEcommerce />} />
             <Route path="/blog/ai-agents-use-cases-in-banking" element={<AIAgentsBanking />} />
+            <Route path="/blog/ai-voice-agents-for-customer-experience" element={<AIVoiceAgents />} />
+            <Route path="/blog/ai-agents-vs-traditional-chatbots" element={<AIAgentsVsChatbots />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
