@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe, BookOpen, FileText, Video, Download, HelpCircle } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,7 +76,7 @@ const Navigation = () => {
     },
     { 
       name: 'Travel & Hospitality', 
-      path: '/industries/travel-and-hospitality', 
+      path: '/industries/travel', 
       icon: Plane,
       benefit: 'Bookings, itineraries & real-time updates'
     },
@@ -103,6 +103,57 @@ const Navigation = () => {
       path: '/industries/healthcare', 
       icon: Activity,
       benefit: 'Appointments, reminders & patient care'
+    },
+  ];
+
+  const resources = [
+    { 
+      name: 'Case Studies', 
+      path: '/resources#case-studies', 
+      icon: FileText,
+      benefit: 'Real success stories from our clients'
+    },
+    { 
+      name: 'Knowledge Center', 
+      path: '/resources#guides', 
+      icon: BookOpen,
+      benefit: 'Comprehensive guides and documentation'
+    },
+    { 
+      name: 'Customer Showcase', 
+      path: '/resources#case-studies', 
+      icon: Users,
+      benefit: 'See how businesses transform with AI'
+    },
+    { 
+      name: 'Webinars', 
+      path: '/resources#webinars', 
+      icon: Video,
+      benefit: 'Live demos and expert insights'
+    },
+    { 
+      name: 'Reports & Research', 
+      path: '/resources#guides', 
+      icon: BarChart3,
+      benefit: 'Industry trends and analysis'
+    },
+    { 
+      name: 'Company Blog', 
+      path: '/resources#blog', 
+      icon: BookOpen,
+      benefit: 'Latest AI insights and updates'
+    },
+    { 
+      name: 'Tech Blog', 
+      path: '/resources#blog', 
+      icon: Zap,
+      benefit: 'Technical deep dives and tutorials'
+    },
+    { 
+      name: 'Conversations on AI', 
+      path: '/resources#webinars', 
+      icon: Mic,
+      benefit: 'Thought leadership discussions'
     },
   ];
 
@@ -218,12 +269,39 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link
-              to="/resources"
-              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
-            >
-              Resources
-            </Link>
+            <div className="relative group">
+              <button 
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                onClick={() => handleDropdown('resources')}
+                aria-label="Resources menu"
+              >
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {activeDropdown === 'resources' && (
+                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-md shadow-xl border z-50">
+                  <div className="py-4">
+                    <div className="grid grid-cols-2 gap-1">
+                      {resources.map((resource) => (
+                        <Link
+                          key={resource.name}
+                          to={resource.path}
+                          className="flex items-start px-4 py-3 text-sm hover:bg-grey-50 transition-colors duration-250"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          <resource.icon className="mr-3 h-4 w-4 text-brand-green-500 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-grey-900 mb-1">{resource.name}</div>
+                            <div className="text-grey-500 text-xs">{resource.benefit}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link
               to="/contact"
               className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
@@ -330,13 +408,31 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link
-              to="/resources"
-              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Resources
-            </Link>
+            <div className="space-y-1">
+              <button
+                onClick={() => handleDropdown('resources-mobile')}
+                className="w-full flex items-center justify-between text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Resources
+                <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'resources-mobile' ? 'rotate-180' : ''}`} />
+              </button>
+              {activeDropdown === 'resources-mobile' && (
+                <div className="pl-4 space-y-1">
+                  {resources.map((resource) => (
+                    <Link
+                      key={resource.name}
+                      to={resource.path}
+                      className="flex items-center text-grey-600 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <resource.icon className="mr-3 h-4 w-4" />
+                      {resource.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               to="/contact"
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
