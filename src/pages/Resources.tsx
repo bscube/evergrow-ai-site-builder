@@ -9,139 +9,188 @@ import SEO from '../components/SEO';
 const Resources = () => {
   const blogPosts = [
     {
-      title: "Generative AI Ecommerce Marketing Applications",
-      excerpt: "Discover how generative AI is transforming ecommerce marketing with personalized product recommendations, dynamic content creation, and automated customer engagement.",
+      title: "The Future of Conversational AI in Customer Service",
+      excerpt: "Explore how advanced AI technologies are revolutionizing customer service interactions and driving business growth through intelligent automation.",
       date: "2024-01-10",
       readTime: "8 min read",
-      category: "AI & Ecommerce",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-      slug: "generative-ai-ecommerce-marketing-applications"
+      category: "AI & Innovation",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      slug: "future-conversational-ai-customer-service"
     },
     {
-      title: "AI Agents Use Cases in Banking",
-      excerpt: "Explore practical applications of AI agents in banking for customer service, fraud detection, loan processing, and personalized financial advice.",
+      title: "ROI Analysis: Measuring Success with AI Chatbots",
+      excerpt: "A comprehensive guide to calculating and maximizing return on investment when implementing AI chatbot solutions in your business.",
       date: "2024-01-08",
-      readTime: "10 min read",
-      category: "Fintech",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-      slug: "ai-agents-use-cases-in-banking"
+      readTime: "12 min read",
+      category: "Business Strategy",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      slug: "roi-analysis-ai-chatbots"
     },
     {
-      title: "AI Voice Agents for Customer Experience",
-      excerpt: "Learn how AI voice agents are revolutionizing customer experience with natural language processing, sentiment analysis, and 24/7 availability.",
+      title: "Multi-Channel AI: Unifying Customer Experience",
+      excerpt: "Learn how to create seamless customer experiences across WhatsApp, Facebook Messenger, Instagram, and your website with unified AI agents.",
       date: "2024-01-05",
-      readTime: "6 min read",
-      category: "Voice AI",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      slug: "ai-voice-agents-for-customer-experience"
+      readTime: "10 min read",
+      category: "Omnichannel",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      slug: "multi-channel-ai-customer-experience"
     },
     {
-      title: "AI Agents vs Traditional Chatbots",
-      excerpt: "Understanding the key differences between AI agents and traditional chatbots, and why businesses are making the switch to intelligent automation.",
+      title: "Industry Spotlight: AI Transformation in Healthcare",
+      excerpt: "Discover how healthcare organizations are using AI agents to improve patient engagement, streamline appointments, and enhance care delivery.",
       date: "2024-01-03",
-      readTime: "7 min read",
-      category: "Technology",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
-      slug: "ai-agents-vs-traditional-chatbots"
+      readTime: "9 min read",
+      category: "Healthcare",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      slug: "ai-transformation-healthcare"
     }
   ];
 
   const caseStudies = [
     {
-      title: "Tira Beauty: 300% Increase in Conversion Rate",
-      excerpt: "How Tira Beauty transformed their customer experience with AI-powered chatbots, resulting in 300% higher conversion rates and 65% reduction in support tickets.",
-      industry: "Beauty & Retail",
+      title: "Retail Giant Achieves 400% ROI with AI Customer Service",
+      excerpt: "A leading fashion retailer transformed their customer support operations, reducing response times by 90% and increasing customer satisfaction scores significantly.",
+      industry: "Retail & E-commerce",
       results: [
-        "300% increase in conversion rate",
-        "65% reduction in support tickets",
-        "40% improvement in customer satisfaction"
+        "400% return on investment within 6 months",
+        "90% reduction in average response time",
+        "85% of queries resolved automatically",
+        "45% increase in customer satisfaction scores"
       ],
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
-      slug: "tira-beauty-case-study"
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+      slug: "retail-giant-400-percent-roi"
     },
     {
-      title: "Fashion Retailer: AI-Driven Customer Journey",
-      excerpt: "A leading fashion retailer implemented our AI agents to personalize the shopping experience, leading to significant improvements in sales and customer retention.",
-      industry: "Fashion & Retail",
+      title: "FinTech Startup Scales Support 10x with AI Agents",
+      excerpt: "How a growing financial technology company handled 1000% user growth without proportionally increasing their support team size.",
+      industry: "Financial Services",
       results: [
-        "250% increase in sales",
-        "80% improvement in customer retention",
-        "50% reduction in cart abandonment"
+        "Handled 10x increase in support volume",
+        "Maintained 24/7 support availability",
+        "Reduced support costs by 60%",
+        "Improved compliance response accuracy to 99.8%"
       ],
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop",
-      slug: "fashion-retailer-case-study"
+      image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=600&h=400&fit=crop",
+      slug: "fintech-scales-support-ai-agents"
+    },
+    {
+      title: "Healthcare Network: 50% Reduction in Appointment No-Shows",
+      excerpt: "A multi-location healthcare provider used AI agents to dramatically improve patient engagement and reduce missed appointments.",
+      industry: "Healthcare",
+      results: [
+        "50% reduction in appointment no-shows",
+        "95% patient satisfaction with AI interactions",
+        "30% increase in appointment bookings",
+        "Automated 80% of routine patient inquiries"
+      ],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      slug: "healthcare-reduces-no-shows"
     }
   ];
 
   const webinars = [
     {
-      title: "The Future of AI Customer Support",
-      date: "January 25, 2024",
-      time: "2:00 PM EST",
-      type: "Live Webinar",
-      description: "Join our experts as they discuss the latest trends in AI-powered customer support and what the future holds.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      title: "Building Your First AI Customer Service Agent",
+      date: "January 28, 2024",
+      time: "3:00 PM EST",
+      type: "Live Workshop",
+      description: "Join our hands-on workshop where we'll guide you through creating and deploying your first AI customer service agent from scratch.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
       status: "upcoming"
     },
     {
-      title: "AI Implementation Best Practices",
-      date: "January 15, 2024",
-      duration: "45 minutes",
-      type: "On-Demand",
-      description: "Learn the essential steps for successfully implementing AI agents in your customer service workflow.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      title: "AI in Fintech: Compliance and Customer Experience",
+      date: "January 20, 2024",
+      duration: "60 minutes",
+      type: "Industry Deep Dive",
+      description: "Explore how financial services companies can leverage AI while maintaining strict compliance requirements and enhancing customer trust.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
       status: "recorded"
     },
     {
-      title: "ROI of AI Automation Demo",
-      date: "January 10, 2024",
-      duration: "30 minutes",
-      type: "Product Demo",
-      description: "See how businesses are achieving measurable ROI with AI automation solutions.",
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop",
+      title: "Omnichannel AI Strategy: From WhatsApp to Website",
+      date: "January 15, 2024",
+      duration: "45 minutes",
+      type: "Strategy Session",
+      description: "Learn how to create a unified customer experience across all digital touchpoints using intelligent AI agent orchestration.",
+      image: "https://images.unsplash.com/photo-1515378791036-0648a814c963?w=600&h=400&fit=crop",
       status: "recorded"
     }
   ];
 
   const guides = [
     {
-      title: "Complete Guide to AI Customer Service",
-      description: "Everything you need to know about implementing AI in customer service, from planning to execution.",
-      pages: "45 pages",
-      format: "PDF",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop"
+      title: "The Complete AI Implementation Playbook",
+      description: "Step-by-step guide covering everything from initial planning to full deployment of AI agents in your organization.",
+      pages: "72 pages",
+      format: "PDF + Checklist",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop"
     },
     {
-      title: "AI ROI Calculator & Methodology",
-      description: "Calculate the potential return on investment for AI implementation in your business.",
-      pages: "12 pages",
-      format: "PDF + Excel",
+      title: "Industry-Specific AI Use Case Library",
+      description: "Comprehensive collection of proven AI implementations across retail, healthcare, fintech, and other key industries.",
+      pages: "95 pages",
+      format: "PDF + Templates",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop"
+    },
+    {
+      title: "AI Agent Training and Optimization Guide",
+      description: "Advanced techniques for training, fine-tuning, and continuously improving your AI agents' performance and accuracy.",
+      pages: "58 pages",
+      format: "PDF + Video Tutorials",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop"
+    },
+    {
+      title: "Measuring AI Success: KPIs and Analytics",
+      description: "Essential metrics, tracking methods, and analytics frameworks to measure and improve your AI implementation ROI.",
+      pages: "34 pages",
+      format: "PDF + Dashboard Templates",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
-    },
-    {
-      title: "Industry-Specific AI Use Cases",
-      description: "Detailed use cases and implementation strategies for different industries.",
-      pages: "60 pages",
-      format: "PDF",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
     }
   ];
 
   const comparisons = [
     {
-      title: "AI Agents vs Traditional Chatbots",
-      description: "Comprehensive comparison of modern AI agents versus traditional rule-based chatbots.",
-      link: "/comparisons/ai-agents-vs-chatbots"
+      title: "EverGrow vs. Traditional Chatbot Platforms",
+      description: "Detailed comparison of modern AI agents versus rule-based chatbot solutions, including features, costs, and implementation complexity.",
+      link: "/comparisons/evergrow-vs-traditional-chatbots"
     },
     {
-      title: "EverGrow vs Competitors",
-      description: "See how our AI solutions stack up against other market leaders.",
-      link: "/comparisons/evergrow-vs-competitors"
+      title: "AI Agent Platforms: Feature Comparison Matrix",
+      description: "Side-by-side analysis of leading AI customer service platforms, helping you choose the right solution for your business needs.",
+      link: "/comparisons/ai-platforms-feature-matrix"
     },
     {
-      title: "Build vs Buy Analysis",
-      description: "Should you build your own AI solution or use a ready-made platform?",
-      link: "/comparisons/build-vs-buy"
+      title: "Build vs. Buy: AI Development Cost Analysis",
+      description: "Comprehensive analysis of building custom AI solutions in-house versus adopting ready-made platforms like EverGrow.",
+      link: "/comparisons/build-vs-buy-ai-solutions"
+    }
+  ];
+
+  const helpResources = [
+    {
+      title: "Quick Start Guide",
+      description: "Get up and running with your first AI agent in under 30 minutes",
+      icon: Lightbulb,
+      link: "/help/quick-start"
+    },
+    {
+      title: "API Documentation",
+      description: "Complete technical documentation for developers and integrators",
+      icon: FileText,
+      link: "/help/api-documentation"
+    },
+    {
+      title: "Integration Tutorials",
+      description: "Step-by-step guides for connecting with popular business tools",
+      icon: Users,
+      link: "/help/integration-tutorials"
+    },
+    {
+      title: "Troubleshooting Hub",
+      description: "Common issues, solutions, and best practices for smooth operations",
+      icon: Target,
+      link: "/help/troubleshooting"
     }
   ];
 
@@ -168,7 +217,7 @@ const Resources = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" id="case-studies">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-16">
             <div>
@@ -182,7 +231,7 @@ const Resources = () => {
             <FileText className="h-16 w-16 text-brand-green-500 opacity-20" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 overflow-hidden">
                 <img 
@@ -191,24 +240,24 @@ const Resources = () => {
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
-                <div className="p-8">
+                <div className="p-6">
                   <div className="flex items-center mb-4">
                     <span className="px-3 py-1 bg-blue-500/10 text-blue-600 text-sm font-medium rounded-full">
                       {study.industry}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-grey-900 mb-3">
+                  <h3 className="text-lg font-bold text-grey-900 mb-3">
                     {study.title}
                   </h3>
-                  <p className="text-grey-700 mb-6">
+                  <p className="text-grey-700 text-sm mb-4">
                     {study.excerpt}
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-semibold text-grey-900 mb-3">Key Results:</h4>
+                    <h4 className="font-semibold text-grey-900 mb-3 text-sm">Key Results:</h4>
                     <ul className="space-y-2">
-                      {study.results.map((result, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-grey-700">
-                          <CheckCircle className="w-4 h-4 text-brand-green-500 mr-3" />
+                      {study.results.slice(0, 2).map((result, idx) => (
+                        <li key={idx} className="flex items-center text-xs text-grey-700">
+                          <CheckCircle className="w-3 h-3 text-brand-green-500 mr-2 flex-shrink-0" />
                           {result}
                         </li>
                       ))}
@@ -216,10 +265,10 @@ const Resources = () => {
                   </div>
                   <Link 
                     to={`/case-studies/${study.slug}`}
-                    className="inline-flex items-center text-brand-green-500 hover:text-brand-green-600 font-semibold"
+                    className="inline-flex items-center text-brand-green-500 hover:text-brand-green-600 font-semibold text-sm"
                   >
                     Read Full Case Study
-                    <ArrowRight className="ml-1 h-4 w-4" />
+                    <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
                 </div>
               </div>
@@ -229,7 +278,7 @@ const Resources = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="py-24 bg-grey-50">
+      <section className="py-24 bg-grey-50" id="blog">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-16">
             <div>
@@ -237,7 +286,7 @@ const Resources = () => {
                 Latest <span className="text-brand-green-500">Insights</span>
               </h2>
               <p className="text-xl text-grey-700">
-                Stay updated with the latest AI automation trends and expert analysis
+                Expert analysis on AI trends, implementation strategies, and industry innovations
               </p>
             </div>
             <BookOpen className="h-16 w-16 text-brand-green-500 opacity-20" />
@@ -289,15 +338,15 @@ const Resources = () => {
       </section>
 
       {/* Webinars & Demos Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" id="webinars">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-16">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-4">
-                Webinars & <span className="text-brand-green-500">Demos</span>
+                Webinars & <span className="text-brand-green-500">Workshops</span>
               </h2>
               <p className="text-xl text-grey-700">
-                Learn from experts and see our solutions in action
+                Learn from AI experts and see our solutions in action through interactive sessions
               </p>
             </div>
             <Video className="h-16 w-16 text-brand-green-500 opacity-20" />
@@ -355,7 +404,7 @@ const Resources = () => {
       </section>
 
       {/* E-books & Guides Section */}
-      <section className="py-24 bg-grey-50">
+      <section className="py-24 bg-grey-50" id="guides">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-16">
             <div>
@@ -363,33 +412,33 @@ const Resources = () => {
                 Guides & <span className="text-brand-green-500">E-books</span>
               </h2>
               <p className="text-xl text-grey-700">
-                Comprehensive resources to master AI automation
+                Comprehensive resources to master AI automation and drive business success
               </p>
             </div>
             <Download className="h-16 w-16 text-brand-green-500 opacity-20" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {guides.map((guide, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 overflow-hidden">
                 <img 
                   src={guide.image} 
                   alt={guide.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 object-cover"
                   loading="lazy"
                 />
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-grey-900 mb-3">
+                  <h3 className="text-base font-bold text-grey-900 mb-3">
                     {guide.title}
                   </h3>
                   <p className="text-grey-700 text-sm mb-4">
                     {guide.description}
                   </p>
-                  <div className="flex items-center justify-between text-sm text-grey-600 mb-4">
+                  <div className="flex items-center justify-between text-xs text-grey-600 mb-4">
                     <span>{guide.pages}</span>
                     <span>{guide.format}</span>
                   </div>
-                  <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center">
+                  <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center text-sm">
                     <Download className="h-4 w-4 mr-2" />
                     Download Free
                   </button>
@@ -409,7 +458,7 @@ const Resources = () => {
                 Product <span className="text-brand-green-500">Comparisons</span>
               </h2>
               <p className="text-xl text-grey-700">
-                Make informed decisions with detailed comparisons
+                Make informed decisions with detailed feature and cost comparisons
               </p>
             </div>
             <BarChart3 className="h-16 w-16 text-brand-green-500 opacity-20" />
@@ -447,28 +496,26 @@ const Resources = () => {
                 Help & <span className="text-brand-green-500">Support</span>
               </h2>
               <p className="text-xl text-grey-700">
-                Get answers and access documentation
+                Get answers, access documentation, and find solutions quickly
               </p>
             </div>
             <HelpCircle className="h-16 w-16 text-brand-green-500 opacity-20" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Getting Started", icon: Lightbulb, link: "/help/getting-started" },
-              { title: "API Documentation", icon: FileText, link: "/help/api-docs" },
-              { title: "Integration Guides", icon: Users, link: "/help/integrations" },
-              { title: "Troubleshooting", icon: Target, link: "/help/troubleshooting" }
-            ].map((item, index) => (
+            {helpResources.map((item, index) => (
               <Link 
                 key={index}
                 to={item.link}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 p-6 text-center"
               >
                 <item.icon className="h-12 w-12 text-brand-green-500 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-grey-900">
+                <h3 className="text-lg font-bold text-grey-900 mb-2">
                   {item.title}
                 </h3>
+                <p className="text-sm text-grey-700">
+                  {item.description}
+                </p>
               </Link>
             ))}
           </div>
@@ -479,10 +526,10 @@ const Resources = () => {
       <section className="py-24 bg-gradient-to-r from-brand-green-500 to-brand-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Create Your Success Story?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Join hundreds of businesses that have transformed their customer experience with AI automation
+            Join hundreds of businesses that have automated their customer experience with intelligent AI agents
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
             Start Your AI Journey
