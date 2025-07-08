@@ -109,7 +109,7 @@ const Navigation = () => {
   const resources = [
     { 
       name: 'Case Studies', 
-      path: '/resources#case-studies', 
+      path: '/case-studies', 
       icon: FileText,
       benefit: 'Real success stories from our clients'
     },
@@ -121,7 +121,7 @@ const Navigation = () => {
     },
     { 
       name: 'Customer Showcase', 
-      path: '/resources#case-studies', 
+      path: '/case-studies', 
       icon: Users,
       benefit: 'See how businesses transform with AI'
     },
