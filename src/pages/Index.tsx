@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [selectedAgent, setSelectedAgent] = useState('lead-qualification');
 
   const stats = [{
     number: '500+',
@@ -172,6 +173,56 @@ const Index = () => {
     description: "Break language barriers with AI that supports 100+ languages, ensuring seamless global communication",
     benefit: "Global reach capabilities"
   }];
+
+  const agentDemos = {
+    'support': {
+      title: 'AI Support Agent',
+      icon: Headphones,
+      description: 'Streamline support without pre-built journeys',
+      messages: [
+        { type: 'user', text: 'Hi, I need help with my order' },
+        { type: 'agent', text: 'Hello! I\'d be happy to help you with your order. Could you please provide your order number?' },
+        { type: 'user', text: 'It\'s #12345' },
+        { type: 'agent', text: 'Thank you! I found your order. It was shipped yesterday and should arrive by tomorrow. Here\'s your tracking link: track.example.com/12345' }
+      ]
+    },
+    'sales': {
+      title: 'AI Sales Agent',
+      icon: ShoppingCart,
+      description: 'Convert prospects into customers automatically',
+      messages: [
+        { type: 'user', text: 'I\'m interested in your premium plan' },
+        { type: 'agent', text: 'Great choice! Our premium plan includes advanced analytics, priority support, and unlimited users. Based on your company size, this could save you $2,000/month in operational costs.' },
+        { type: 'user', text: 'What\'s the pricing?' },
+        { type: 'agent', text: 'The premium plan is $199/month. I can offer you a 20% discount for the first 3 months if you sign up today. Would you like me to set up a demo?' }
+      ]
+    },
+    'booking': {
+      title: 'AI Booking Agent',
+      icon: Calendar,
+      description: 'Automate scheduling and appointment management',
+      messages: [
+        { type: 'user', text: 'I need to book a consultation' },
+        { type: 'agent', text: 'I\'d be happy to help you schedule a consultation. What type of consultation are you looking for?' },
+        { type: 'user', text: 'AI implementation strategy' },
+        { type: 'agent', text: 'Perfect! I have availability this week on Tuesday at 2 PM or Thursday at 10 AM. Which works better for you?' }
+      ]
+    },
+    'lead-qualification': {
+      title: 'AI Lead Qualification Agent',
+      icon: Target,
+      description: 'Capture qualified leads for personalized engagement',
+      messages: [
+        { type: 'agent', text: 'Are you looking for an EV vehicle in different body style?' },
+        { type: 'user', text: 'Yes, I\'m interested in a compact SUV' },
+        { type: 'agent', text: 'Excellent! What\'s your preferred price range for a compact electric SUV?' },
+        { type: 'user', text: 'Around $40,000 to $50,000' },
+        { type: 'agent', text: 'Based on your preferences, I\'d recommend the Model Y or the ID.4. Would you like to schedule a test drive?' }
+      ]
+    }
+  };
+
+  const currentDemo = agentDemos[selectedAgent];
 
   return <div className="min-h-screen bg-white">
       <Navigation />
@@ -401,6 +452,125 @@ const Index = () => {
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
               View Analytics Demo
               <BarChart3 className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive AI Agent Demo Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
+              <Bot className="w-4 h-4 mr-2" />
+              Watch Our AI Agents in Action
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Interactive AI Agent Demo
+            </h2>
+            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
+              Experience how our AI agents handle real conversations. Click on any agent to see them in action.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-2xl border border-grey-200 overflow-hidden max-w-6xl mx-auto">
+            <div className="flex h-[600px]">
+              {/* Left Sidebar - Agent Selection */}
+              <div className="w-80 bg-grey-50 border-r border-grey-200 p-6">
+                <div className="space-y-3">
+                  {Object.entries(agentDemos).map(([key, agent]) => {
+                    const IconComponent = agent.icon;
+                    const isSelected = selectedAgent === key;
+                    
+                    return (
+                      <button
+                        key={key}
+                        onClick={() => setSelectedAgent(key)}
+                        className={`w-full p-4 rounded-xl text-left transition-all duration-300 ${
+                          isSelected 
+                            ? 'bg-brand-green-500 text-white shadow-lg' 
+                            : 'bg-white hover:bg-grey-100 text-grey-700 hover:text-grey-900'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center">
+                            <div className={`p-2 rounded-lg ${isSelected ? 'bg-white/20' : 'bg-brand-green-500/10'}`}>
+                              <IconComponent className={`h-5 w-5 ${isSelected ? 'text-white' : 'text-brand-green-500'}`} />
+                            </div>
+                            <span className="ml-3 font-semibold">{agent.title}</span>
+                          </div>
+                          <ChevronRight className={`h-4 w-4 transition-transform ${isSelected ? 'rotate-90' : ''}`} />
+                        </div>
+                        <p className={`text-sm ${isSelected ? 'text-white/80' : 'text-grey-600'}`}>
+                          {agent.description}
+                        </p>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Right Panel - Chat Interface */}
+              <div className="flex-1 flex flex-col">
+                {/* Chat Header */}
+                <div className="p-6 border-b border-grey-200 bg-white">
+                  <div className="flex items-center">
+                    <div className="p-3 bg-brand-green-500/10 rounded-xl">
+                      <currentDemo.icon className="h-6 w-6 text-brand-green-500" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-semibold text-grey-900">{currentDemo.title}</h3>
+                      <p className="text-sm text-grey-600">{currentDemo.description}</p>
+                    </div>
+                    <div className="ml-auto flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-brand-green-500 rounded-full"></div>
+                      <span className="text-sm text-grey-600">Online</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Chat Messages */}
+                <div className="flex-1 p-6 overflow-y-auto bg-gradient-to-b from-grey-50/50 to-white">
+                  <div className="space-y-4">
+                    {currentDemo.messages.map((message, index) => (
+                      <div
+                        key={index}
+                        className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                      >
+                        <div
+                          className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
+                            message.type === 'user'
+                              ? 'bg-brand-green-500 text-white rounded-br-sm'
+                              : 'bg-white text-grey-900 border border-grey-200 rounded-bl-sm shadow-sm'
+                          }`}
+                        >
+                          <p className="text-sm leading-relaxed">{message.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Chat Input */}
+                <div className="p-6 border-t border-grey-200 bg-white">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex-1 bg-grey-100 rounded-full px-4 py-3">
+                      <p className="text-sm text-grey-500 italic">Try the live demo to interact with this agent...</p>
+                    </div>
+                    <button className="p-3 bg-brand-green-500 hover:bg-brand-green-600 text-white rounded-full transition-colors duration-300">
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Below Demo */}
+          <div className="text-center mt-12">
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              Try Live Demo
+              <Play className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
