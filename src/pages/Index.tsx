@@ -184,7 +184,8 @@ const Index = () => {
         { type: 'agent', text: 'Hello! I\'d be happy to help you with your order. Could you please provide your order number?' },
         { type: 'user', text: 'It\'s #12345' },
         { type: 'agent', text: 'Thank you! I found your order. It was shipped yesterday and should arrive by tomorrow. Here\'s your tracking link: track.example.com/12345' }
-      ]
+      ],
+      image: 'https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif'
     },
     'sales': {
       title: 'AI Sales Agent',
@@ -195,7 +196,8 @@ const Index = () => {
         { type: 'agent', text: 'Great choice! Our premium plan includes advanced analytics, priority support, and unlimited users. Based on your company size, this could save you $2,000/month in operational costs.' },
         { type: 'user', text: 'What\'s the pricing?' },
         { type: 'agent', text: 'The premium plan is $199/month. I can offer you a 20% discount for the first 3 months if you sign up today. Would you like me to set up a demo?' }
-      ]
+      ],
+      image: 'https://www.haptik.ai/hs-fs/hubfs/02SalesAgent.gif?width=1815&height=666&name=02SalesAgent.gif'
     },
     'booking': {
       title: 'AI Booking Agent',
@@ -206,7 +208,8 @@ const Index = () => {
         { type: 'agent', text: 'I\'d be happy to help you schedule a consultation. What type of consultation are you looking for?' },
         { type: 'user', text: 'AI implementation strategy' },
         { type: 'agent', text: 'Perfect! I have availability this week on Tuesday at 2 PM or Thursday at 10 AM. Which works better for you?' }
-      ]
+      ],
+      image: 'https://www.haptik.ai/hs-fs/hubfs/03BookingAgent.gif?width=1815&height=666&name=03BookingAgent.gif'
     },
     'lead-qualification': {
       title: 'AI Lead Qualification Agent',
@@ -218,7 +221,8 @@ const Index = () => {
         { type: 'agent', text: 'Excellent! What\'s your preferred price range for a compact electric SUV?' },
         { type: 'user', text: 'Around $40,000 to $50,000' },
         { type: 'agent', text: 'Based on your preferences, I\'d recommend the Model Y or the ID.4. Would you like to schedule a test drive?' }
-      ]
+      ],
+      image: 'https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif'
     }
   };
 
@@ -702,7 +706,7 @@ const Index = () => {
               </div>
               
               <div className="mb-6">
-                <img src="https://www.haptik.ai/hs-fs/hubfs/04%20Lead%20Qualification%20Agent.gif?width=1815&height=666&name=04%20Lead%20Qualification%20Agent.gif" alt="AI Lead Qualification Agent identifying high-value prospects" className="w-full rounded-lg" />
+                <img src="https://www.haptik.ai/hs-fs/hubfs/01Support.gif?width=1200&height=666&name=01Support.gif" alt="AI Lead Qualification Agent identifying high-value prospects" className="w-full rounded-lg" />
               </div>
               
               <p className="text-grey-600 mb-6 leading-relaxed">
