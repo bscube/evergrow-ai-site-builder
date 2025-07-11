@@ -9,10 +9,10 @@ import TrustBadgesSection from '../components/sections/TrustBadgesSection';
 import StatsSection from '../components/sections/StatsSection';
 import AnalyticsDashboardSection from '../components/sections/AnalyticsDashboardSection';
 import AIAgentBuilderSection from '../components/sections/AIAgentBuilderSection';
+import AIFeaturesSection from '../components/sections/AIFeaturesSection';
 import AIAgentTypesSection from '../components/sections/AIAgentTypesSection';
 import AIVoiceAgentsSection from '../components/sections/AIVoiceAgentsSection';
 import ProductDemoSection from '../components/sections/ProductDemoSection';
-import AIFeaturesSection from '../components/sections/AIFeaturesSection';
 import AIHumanCollaborationSection from '../components/sections/AIHumanCollaborationSection';
 import PartnerLogosSection from '../components/sections/PartnerLogosSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
@@ -32,10 +32,10 @@ const Index = () => {
       <StatsSection />
       <AnalyticsDashboardSection />
       <AIAgentBuilderSection />
+      <AIFeaturesSection />
       <AIAgentTypesSection />
       <AIVoiceAgentsSection />
       <ProductDemoSection />
-      <AIFeaturesSection />
       <AIHumanCollaborationSection />
       <PartnerLogosSection />
       <IndustriesSection />
