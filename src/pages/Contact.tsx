@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { MessageSquare, Phone, Mail, MapPin, Calendar, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { toast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +15,77 @@ const Contact = () => {
     projectType: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const errors = [];
+    
+    if (!formData.name.trim()) {
+      errors.push('Full name is required');
+    }
+    
+    if (!formData.email.trim()) {
+      errors.push('Email is required');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    if (!formData.company.trim()) {
+      errors.push('Company name is required');
+    }
+    
+    return errors;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Validate form
+    const validationErrors = validateForm();
+    if (validationErrors.length > 0) {
+      toast({
+        title: "Please fix the following errors:",
+        description: validationErrors.join(', '),
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission (replace with actual API call)
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('Form submitted successfully:', formData);
+      
+      // Show success message
+      toast({
+        title: "Thank you for your interest!",
+        description: "We've received your consultation request and will respond within 2 hours during business hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '',
+        industry: '',
+        projectType: ''
+      });
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your form. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -331,10 +398,20 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className="w-full bg-brand-green-500 hover:bg-brand-green-600 disabled:bg-brand-green-300 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
                 >
-                  Get Free AI Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Get Free AI Consultation
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </>
+                  )}
                 </button>
 
                 <p className="text-sm text-grey-500 text-center">
