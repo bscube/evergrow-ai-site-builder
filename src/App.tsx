@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
 import CaseStudies from "./pages/CaseStudies";
+import CinemaExperienceCaseStudy from "./pages/CinemaExperienceCaseStudy";
 import WhatsApp from "./pages/channels/WhatsApp";
 import FacebookChatbot from "./pages/channels/FacebookChatbot";
 import InstagramChatbot from "./pages/channels/InstagramChatbot";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/cinema-experience" element={<CinemaExperienceCaseStudy />} />
             <Route path="/ai-agents/support" element={<Support />} />
             <Route path="/ai-agents/sales" element={<Sales />} />
             <Route path="/ai-agents/booking" element={<Booking />} />
