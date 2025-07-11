@@ -9,7 +9,6 @@ import TrustBadgesSection from '../components/sections/TrustBadgesSection';
 import StatsSection from '../components/sections/StatsSection';
 import AnalyticsDashboardSection from '../components/sections/AnalyticsDashboardSection';
 import AIAgentBuilderSection from '../components/sections/AIAgentBuilderSection';
-import AIFeaturesSection from '../components/sections/AIFeaturesSection';
 import AIAgentTypesSection from '../components/sections/AIAgentTypesSection';
 import AIVoiceAgentsSection from '../components/sections/AIVoiceAgentsSection';
 import ProductDemoSection from '../components/sections/ProductDemoSection';
@@ -32,7 +31,6 @@ const Index = () => {
       <StatsSection />
       <AnalyticsDashboardSection />
       <AIAgentBuilderSection />
-      <AIFeaturesSection />
       <AIAgentTypesSection />
       <AIVoiceAgentsSection />
       <ProductDemoSection />
