@@ -1,26 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogSection = () => {
   const blogPosts = [
     {
       title: "Are Conversational AI Agents Just Fancy Chatbots?",
-      readTime: "5 min read"
+      readTime: "5 min read",
+      slug: "/blog/ai-agents-vs-traditional-chatbots"
     },
     {
       title: "Growth and Customer Experience in the Age of AI Agents", 
-      readTime: "7 min read"
+      readTime: "7 min read",
+      slug: "/blog/ai-voice-agents-for-customer-experience"
     },
     {
       title: "GPT 4.1 vs GPT 4.1 mini vs GPT 4.1 nano: How OpenAI's Newest Models Compare for Enterprise Use Cases?",
-      readTime: "10 min read"
+      readTime: "10 min read",
+      slug: "/blog/generative-ai-ecommerce-marketing-applications"
     },
     {
       title: "10 Best AI Chatbots In India (Updated 2025)",
-      readTime: "8 min read"
+      readTime: "8 min read",
+      slug: "/blog/ai-agents-vs-traditional-chatbots"
     },
     {
       title: "Why GenAI Call Auditing Is the Next Big Thing",
-      readTime: "6 min read"
+      readTime: "6 min read",
+      slug: "/blog/ai-agents-use-cases-in-banking"
     }
   ];
 
@@ -78,9 +84,13 @@ const BlogSection = () => {
                 </h4>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                  <button className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1">
+                  <Link 
+                    to={post.slug}
+                    className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
+                    aria-label={`Read article: ${post.title}`}
+                  >
                     Read now →
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
