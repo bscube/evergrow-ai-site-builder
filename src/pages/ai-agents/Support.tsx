@@ -151,6 +151,105 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Human-Like Interactions Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Chat Interface */}
+            <div className="relative">
+              <div className="bg-white rounded-3xl p-8 space-y-6 shadow-lg">
+                {/* First Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-sm">
+                    <div className="bg-blue-50 rounded-2xl rounded-br-md px-4 py-3">
+                      <p className="text-grey-900 font-medium">I can&apos;t access my account, it&apos;s happening for the 2nd time this month.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* First Response - AI */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-grey-100 rounded-2xl rounded-bl-md px-4 py-3">
+                    <p className="text-grey-900">Your account was locked for security reasons after multiple failed login attempts. Would you like me to unlock your account?</p>
+                  </div>
+                </div>
+
+                {/* Second Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-sm">
+                    <div className="bg-blue-50 rounded-2xl rounded-br-md px-4 py-3">
+                      <p className="text-grey-900 font-medium">Yes, please.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Second Response - AI */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-grey-100 rounded-2xl rounded-bl-md px-4 py-3">
+                    <p className="text-grey-900">I&apos;ve sent a passcode to your email that you can use as a temporary login and regain access.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="space-y-8">              
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Human-Like Interactions
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Context-aware responses:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Seamlessly handle multi-turn conversations by retaining context from past interactions, personalizing responses, and staying on-brand.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Dynamic resolution:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Our AI support agent doesn&apos;t stick to a script. It tackles diverse queries independently, initiating smooth agent handoff when needed.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Self-serve:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Augment human agents with the efficiency of AI for self-serve support, improving first-time resolution and customer satisfaction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
