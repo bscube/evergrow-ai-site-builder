@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, ArrowRight } from 'lucide-react';
 
 const EnterpriseDataSection = () => {
   const [expandedItem, setExpandedItem] = useState('Smart Recommendations');
@@ -112,7 +112,7 @@ const EnterpriseDataSection = () => {
                       </p>
                       
                       {/* Product recommendations */}
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-3 gap-3 mb-4">
                         <div className="text-center">
                           <div className="bg-grey-100 rounded-lg p-3 mb-2">
                             <div className="w-12 h-12 bg-green-500 rounded-lg mx-auto"></div>
@@ -137,6 +137,14 @@ const EnterpriseDataSection = () => {
                             View Item
                           </button>
                         </div>
+                      </div>
+                      
+                      {/* Get A Demo Button */}
+                      <div className="flex justify-center">
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 transition-colors duration-200">
+                          Get A Demo
+                          <ArrowRight className="h-4 w-4" />
+                        </button>
                       </div>
                     </div>
                   </div>
