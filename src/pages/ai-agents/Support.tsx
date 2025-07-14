@@ -64,42 +64,39 @@ const Support = () => {
       </section>
 
       {/* AI Conversation Demo Section */}
-      <section className="py-24 bg-grey-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
-              Automate Customer Support with Smart AI Agents
-            </h2>
-            <p className="text-xl text-grey-600 max-w-3xl mx-auto">
-              Harness your enterprise data to build a powerful support agent for resolving brand-related queries at scale. Lighten the load on human agents while enhancing accuracy and speed of resolution
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="text-sm font-medium text-primary uppercase tracking-wider">
+                AI Support Agent
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Automate Customer Support with Smart AI Agents
+              </h2>
+              
+              <p className="text-lg text-grey-600 leading-relaxed">
+                Harness your enterprise data to build a powerful support agent for resolving brand-related queries at scale. Lighten the load on human agents while enhancing accuracy and speed of resolution
+              </p>
+              
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                Get A Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-              <div className="space-y-8">
-                {/* First Conversation */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="bg-blue-50 rounded-2xl p-6 max-w-md">
+            {/* Right Chat Interface */}
+            <div className="relative">
+              <div className="bg-grey-50 rounded-3xl p-8 space-y-6">
+                {/* First Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-xs">
+                    <div className="bg-primary/10 rounded-2xl rounded-br-md px-4 py-3">
                       <p className="text-grey-900 font-medium">What's your return policy?</p>
                     </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4 justify-end">
-                  <div className="flex-1 flex justify-end">
-                    <div className="bg-grey-100 rounded-2xl p-6 max-w-md">
-                      <p className="text-grey-900">As per our policy, you can return items within 7 days of purchase.</p>
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                       <img 
                         src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" 
                         alt="Customer" 
@@ -109,28 +106,25 @@ const Support = () => {
                   </div>
                 </div>
 
-                {/* Second Conversation */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-white" />
+                {/* First Response - AI */}
+                <div className="flex items-end space-x-3 max-w-xs">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="bg-blue-50 rounded-2xl p-6 max-w-md">
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">As per our policy, you can return items within 7 days of purchase.</p>
+                  </div>
+                </div>
+
+                {/* Second Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-xs">
+                    <div className="bg-primary/10 rounded-2xl rounded-br-md px-4 py-3">
                       <p className="text-grey-900 font-medium">What if it's defective?</p>
                     </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4 justify-end">
-                  <div className="flex-1 flex justify-end">
-                    <div className="bg-grey-100 rounded-2xl p-6 max-w-md">
-                      <p className="text-grey-900">For defective items, you can request a replacement in 10 days.</p>
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                       <img 
                         src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" 
                         alt="Customer" 
@@ -139,13 +133,18 @@ const Support = () => {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-12 text-center">
-                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Get A Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                {/* Second Response - AI */}
+                <div className="flex items-end space-x-3 max-w-xs">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">For defective items, you can request a replacement in 10 days.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
