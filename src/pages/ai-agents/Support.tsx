@@ -479,6 +479,138 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Optimize and Measure Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">              
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Optimize and Measure
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Track metrics:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Monitor KPIs with custom dashboards for insights on response times, CSAT, NPS, resolution rate, and more.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">SOP compliance:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Measure agent performance against SOPs and identify areas for improvement to uphold quality of support.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Topic distribution:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Glean actionable insights into customer pain points by tracking most common requests and key issues that need proactive solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Dashboard Interface */}
+            <div className="relative">
+              <div className="bg-blue-50 rounded-3xl p-8">
+                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  {/* Dashboard Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-lg font-semibold text-grey-900">Agent Performance</h3>
+                    <div className="px-3 py-1 bg-blue-500 text-white text-sm rounded-lg">
+                      Agent Performance
+                    </div>
+                  </div>
+
+                  {/* Top Row Metrics */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="bg-grey-50 rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-grey-900 mb-1">4.5</div>
+                      <div className="text-sm text-grey-600">Avg. User Rating</div>
+                    </div>
+                    <div className="bg-grey-50 rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-grey-900 mb-1">107</div>
+                      <div className="text-sm text-grey-600">Total Number of Agents</div>
+                    </div>
+                    <div className="bg-grey-50 rounded-xl p-4 text-center">
+                      <div className="text-2xl font-bold text-grey-900 mb-1">34h 29m 2s</div>
+                      <div className="text-sm text-grey-600">Time Saved of Agents</div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Row Stats */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Time Stats */}
+                    <div className="bg-grey-50 rounded-xl p-4">
+                      <h4 className="text-sm font-medium text-grey-900 mb-3">Time Stats</h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Avg. Agent First Response Time</span>
+                          <span className="font-medium">2m 3s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Avg. Queue Time</span>
+                          <span className="font-medium">1m 8s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Avg. Response Time</span>
+                          <span className="font-medium">57s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Avg. Agent Resolution Time</span>
+                          <span className="font-medium">5m 7s</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Chat Stats */}
+                    <div className="bg-grey-50 rounded-xl p-4">
+                      <h4 className="text-sm font-medium text-grey-900 mb-3">Chat Stats</h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Chats Received</span>
+                          <span className="font-medium">124,978</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Closed Chats</span>
+                          <span className="font-medium">98,426</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Chats Abandoned by Users</span>
+                          <span className="font-medium">26,552</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-grey-600">Delayed Chats</span>
+                          <span className="font-medium">8,724</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
