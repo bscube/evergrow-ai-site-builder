@@ -794,7 +794,6 @@ const Support = () => {
                   placeholder="First name*" 
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 />
-                <p className="text-red-500 text-sm mt-1">Please complete this required field.</p>
               </div>
               <div>
                 <input 
@@ -809,7 +808,6 @@ const Support = () => {
                   placeholder="Your Email*" 
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 />
-                <p className="text-red-500 text-sm mt-1">Please complete this required field.</p>
               </div>
             </div>
 
