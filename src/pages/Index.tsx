@@ -14,6 +14,7 @@ import AIAgentTypesSection from '../components/sections/AIAgentTypesSection';
 import AIVoiceAgentsSection from '../components/sections/AIVoiceAgentsSection';
 import ProductDemoSection from '../components/sections/ProductDemoSection';
 import AIHumanCollaborationSection from '../components/sections/AIHumanCollaborationSection';
+import AIControlSection from '../components/sections/AIControlSection';
 import PartnerLogosSection from '../components/sections/PartnerLogosSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
@@ -37,6 +38,7 @@ const Index = () => {
       <AIVoiceAgentsSection />
       <ProductDemoSection />
       <AIHumanCollaborationSection />
+      <AIControlSection />
       <PartnerLogosSection />
       <IndustriesSection />
       <TestimonialsSection />
