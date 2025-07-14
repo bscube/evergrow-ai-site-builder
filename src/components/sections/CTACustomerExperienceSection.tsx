@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -18,13 +19,15 @@ const CTACustomerExperienceSection = () => {
           Ready to Shape the Future of Customer Experience?
         </h2>
         
-        <Button 
-          size="lg"
-          className="bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:text-white backdrop-blur-sm transition-all duration-300 px-8 py-3 text-lg font-medium"
-        >
-          Get A Demo
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link to="/contact">
+          <Button 
+            size="lg"
+            className="bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:text-white backdrop-blur-sm transition-all duration-300 px-8 py-3 text-lg font-medium"
+          >
+            Get A Demo
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
