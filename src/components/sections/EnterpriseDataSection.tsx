@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const EnterpriseDataSection = () => {
   const [expandedItem, setExpandedItem] = useState('Smart Recommendations');
@@ -16,6 +17,9 @@ const EnterpriseDataSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-grey-900 mb-6">
             Your Data. Your AI. Your Advantage.
           </h2>
+          <Button size="lg" className="mt-6">
+            Get A Demo
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
