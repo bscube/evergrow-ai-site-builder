@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, CheckCircle, ArrowRight, Settings, Terminal, Brain, Layout } from 'lucide-react';
+import { Bot, CheckCircle, ArrowRight, Settings, Terminal, Brain, Layout, Cpu, Share2, Globe } from 'lucide-react';
 
 const AIAgentBuilderSection = () => {
   return (
@@ -113,6 +113,45 @@ const AIAgentBuilderSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Feature boxes section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-grey-200">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mr-4">
+                <Cpu className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-grey-900">Flexible Model Selection</h3>
+            </div>
+            <p className="text-grey-600 leading-relaxed">
+              Experiment with leading AI models like GPT, llama, and Claude to find the best fit for your business needs
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-grey-200">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mr-4">
+                <Share2 className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-grey-900">Omnichannel Engagement</h3>
+            </div>
+            <p className="text-grey-600 leading-relaxed">
+              Deploy your AI Agent across Web, Chat, Voice, and more—effortlessly reaching customers on their preferred platforms.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-grey-200">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mr-4">
+                <Globe className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-grey-900">Multilingual Support</h3>
+            </div>
+            <p className="text-grey-600 leading-relaxed">
+              Break language barriers with AI that supports 100+ languages, ensuring seamless global communication
+            </p>
           </div>
         </div>
 
