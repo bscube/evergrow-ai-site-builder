@@ -42,10 +42,10 @@ const Index = () => {
       <AIHumanCollaborationSection />
       <AIControlSection />
       <FeaturedTestimonialSection />
+      <RecognitionSection />
       <PartnerLogosSection />
       <IndustriesSection />
       <TestimonialsSection />
-      <RecognitionSection />
       <CTASection />
       <FAQSection />
 
