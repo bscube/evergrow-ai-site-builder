@@ -63,7 +63,7 @@ const BlogSection = () => {
               </div>
             </div>
             <div className="p-6">
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+              <h4 className="text-xl font-semibold text-gray-900">
                 [Blog] Meet Haptik's AI Agents: The Powerhouse of Human-Like CX
               </h4>
             </div>
