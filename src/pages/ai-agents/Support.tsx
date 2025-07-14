@@ -250,6 +250,122 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Efficient and Customer-Centric Support Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">              
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Efficient and Customer-Centric Support
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Omnichannel:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Deploy the AI support agent across channels so customers can get their questions answered anytime, anywhere.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Personalized conversations:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Ask follow-up questions to ensure customers find the best solution to their problem and feel valued.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Always-on assistance:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Offer round-the-clock support to resolve queries instantly, significantly reducing wait times and new ticket creation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Chat Interface */}
+            <div className="relative">
+              <div className="bg-blue-50 rounded-3xl p-8 space-y-6">
+                {/* First Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-sm">
+                    <div className="bg-white rounded-2xl rounded-br-md px-4 py-3 shadow-sm">
+                      <p className="text-grey-900 font-medium">I haven&apos;t received the refund for the product returned. It&apos;s been a week.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                      <img 
+                        src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" 
+                        alt="Customer" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* First Response - AI */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">The refund was initiated to your bank account yesterday. Would you like me to share the transaction reference?</p>
+                  </div>
+                </div>
+
+                {/* Second Message - User */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-sm">
+                    <div className="bg-white rounded-2xl rounded-br-md px-4 py-3 shadow-sm">
+                      <p className="text-grey-900 font-medium">Yes, that would be helpful.</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                      <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
+                        alt="Customer" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Final Response - AI */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">
+                      <span className="font-semibold">Reference number: 891065</span><br />
+                      Let me know if you need anything else.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
