@@ -366,6 +366,119 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Voice Support Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Chat Interface with Voice */}
+            <div className="relative">
+              <div className="bg-blue-50 rounded-3xl p-8 space-y-6">
+                {/* Voice Input Visualization */}
+                <div className="flex justify-end">
+                  <div className="flex items-center space-x-3 max-w-sm">
+                    <div className="bg-white rounded-2xl px-4 py-3 shadow-sm">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <div className="flex space-x-1">
+                          {[...Array(20)].map((_, i) => (
+                            <div 
+                              key={i} 
+                              className="w-1 bg-blue-500 rounded-full animate-pulse" 
+                              style={{
+                                height: Math.random() * 20 + 8 + 'px',
+                                animationDelay: i * 0.1 + 's'
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-grey-900 font-medium">I want to cancel my order.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI Response */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">I can help you with that. What&apos;s your order ID?</p>
+                  </div>
+                </div>
+
+                {/* Customer Response */}
+                <div className="flex justify-end">
+                  <div className="flex items-end space-x-3 max-w-sm">
+                    <div className="bg-white rounded-2xl rounded-br-md px-4 py-3 shadow-sm">
+                      <p className="text-grey-900 font-medium">Order ID is 276589</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Final AI Response */}
+                <div className="flex items-end space-x-3 max-w-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                    <p className="text-grey-900">Your order has been cancelled and refund is initiated.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="space-y-8">              
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Empower Customers with Voice Support
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Intelligent support:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Efficiently handle high support volumes with voice AI. Resolve queries in real-time with natural voice conversations... without rigid menu options.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Advanced intent detection:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Our voice agents don&apos;t just hear words. They understand the intent behind them to tailor responses that resonate.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">Multilingual:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      We support 100+ languages so you can speak in your customers&apos; preferred language and break linguistic barriers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
