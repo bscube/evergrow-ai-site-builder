@@ -611,6 +611,74 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Cutting-Edge AI Support Agent Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Cutting-Edge AI Support Agent
+            </h2>
+            <p className="text-xl text-grey-600">
+              Equipped with advanced reasoning
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Superior Unstructured Data Handling */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-6 p-4 bg-blue-100 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 text-blue-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-grey-900 mb-4">
+                Superior Unstructured Data Handling
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Leveraging unstructured data, we broaden the support agent&apos;s capacity to understand diverse questions & elevate the quality of responses.
+              </p>
+            </div>
+
+            {/* Robust Guardrails */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-6 p-4 bg-blue-100 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 text-blue-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-grey-900 mb-4">
+                Robust Guardrails
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                We employ well-defined guardrails to ensure the agent&apos;s responses are extremely precise and relevant for the information provided.
+              </p>
+            </div>
+
+            {/* Faster Deployment */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-6 p-4 bg-blue-100 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 text-blue-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                    <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-grey-900 mb-4">
+                Faster Deployment
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Build a fully-functional support agent in merely hours, ensuring rapid deployment, efficient operations and better customer experiences at scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
