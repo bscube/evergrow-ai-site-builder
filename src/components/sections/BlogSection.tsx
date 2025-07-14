@@ -82,8 +82,7 @@ const BlogSection = () => {
                 <h4 className="font-semibold text-gray-900 mb-3 leading-relaxed">
                   {post.title}
                 </h4>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">{post.readTime}</span>
+                <div className="flex items-center justify-end">
                   <Link 
                     to={post.slug}
                     className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
