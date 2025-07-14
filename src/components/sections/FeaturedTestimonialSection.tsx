@@ -1,15 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -36,112 +27,51 @@ const testimonials = [
 ];
 
 const FeaturedTestimonialSection = () => {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 6000, stopOnInteraction: true })
-  );
-
-  useEffect(() => {
-    if (!api) return;
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
   return (
     <section className="py-24 bg-gradient-to-br from-[#003366] to-[#004080] relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 text-center">
           We Couldn't Have Said It Better Ourselves
         </h2>
 
-        {/* Carousel */}
-        <div className="relative">
-          <Carousel 
-            setApi={setApi}
-            plugins={[autoplayPlugin.current]}
-            className="w-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id}>
-                  <div className="text-center max-w-4xl mx-auto">
-                    {/* Testimonial Quote */}
-                    <div className="relative mb-12">
-                      {/* Opening Quote */}
-                      <div className="absolute -top-4 -left-4 text-6xl text-white/30 font-serif">"</div>
-                      
-                      <blockquote className="text-lg md:text-xl lg:text-2xl text-white italic leading-relaxed px-8">
-                        {testimonial.quote}
-                      </blockquote>
-                      
-                      {/* Closing Quote */}
-                      <div className="absolute -bottom-4 -right-4 text-6xl text-white/30 font-serif">"</div>
-                    </div>
-
-                    {/* Customer Info */}
-                    <div className="flex flex-col items-center mb-8">
-                      {/* Customer Photo */}
-                      <div className="w-16 h-16 rounded-full bg-white/20 mb-4 overflow-hidden">
-                        <img 
-                          src={testimonial.image} 
-                          alt={testimonial.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      
-                      {/* Customer Details */}
-                      <div className="text-white">
-                        <div className="font-semibold text-lg">{testimonial.name}</div>
-                        <div className="text-white/80">{testimonial.designation}</div>
-                      </div>
-                    </div>
-
-                    {/* Read More Button */}
-                    <Link 
-                      to="/testimonials"
-                      className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group"
-                    >
-                      <span className="mr-2">Read More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            
-            {/* Navigation Arrows */}
-            <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/5 border-white/10 text-white/60 hover:bg-white/15 hover:text-white/90 hover:border-white/20 transition-all duration-300" />
-            <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/5 border-white/10 text-white/60 hover:bg-white/15 hover:text-white/90 hover:border-white/20 transition-all duration-300" />
-          </Carousel>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {Array.from({ length: count }).map((_, index) => (
-              <button
-                key={index}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  index + 1 === current 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-                onClick={() => api?.scrollTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <div 
+              key={testimonial.id}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/30 hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Customer Photo */}
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 mx-auto">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Customer Name & Title */}
+              <div className="text-center mb-4">
+                <h3 className="font-semibold text-lg text-white mb-1">{testimonial.name}</h3>
+                <p className="text-white/80 text-sm">{testimonial.designation}</p>
+              </div>
+              
+              {/* Quote */}
+              <blockquote className="text-white/90 text-sm leading-relaxed mb-6 line-clamp-4">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              {/* Read More Button */}
+              <Link 
+                to="/testimonials"
+                className="inline-flex items-center justify-center w-full px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group text-sm"
+              >
+                <span className="mr-2">Read More</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
