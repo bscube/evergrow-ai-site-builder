@@ -19,6 +19,7 @@ import FeaturedTestimonialSection from '../components/sections/FeaturedTestimoni
 import PartnerLogosSection from '../components/sections/PartnerLogosSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
+import RecognitionSection from '../components/sections/RecognitionSection';
 import CTASection from '../components/sections/CTASection';
 import FAQSection from '../components/sections/FAQSection';
 
@@ -44,6 +45,7 @@ const Index = () => {
       <PartnerLogosSection />
       <IndustriesSection />
       <TestimonialsSection />
+      <RecognitionSection />
       <CTASection />
       <FAQSection />
 
