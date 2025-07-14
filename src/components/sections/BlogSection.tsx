@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const BlogSection = () => {
   const blogPosts = [
@@ -67,10 +66,6 @@ const BlogSection = () => {
               <h4 className="text-xl font-semibold text-gray-900 mb-2">
                 [Blog] Meet Haptik's AI Agents: The Powerhouse of Human-Like CX
               </h4>
-              <button className="text-primary hover:text-primary/80 font-medium flex items-center gap-2 transition-colors">
-                Read now
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
           </div>
 
@@ -81,12 +76,8 @@ const BlogSection = () => {
                 <h4 className="font-semibold text-gray-900 mb-3 leading-relaxed">
                   {post.title}
                 </h4>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center">
                   <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                  <button className="text-primary hover:text-primary/80 font-medium flex items-center gap-2 transition-colors">
-                    Read now
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               </div>
             ))}
