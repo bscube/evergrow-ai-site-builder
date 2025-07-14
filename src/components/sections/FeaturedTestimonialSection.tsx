@@ -123,8 +123,8 @@ const FeaturedTestimonialSection = () => {
             </CarouselContent>
             
             {/* Navigation Arrows */}
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white" />
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white" />
+            <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/5 border-white/10 text-white/60 hover:bg-white/15 hover:text-white/90 hover:border-white/20 transition-all duration-300" />
+            <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/5 border-white/10 text-white/60 hover:bg-white/15 hover:text-white/90 hover:border-white/20 transition-all duration-300" />
           </Carousel>
 
           {/* Dots Indicator */}
