@@ -29,7 +29,7 @@ const AIControlSection = () => {
     <section className="py-16 bg-grey-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-grey-900 mb-6">
             Powerful AI That You Control
           </h2>
           <p className="text-lg text-grey-600 max-w-4xl mx-auto">
