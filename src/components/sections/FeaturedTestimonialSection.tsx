@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   Carousel,
   CarouselContent,
@@ -109,10 +110,13 @@ const FeaturedTestimonialSection = () => {
                     </div>
 
                     {/* Read More Button */}
-                    <button className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group">
+                    <Link 
+                      to="/testimonials"
+                      className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group"
+                    >
                       <span className="mr-2">Read More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </button>
+                    </Link>
                   </div>
                 </CarouselItem>
               ))}

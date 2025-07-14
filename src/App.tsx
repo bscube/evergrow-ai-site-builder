@@ -28,6 +28,7 @@ import GenerativeAIEcommerce from "./pages/blog/GenerativeAIEcommerce";
 import AIAgentsBanking from "./pages/blog/AIAgentsBanking";
 import AIVoiceAgents from "./pages/blog/AIVoiceAgents";
 import AIAgentsVsChatbots from "./pages/blog/AIAgentsVsChatbots";
+import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const App = () => (
             <Route path="/blog/ai-agents-use-cases-in-banking" element={<AIAgentsBanking />} />
             <Route path="/blog/ai-voice-agents-for-customer-experience" element={<AIVoiceAgents />} />
             <Route path="/blog/ai-agents-vs-traditional-chatbots" element={<AIAgentsVsChatbots />} />
+            <Route path="/testimonials" element={<Testimonials />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
