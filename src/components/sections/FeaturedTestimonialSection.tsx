@@ -127,21 +127,6 @@ const FeaturedTestimonialSection = () => {
             <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/5 border-white/10 text-white/60 hover:bg-white/15 hover:text-white/90 hover:border-white/20 transition-all duration-300" />
           </Carousel>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {Array.from({ length: count }).map((_, index) => (
-              <button
-                key={index}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  index + 1 === current 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-                onClick={() => api?.scrollTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
