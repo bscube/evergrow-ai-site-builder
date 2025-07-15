@@ -255,6 +255,95 @@ const Sales = () => {
         </div>
       </section>
 
+      {/* Address Customer Concerns Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 relative overflow-hidden">
+                <div className="bg-white rounded-2xl p-6 shadow-lg max-w-md">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-10 h-10 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="bg-grey-50 rounded-xl p-3 flex-1">
+                      <p className="text-grey-700 text-sm">What is a good skin care routine?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="bg-blue-500 text-white rounded-xl p-3 text-sm leading-relaxed">
+                      A good skin care routine to follow is to use fewer, targeted products in the recommended amount. Consistency is key, so create a realistic routine that can be followed every day.
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-8 h-8 bg-grey-300 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Users className="w-4 h-4 text-grey-600" />
+                    </div>
+                    <div className="bg-grey-50 rounded-xl p-3 flex-1">
+                      <p className="text-grey-700 text-sm">Ok, does this apply for oily skin too?</p>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="bg-blue-500 text-white rounded-xl p-3 text-sm leading-relaxed">
+                      Absolutely! Yes, the routine mentioned is suitable for oily skin as well.
+                      <br /><br />
+                      We offer a range of skincare options. If you have any specific concerns or preferences, I'd be happy to recommend some products for you. :)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Address Customer Concerns
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Guided purchases:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Don the hat of a sales rep and guide customers with relevant product information that drive informed purchases.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Share expertise:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Provide actionable tips and usage recommendations, building trust and empowering customers for future purchases.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Competitor handling:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Efficiently handle competitor-related queries with balanced responses highlighting the unique value of your brand and products.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
