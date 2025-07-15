@@ -156,6 +156,105 @@ const Sales = () => {
         </div>
       </section>
 
+      {/* Harness Your Product Catalog Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Harness Your Product Catalog
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Catalog search:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Our AI sales agent uses embeddings to sift through the product catalog and surface products that match buyer queries.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Product discovery:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Reduce friction and boost sales by connecting buyers to the right products.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Tailored responses:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Answer queries beyond product details like feature comparison, preferences, and more for personalized shopping.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 relative overflow-hidden">
+                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-brand-green-500 rounded-full flex items-center justify-center">
+                      <Globe className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-lg font-semibold text-grey-900">Sunscreens for summer</div>
+                  </div>
+                  
+                  <div className="bg-grey-50 rounded-xl p-4 mb-4">
+                    <p className="text-grey-700 text-sm leading-relaxed">
+                      I've found some great sunscreens that are perfect for summer weather. Would you like to know more about them?
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-white rounded-xl p-3 shadow-sm border border-grey-200">
+                      <div className="w-full h-16 bg-orange-100 rounded-lg mb-2 flex items-center justify-center">
+                        <div className="w-8 h-12 bg-orange-400 rounded"></div>
+                      </div>
+                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                        View Item
+                      </button>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-3 shadow-sm border border-grey-200">
+                      <div className="w-full h-16 bg-yellow-100 rounded-lg mb-2 flex items-center justify-center">
+                        <div className="w-8 h-12 bg-yellow-400 rounded"></div>
+                      </div>
+                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                        View Item
+                      </button>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-3 shadow-sm border border-grey-200">
+                      <div className="w-full h-16 bg-grey-100 rounded-lg mb-2 flex items-center justify-center">
+                        <div className="w-8 h-12 bg-grey-400 rounded"></div>
+                      </div>
+                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                        View Item
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
