@@ -65,6 +65,97 @@ const Sales = () => {
         </div>
       </section>
 
+      {/* Make Each Touchpoint Count Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-12 relative overflow-hidden">
+                <div className="relative z-10">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                      <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Target className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-sm font-medium text-grey-700">Acquire</div>
+                    </div>
+                    <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                      <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <TrendingUp className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-sm font-medium text-grey-700">Convert</div>
+                    </div>
+                    <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                      <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <DollarSign className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-sm font-medium text-grey-700">Transact</div>
+                    </div>
+                    <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                      <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <MessageSquare className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-sm font-medium text-grey-700">Support</div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-yellow-400 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">👋</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Make Each Touchpoint Count
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Lower acquisition costs:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Turn casual visitors into qualified leads by engaging in human-like dialogs, understanding prospect's needs, and tailoring engagement.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Drive transactions:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Turn conversations into conversions by recommending products and reducing drop-offs during checkout.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Streamline support:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Enable customers to resolve queries independently with self-serve support or AI sales agent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
