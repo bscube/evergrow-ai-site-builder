@@ -65,6 +65,43 @@ const Sales = () => {
         </div>
       </section>
 
+      {/* AI Sales Agent Hero Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 rounded-full text-blue-600 text-sm font-medium mb-8">
+                <Target className="w-4 h-4 mr-2" />
+                AI Sales Agent
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-8">
+                <span className="text-grey-900">Sell Smarter and</span>
+                <br />
+                <span className="text-grey-900">Faster with AI Sales</span>
+                <br />
+                <span className="text-blue-600">Agent</span>
+              </h1>
+              
+              <p className="text-xl text-grey-600 mb-8 leading-relaxed">
+                Inspire customers with personalized product recommendations, smart buying guidance, and seamless purchases. Handle complex queries with poise and nudge prospects to convert.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                  Get A Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img src="/lovable-uploads/c05fdbc7-7036-4992-a318-8053ffd43427.png" alt="AI Sales Agent with product recommendations" className="w-full rounded-2xl shadow-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
