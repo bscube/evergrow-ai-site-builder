@@ -776,6 +776,94 @@ const Support = () => {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section className="py-24 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center text-grey-900 mb-12">
+              Get Your Custom AI Support Agent
+            </h2>
+            
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              // TODO: Handle form submission
+              console.log('Form submitted');
+            }}>
+              {/* First Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="First name*"
+                    required
+                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email*"
+                    required
+                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Second Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex">
+                  <select className="px-4 py-3 border border-grey-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
+                    <option value="IN">India (₹)</option>
+                    <option value="US">United States ($)</option>
+                    <option value="UK">United Kingdom (£)</option>
+                    <option value="CA">Canada ($)</option>
+                    <option value="AU">Australia ($)</option>
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="+91"
+                    className="flex-1 px-4 py-3 border border-l-0 border-grey-200 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Company name*"
+                    required
+                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Job title*"
+                    required
+                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex justify-center pt-6">
+                <button
+                  type="submit"
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg"
+                >
+                  Talk to Our Experts
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
