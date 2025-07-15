@@ -819,7 +819,7 @@ const Support = () => {
               {/* Second Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex">
-                  <select className="px-4 py-3 border border-grey-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
+                  <select className="px-3 py-3 border border-grey-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm min-w-[120px]">
                     <option value="IN">India (₹)</option>
                     <option value="US">United States ($)</option>
                     <option value="UK">United Kingdom (£)</option>
@@ -828,7 +828,7 @@ const Support = () => {
                   </select>
                   <input
                     type="tel"
-                    placeholder="+91"
+                    placeholder="6305436"
                     className="flex-1 px-4 py-3 border border-l-0 border-grey-200 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
