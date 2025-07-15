@@ -796,14 +796,14 @@ const Support = () => {
                     type="text"
                     placeholder="First name*"
                     required
-                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -811,7 +811,7 @@ const Support = () => {
                     type="email"
                     placeholder="Your Email*"
                     required
-                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -819,7 +819,7 @@ const Support = () => {
               {/* Second Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex">
-                  <select className="px-3 py-3 border border-grey-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm min-w-[120px]">
+                  <select className="px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm min-w-[140px]">
                     <option value="IN">India (₹)</option>
                     <option value="US">United States ($)</option>
                     <option value="UK">United Kingdom (£)</option>
@@ -828,8 +828,8 @@ const Support = () => {
                   </select>
                   <input
                     type="tel"
-                    placeholder="6305436"
-                    className="flex-1 px-4 py-3 border border-l-0 border-grey-200 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="+91"
+                    className="flex-1 px-4 py-3 border border-l-0 border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -837,7 +837,7 @@ const Support = () => {
                     type="text"
                     placeholder="Your Company name*"
                     required
-                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -845,7 +845,7 @@ const Support = () => {
                     type="text"
                     placeholder="Job title*"
                     required
-                    className="w-full px-4 py-3 border border-grey-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
