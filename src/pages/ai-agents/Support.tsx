@@ -818,18 +818,25 @@ const Support = () => {
 
               {/* Second Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
-                  <select className="px-3 py-3 border border-gray-300 sm:rounded-l-lg rounded-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm min-w-0 sm:w-32 flex-shrink-0">
-                    <option value="IN">India (₹)</option>
-                    <option value="US">USA ($)</option>
-                    <option value="UK">UK (£)</option>
-                    <option value="CA">Canada ($)</option>
-                    <option value="AU">Australia ($)</option>
-                  </select>
+                <div className="flex">
+                  <div className="relative">
+                    <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-3 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+1">🇨🇦 +1</option>
+                      <option value="+61">🇦🇺 +61</option>
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
+                  </div>
                   <input
                     type="tel"
-                    placeholder="+91 Your phone number"
-                    className="flex-1 px-4 py-3 border sm:border-l-0 border-gray-300 sm:rounded-r-lg rounded-lg sm:rounded-l-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-0"
+                    placeholder="Your phone number"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
