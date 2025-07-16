@@ -385,10 +385,8 @@ const FacebookChatbot = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Blog Card 1 - Definitive Guide to Messenger Chatbots */}
-            <a 
-              href="https://www.haptik.ai/blog/guide-messenger-chatbots" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/blog/guide-to-messenger-chatbots"
               tabIndex={0}
               className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
@@ -428,13 +426,11 @@ const FacebookChatbot = () => {
                   <span>8 min read</span>
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Blog Card 2 - 3 Ways Facebook Messenger Helps eCommerce Businesses */}
-            <a 
-              href="https://www.haptik.ai/blog/facebook-messenger-ecommerce" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/blog/facebook-messenger-for-ecommerce"
               tabIndex={0}
               className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
@@ -475,13 +471,11 @@ const FacebookChatbot = () => {
                   <span>5 min read</span>
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Blog Card 3 - Deliver delightful shopping experiences with WhatsApp chatbot */}
-            <a 
-              href="https://www.haptik.ai/blog/whatsapp-chatbot-conversational-commerce" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/blog/whatsapp-chatbot-shopping-experience"
               tabIndex={0}
               className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
@@ -520,7 +514,7 @@ const FacebookChatbot = () => {
                   <span>15 min read</span>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

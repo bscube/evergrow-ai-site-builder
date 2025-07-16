@@ -28,6 +28,9 @@ import GenerativeAIEcommerce from "./pages/blog/GenerativeAIEcommerce";
 import AIAgentsBanking from "./pages/blog/AIAgentsBanking";
 import AIVoiceAgents from "./pages/blog/AIVoiceAgents";
 import AIAgentsVsChatbots from "./pages/blog/AIAgentsVsChatbots";
+import GuideToMessengerChatbots from "./pages/blog/GuideToMessengerChatbots";
+import FacebookMessengerEcommerce from "./pages/blog/FacebookMessengerEcommerce";
+import WhatsAppChatbotShopping from "./pages/blog/WhatsAppChatbotShopping";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
@@ -64,6 +67,9 @@ const App = () => (
             <Route path="/blog/ai-agents-use-cases-in-banking" element={<AIAgentsBanking />} />
             <Route path="/blog/ai-voice-agents-for-customer-experience" element={<AIVoiceAgents />} />
             <Route path="/blog/ai-agents-vs-traditional-chatbots" element={<AIAgentsVsChatbots />} />
+            <Route path="/blog/guide-to-messenger-chatbots" element={<GuideToMessengerChatbots />} />
+            <Route path="/blog/facebook-messenger-for-ecommerce" element={<FacebookMessengerEcommerce />} />
+            <Route path="/blog/whatsapp-chatbot-shopping-experience" element={<WhatsAppChatbotShopping />} />
             <Route path="/testimonials" element={<Testimonials />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
