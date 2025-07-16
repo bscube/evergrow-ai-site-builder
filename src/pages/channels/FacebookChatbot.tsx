@@ -1,10 +1,36 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageSquare, Users, TrendingUp, CheckCircle, Zap, Globe, BarChart3, Heart, ShoppingBag, Bot, Star } from 'lucide-react';
+import { ArrowRight, MessageSquare, Users, TrendingUp, CheckCircle, Zap, Globe, BarChart3, Heart, ShoppingBag, Bot, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
+
+// Accordion Item Component
+const AccordionItem = ({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  return (
+    <div className="bg-white rounded-xl border border-grey-200 overflow-hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-6 text-left hover:bg-grey-50 transition-colors"
+      >
+        <h3 className="text-lg font-semibold text-grey-900">{title}</h3>
+        {isOpen ? (
+          <ChevronUp className="h-5 w-5 text-grey-500" />
+        ) : (
+          <ChevronDown className="h-5 w-5 text-grey-500" />
+        )}
+      </button>
+      {isOpen && (
+        <div className="px-6 pb-6">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const FacebookChatbot = () => {
   return (
@@ -202,6 +228,123 @@ const FacebookChatbot = () => {
                   <span className="text-grey-700">Advanced analytics and performance tracking</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Maximize Customer Engagement Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Maximize customer engagement on Facebook Messenger
+            </h2>
+            <p className="text-xl text-grey-700 max-w-4xl mx-auto">
+              Boost your campaign's effectiveness with the power of Messenger & Haptik's solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Accordion */}
+            <div className="space-y-4">
+              <AccordionItem 
+                title="Ad Targeting & User Segmentation"
+                defaultOpen={true}
+              >
+                <p className="text-grey-700 leading-relaxed">
+                  Gather insights from real conversations to create targeted audiences for your ads and optimize campaign performance.
+                </p>
+              </AccordionItem>
+
+              <AccordionItem 
+                title="Rich Interactive Experiences"
+                defaultOpen={false}
+              >
+                <p className="text-grey-700 leading-relaxed">
+                  Create engaging conversations with rich media, quick replies, carousels, and interactive elements that drive user engagement and conversions.
+                </p>
+              </AccordionItem>
+
+              <AccordionItem 
+                title="Out-of-the-box Integrations"
+                defaultOpen={false}
+              >
+                <p className="text-grey-700 leading-relaxed">
+                  Seamlessly connect with your existing tools including CRMs, e-commerce platforms, and marketing automation systems for streamlined operations.
+                </p>
+              </AccordionItem>
+            </div>
+
+            {/* Right Column - Dashboard Mockup */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-grey-200">
+              {/* Meta Campaign Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">M</span>
+                    </div>
+                    <span className="text-grey-700 font-medium">Meta</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-purple-500 rounded"></div>
+                    <span className="text-grey-700 font-medium">Campaign 1101</span>
+                  </div>
+                </div>
+                <span className="text-grey-500 text-sm">Ad Overview</span>
+              </div>
+
+              {/* Metrics Row */}
+              <div className="grid grid-cols-5 gap-4 mb-8">
+                <div className="text-center">
+                  <div className="text-xs text-grey-500 mb-1">Advertisement Cost</div>
+                  <div className="text-lg font-bold text-blue-500">$1,200</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-grey-500 mb-1">Impressions</div>
+                  <div className="text-lg font-bold text-blue-500">10,000</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-grey-500 mb-1">Ad Clicks</div>
+                  <div className="text-lg font-bold text-blue-500">6,000</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-grey-500 mb-1">Total Conversations</div>
+                  <div className="text-lg font-bold text-blue-500">4,890</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-grey-500 mb-1">Goals Achieved</div>
+                  <div className="text-lg font-bold text-blue-500">1,050</div>
+                </div>
+              </div>
+
+              {/* Chart Section */}
+              <div>
+                <div className="text-sm text-grey-700 mb-4">Product Launch Journey</div>
+                <div className="flex items-end space-x-3 h-32">
+                  <div className="flex-1 bg-blue-500 rounded-t flex flex-col justify-end items-center pb-2" style={{height: '100%'}}>
+                    <span className="text-white text-xs font-bold">100%</span>
+                    <span className="text-white text-xs">Aware</span>
+                  </div>
+                  <div className="flex-1 bg-blue-400 rounded-t flex flex-col justify-end items-center pb-2" style={{height: '75%'}}>
+                    <span className="text-white text-xs font-bold">65.4%</span>
+                    <span className="text-white text-xs">Interest</span>
+                  </div>
+                  <div className="flex-1 bg-blue-400 rounded-t flex flex-col justify-end items-center pb-2" style={{height: '80%'}}>
+                    <span className="text-white text-xs font-bold">84.4%</span>
+                    <span className="text-white text-xs">Desire</span>
+                  </div>
+                  <div className="flex-1 bg-blue-300 rounded-t flex flex-col justify-end items-center pb-2" style={{height: '70%'}}>
+                    <span className="text-white text-xs font-bold">81.5%</span>
+                    <span className="text-white text-xs">Action</span>
+                  </div>
+                  <div className="flex-1 bg-blue-300 rounded-t flex flex-col justify-end items-center pb-2" style={{height: '45%'}}>
+                    <span className="text-white text-xs font-bold">47.7%</span>
+                    <span className="text-white text-xs">Retention</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
