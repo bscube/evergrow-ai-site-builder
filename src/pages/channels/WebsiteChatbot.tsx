@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, Zap, Users, TrendingUp, CheckCircle, MessageSquare, BarChart3, Clock, Shield, Bot, Sparkles } from 'lucide-react';
+import { ArrowRight, Globe, Zap, Users, TrendingUp, CheckCircle, MessageSquare, BarChart3, Clock, Shield, Bot, Sparkles, ChevronDown, ShoppingCart, MessageCircle, CreditCard, MousePointer } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
@@ -232,6 +233,156 @@ const WebsiteChatbot = () => {
                   <span className="text-grey-700">Advanced targeting based on visitor behavior</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seamless Customer Experience Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+                Offer a Seamless Customer Experience
+              </h2>
+              <p className="text-xl text-grey-700 mb-12 leading-relaxed">
+                For improved conversions, higher revenue, and strategic insights
+              </p>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="gpt-conversations" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <Bot className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">GPT-powered Conversations</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Improve quality and depth of customer-facing interactions by using GPT-powered website chatbots.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="product-catalogs" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <ShoppingCart className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">Product Catalogs</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Showcase your products directly in chat with rich catalogs, images, and instant purchase options.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="website-flows" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <Globe className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">Website Flows</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Create automated conversation flows that guide visitors through your sales funnel and capture leads.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="chat-analytics" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <BarChart3 className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">Chat Message Analytics</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Track conversation performance, user engagement, and conversion metrics to optimize your chatbot.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="website-payments" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <CreditCard className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">Website Payments</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Enable secure payment processing directly through chat for seamless purchase experiences.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="click-to-chat" className="bg-white rounded-xl shadow-sm border border-grey-200">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <div className="flex items-center">
+                      <MousePointer className="w-6 h-6 text-brand-green-500 mr-4" />
+                      <span className="text-lg font-semibold text-grey-900">Click-to-Chat Widgets</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <p className="text-grey-700">
+                      Add strategic chat buttons and widgets throughout your site to maximize engagement opportunities.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+                {/* Chat Interface Mockup */}
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-grey-200">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-brand-green-500 rounded-full flex items-center justify-center">
+                      <Bot className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="ml-3">
+                      <h4 className="font-semibold text-grey-900">AI Assistant</h4>
+                      <p className="text-sm text-grey-600">Online</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="bg-grey-100 rounded-lg px-4 py-3 max-w-xs">
+                    <p className="text-sm text-grey-800">Get 25% off on all earpods with code EA25! 😊</p>
+                  </div>
+                  
+                  <div className="bg-brand-green-500 text-white rounded-lg px-4 py-3 max-w-xs ml-auto">
+                    <p className="text-sm">Hurry! Earpods on sale at 25% off! Use code EA25. ✨</p>
+                  </div>
+
+                  <div className="bg-grey-100 rounded-lg px-4 py-3 max-w-xs">
+                    <p className="text-sm text-grey-800">Don't miss out! Earpods range now 25% off. 🎧 Use code EA25 at checkout.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-2">
+                  <input 
+                    type="text" 
+                    placeholder="Type your message..."
+                    className="flex-1 px-4 py-2 border border-grey-300 rounded-lg text-sm"
+                    disabled
+                  />
+                  <button className="bg-brand-green-500 text-white p-2 rounded-lg">
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Floating notification bubbles */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-3 border border-grey-200 max-w-48">
+                <p className="text-xs text-grey-700">Earpods 25% off! Code: EA25.</p>
+              </div>
             </div>
           </div>
         </div>
