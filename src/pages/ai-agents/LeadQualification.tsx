@@ -304,8 +304,136 @@ const LeadQualification = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Optimize with Analytics Section */}
       <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Analytics Dashboard */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-3xl p-8 shadow-2xl">
+                {/* Dashboard Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* Unique Users Card */}
+                  <div className="bg-white rounded-2xl p-4">
+                    <div className="text-xs text-grey-500 mb-1">Unique Users</div>
+                    <div className="text-2xl font-bold text-grey-900">13,199</div>
+                  </div>
+                  
+                  {/* CSAT Card */}
+                  <div className="bg-white rounded-2xl p-4 flex items-center justify-center">
+                    <div className="relative w-16 h-16">
+                      <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="12" fill="none" stroke="#e5e7eb" strokeWidth="3"/>
+                        <circle cx="16" cy="16" r="12" fill="none" stroke="#3b82f6" strokeWidth="3" 
+                                strokeDasharray="75.4" strokeDashoffset="18.9" strokeLinecap="round"/>
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-sm font-bold text-blue-600">82%</span>
+                      </div>
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-xs text-grey-500">CSAT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Conversations Card */}
+                <div className="bg-white rounded-2xl p-4 mb-6">
+                  <div className="text-xs text-grey-500 mb-1">Conversations</div>
+                  <div className="text-2xl font-bold text-grey-900 mb-4">16,483</div>
+                </div>
+                
+                {/* Chart Section */}
+                <div className="bg-white rounded-2xl p-4 mb-4">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="text-sm font-medium text-grey-900">Query Completion Rate</div>
+                    <div className="text-sm font-bold text-grey-900">74.7%</div>
+                  </div>
+                  <div className="flex items-end justify-between h-20 space-x-1">
+                    {[40, 60, 30, 80, 45, 70, 35, 90, 50, 75, 40, 65].map((height, index) => (
+                      <div key={index} className={`w-4 rounded-t ${index % 2 === 0 ? 'bg-blue-400' : 'bg-green-400'}`} 
+                           style={{ height: `${height}%` }}></div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Conversations Split */}
+                <div className="bg-white rounded-2xl p-4">
+                  <div className="text-sm font-medium text-grey-900 mb-3">Conversations Split</div>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-grey-600">Bot Automation</span>
+                      <div className="flex-1 mx-3 bg-grey-200 rounded-full h-2">
+                        <div className="bg-yellow-400 h-2 rounded-full" style={{ width: '75%' }}></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-grey-600">Agent Handover</span>
+                      <div className="flex-1 mx-3 bg-grey-200 rounded-full h-2">
+                        <div className="bg-orange-400 h-2 rounded-full" style={{ width: '25%' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Optimize with Analytics
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Track KPIs:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Monitor the AI agent's performance with metrics like query completion rate and first-time resolution to improve customer satisfaction.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Actionable insights:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Get comprehensive insights into customer behavior, trends, and preferences with custom dashboards.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Power growth:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Take stock of frequently asked questions and engagement patterns for refining campaign strategies and effective lead nurturing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
