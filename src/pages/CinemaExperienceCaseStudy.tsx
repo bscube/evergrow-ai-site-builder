@@ -95,19 +95,6 @@ const CinemaExperienceCaseStudy = () => {
                 and delivered exceptional movie-going experiences through intelligent automation.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                >
-                  Get Similar Results
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 font-semibold rounded-xl text-lg transition-all duration-200">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Demo
-                </button>
-              </div>
             </div>
             
             <div className="relative">
