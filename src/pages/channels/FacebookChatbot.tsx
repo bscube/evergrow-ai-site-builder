@@ -389,7 +389,8 @@ const FacebookChatbot = () => {
               href="https://www.haptik.ai/blog/guide-messenger-chatbots" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+              tabIndex={0}
+              className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div className="aspect-video bg-gradient-to-br from-purple-50 to-pink-50 p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
@@ -434,7 +435,8 @@ const FacebookChatbot = () => {
               href="https://www.haptik.ai/blog/facebook-messenger-ecommerce" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+              tabIndex={0}
+              className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div className="aspect-video bg-gradient-to-br from-blue-50 to-cyan-50 p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
@@ -480,7 +482,8 @@ const FacebookChatbot = () => {
               href="https://www.haptik.ai/blog/whatsapp-chatbot-conversational-commerce" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+              tabIndex={0}
+              className="group block cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] border border-grey-200 hover:border-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div className="aspect-video bg-gradient-to-br from-green-50 to-yellow-50 p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
