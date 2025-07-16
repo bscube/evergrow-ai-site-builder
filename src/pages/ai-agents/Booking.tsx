@@ -65,6 +65,115 @@ const Booking = () => {
         </div>
       </section>
 
+      {/* Instant and Intelligent Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Chat Interface */}
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-lg mx-auto">
+                <div className="space-y-6">
+                  {/* User Message */}
+                  <div className="flex justify-end">
+                    <div className="bg-brand-green-500 text-white rounded-2xl rounded-tr-md px-4 py-3 max-w-xs">
+                      I'm going to Bali for a vacation. Can you recommend hotels under $100 per night?
+                    </div>
+                  </div>
+                  
+                  {/* AI Response */}
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center">
+                      <MessageSquare className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="bg-grey-100 text-grey-900 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
+                      Would you prefer beachfront or the city center?
+                    </div>
+                  </div>
+                  
+                  {/* User Response */}
+                  <div className="flex justify-end">
+                    <div className="bg-brand-green-500 text-white rounded-2xl rounded-tr-md px-4 py-3 max-w-xs">
+                      Beachfront for me!
+                    </div>
+                  </div>
+                  
+                  {/* AI Recommendation */}
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center">
+                      <MessageSquare className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="bg-grey-100 text-grey-900 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
+                      <p className="mb-3">Based on your previous trips, you might like the Bamboo Retreat or Sunset Villa - both under $100 and highly-rated.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-white rounded-lg p-2">
+                          <img src="/placeholder.svg" alt="Bamboo Retreat" className="w-full h-16 object-cover rounded mb-1" />
+                          <p className="text-xs font-medium">Bamboo Retreat</p>
+                        </div>
+                        <div className="bg-white rounded-lg p-2">
+                          <img src="/placeholder.svg" alt="Sunset Villa" className="w-full h-16 object-cover rounded mb-1" />
+                          <p className="text-xs font-medium">Sunset Villa</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Instant and Intelligent
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Zero wait times:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Process instant confirmations and cancellations without prolonged delays or human error
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Personalized experience:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Tailor recommendations based on preferences and booking history, winning loyalty and repeat engagement
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Enhanced operations:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Unlock higher efficiency by automating scheduling, reminders, and follow-ups, reducing manual effort
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
