@@ -372,6 +372,157 @@ const FacebookChatbot = () => {
       </section>
 
       <Footer />
+
+      {/* Relevant Blogs Section */}
+      <section className="py-16 bg-white border-t border-grey-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-grey-900 mb-4">
+              Relevant Blogs
+            </h2>
+            <p className="text-lg text-grey-600">
+              Find recent articles on Facebook Messenger
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Blog Card 1 - Definitive Guide to Messenger Chatbots */}
+            <a 
+              href="https://www.haptik.ai/blog/guide-messenger-chatbots" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+            >
+              <div className="aspect-video bg-gradient-to-br from-purple-50 to-pink-50 p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                    <MessageSquare className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="bg-white rounded-xl p-6 shadow-lg max-w-xs">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      <span className="text-sm text-grey-600">AI Virtual Assistant is typing...</span>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="text-sm text-grey-800">Hi! Here are some of our best selling casual clothing dresses:</p>
+                      <div className="flex space-x-2">
+                        <div className="w-16 h-20 bg-red-100 rounded border-2 border-red-200"></div>
+                        <div className="w-16 h-20 bg-blue-100 rounded border-2 border-blue-200"></div>
+                      </div>
+                      <div className="flex space-x-1">
+                        <span className="px-2 py-1 bg-grey-100 rounded text-xs">Stylish</span>
+                        <span className="px-2 py-1 bg-grey-100 rounded text-xs">Trendy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-grey-900 mb-3 group-hover:text-blue-500 transition-colors">
+                  Definitive Guide to Messenger Chatbots
+                </h3>
+                <div className="flex items-center text-sm text-grey-600">
+                  <span>FB Messenger</span>
+                  <span className="mx-2">•</span>
+                  <span>8 min read</span>
+                </div>
+              </div>
+            </a>
+
+            {/* Blog Card 2 - 3 Ways Facebook Messenger Helps eCommerce Businesses */}
+            <a 
+              href="https://www.haptik.ai/blog/facebook-messenger-ecommerce" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+            >
+              <div className="aspect-video bg-gradient-to-br from-blue-50 to-cyan-50 p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                    <MessageSquare className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="bg-white rounded-xl p-6 shadow-lg max-w-xs">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      <span className="text-sm text-grey-600">Would you like to see our recommendations?</span>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="text-sm text-grey-800">Here's what we found on our store for you:</p>
+                      <div className="flex space-x-2">
+                        <div className="w-16 h-16 bg-orange-100 rounded border-2 border-orange-200 flex items-center justify-center">
+                          <ShoppingBag className="w-6 h-6 text-orange-500" />
+                        </div>
+                        <div className="w-16 h-16 bg-green-100 rounded border-2 border-green-200 flex items-center justify-center">
+                          <Heart className="w-6 h-6 text-green-500" />
+                        </div>
+                      </div>
+                      <button className="w-full bg-blue-500 text-white text-xs py-2 rounded">Get Recommendations</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-grey-900 mb-3 group-hover:text-blue-500 transition-colors">
+                  3 Ways Facebook Messenger Helps eCommerce Businesses
+                </h3>
+                <div className="flex items-center text-sm text-grey-600">
+                  <span>FB Messenger</span>
+                  <span className="mx-2">•</span>
+                  <span>5 min read</span>
+                </div>
+              </div>
+            </a>
+
+            {/* Blog Card 3 - Deliver delightful shopping experiences with WhatsApp chatbot */}
+            <a 
+              href="https://www.haptik.ai/blog/whatsapp-chatbot-conversational-commerce" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-grey-200 hover:border-blue-500/30"
+            >
+              <div className="aspect-video bg-gradient-to-br from-green-50 to-yellow-50 p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <MessageSquare className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="relative">
+                    <div className="w-24 h-32 bg-white rounded-lg shadow-lg border border-grey-200 flex flex-col items-center justify-center">
+                      <BarChart3 className="w-8 h-8 text-green-500 mb-2" />
+                      <div className="space-y-1">
+                        <div className="w-12 h-2 bg-green-200 rounded"></div>
+                        <div className="w-8 h-2 bg-green-300 rounded"></div>
+                        <div className="w-10 h-2 bg-green-400 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 w-12 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">%</span>
+                    </div>
+                    <div className="absolute -top-2 -left-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs">💰</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-grey-900 mb-3 group-hover:text-blue-500 transition-colors">
+                  Deliver delightful shopping experiences with WhatsApp chatbot
+                </h3>
+                <div className="flex items-center text-sm text-grey-600">
+                  <span>Conversational Commerce</span>
+                  <span className="mx-2">•</span>
+                  <span>15 min read</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
