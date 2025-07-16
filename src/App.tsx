@@ -32,6 +32,13 @@ import GuideToMessengerChatbots from "./pages/blog/GuideToMessengerChatbots";
 import FacebookMessengerEcommerce from "./pages/blog/FacebookMessengerEcommerce";
 import WhatsAppChatbotShopping from "./pages/blog/WhatsAppChatbotShopping";
 import Testimonials from "./pages/Testimonials";
+import CustomerShowcase from "./pages/CustomerShowcase";
+import KnowledgeCenter from "./pages/KnowledgeCenter";
+import Webinars from "./pages/Webinars";
+import ReportsResearch from "./pages/ReportsResearch";
+import CompanyBlog from "./pages/CompanyBlog";
+import TechBlog from "./pages/TechBlog";
+import ConversationsOnAI from "./pages/ConversationsOnAI";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -71,6 +78,13 @@ const App = () => (
             <Route path="/blog/facebook-messenger-for-ecommerce" element={<FacebookMessengerEcommerce />} />
             <Route path="/blog/whatsapp-chatbot-shopping-experience" element={<WhatsAppChatbotShopping />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/customer-showcase" element={<CustomerShowcase />} />
+            <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+            <Route path="/webinars" element={<Webinars />} />
+            <Route path="/reports-research" element={<ReportsResearch />} />
+            <Route path="/company-blog" element={<CompanyBlog />} />
+            <Route path="/tech-blog" element={<TechBlog />} />
+            <Route path="/conversations-on-ai" element={<ConversationsOnAI />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

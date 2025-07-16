@@ -115,43 +115,43 @@ const Navigation = () => {
     },
     { 
       name: 'Knowledge Center', 
-      path: '/resources#guides', 
+      path: '/knowledge-center', 
       icon: BookOpen,
       benefit: 'Comprehensive guides and documentation'
     },
     { 
       name: 'Customer Showcase', 
-      path: '/case-studies', 
+      path: '/customer-showcase', 
       icon: Users,
       benefit: 'See how businesses transform with AI'
     },
     { 
       name: 'Webinars', 
-      path: '/resources#webinars', 
+      path: '/webinars', 
       icon: Video,
       benefit: 'Live demos and expert insights'
     },
     { 
       name: 'Reports & Research', 
-      path: '/resources#guides', 
+      path: '/reports-research', 
       icon: BarChart3,
       benefit: 'Industry trends and analysis'
     },
     { 
       name: 'Company Blog', 
-      path: '/resources#blog', 
+      path: '/company-blog', 
       icon: BookOpen,
       benefit: 'Latest AI insights and updates'
     },
     { 
       name: 'Tech Blog', 
-      path: '/resources#blog', 
+      path: '/tech-blog', 
       icon: Zap,
       benefit: 'Technical deep dives and tutorials'
     },
     { 
       name: 'Conversations on AI', 
-      path: '/resources#webinars', 
+      path: '/conversations-on-ai', 
       icon: Mic,
       benefit: 'Thought leadership discussions'
     },
