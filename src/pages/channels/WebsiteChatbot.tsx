@@ -3,6 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Zap, Users, TrendingUp, CheckCircle, MessageSquare, BarChart3, Clock, Shield, Bot, Sparkles, ChevronDown, ShoppingCart, MessageCircle, CreditCard, MousePointer } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
+import { Button } from '../../components/ui/button';
+import { Input } from '../../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
@@ -405,6 +408,104 @@ const WebsiteChatbot = () => {
             <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
               Book Demo Call
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-blue-600 mb-6">
+              Start Your Website Commerce Journey with AI
+            </h2>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <Input 
+                    placeholder="First name*" 
+                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <Input 
+                    placeholder="Last name*" 
+                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <Input 
+                    placeholder="Company name*" 
+                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <Input 
+                    type="email"
+                    placeholder="Business email*" 
+                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <Input 
+                    placeholder="Job title*" 
+                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <Select>
+                    <SelectTrigger className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500">
+                      <SelectValue placeholder="Company Annual Revenue*" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white z-50">
+                      <SelectItem value="0-1m">$0 - $1M</SelectItem>
+                      <SelectItem value="1-10m">$1M - $10M</SelectItem>
+                      <SelectItem value="10-50m">$10M - $50M</SelectItem>
+                      <SelectItem value="50-100m">$50M - $100M</SelectItem>
+                      <SelectItem value="100m+">$100M+</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex gap-2">
+                  <Select>
+                    <SelectTrigger className="h-12 w-32 border-grey-300 focus:border-blue-500 focus:ring-blue-500">
+                      <SelectValue placeholder="India" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white z-50">
+                      <SelectItem value="in">🇮🇳 India</SelectItem>
+                      <SelectItem value="us">🇺🇸 USA</SelectItem>
+                      <SelectItem value="gb">🇬🇧 UK</SelectItem>
+                      <SelectItem value="ca">🇨🇦 Canada</SelectItem>
+                      <SelectItem value="au">🇦🇺 Australia</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Input 
+                    type="tel"
+                    placeholder="+91" 
+                    className="h-12 flex-1 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+                <div className="md:col-span-2"></div>
+              </div>
+
+              <div className="text-center pt-6">
+                <Button 
+                  type="submit"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 h-12 text-lg font-semibold rounded-lg transition-all duration-200 hover:scale-105"
+                >
+                  Get A Demo
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
