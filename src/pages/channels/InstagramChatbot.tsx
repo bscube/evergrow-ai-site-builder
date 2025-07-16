@@ -208,27 +208,6 @@ const InstagramChatbot = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-pink-500 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Monetize Your Instagram?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Transform your Instagram presence into a powerful sales channel with automated DM conversations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-pink-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
-              Get Success Blueprint
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Elevate your Instagram Game Section */}
       <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,6 +357,27 @@ const InstagramChatbot = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-pink-500 to-pink-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Monetize Your Instagram?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            Transform your Instagram presence into a powerful sales channel with automated DM conversations
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+              Start Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-pink-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
+              Get Success Blueprint
+            </button>
           </div>
         </div>
       </section>
