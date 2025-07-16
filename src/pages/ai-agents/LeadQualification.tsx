@@ -450,8 +450,6 @@ const LeadQualification = () => {
                 <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
                   <Globe className="w-10 h-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-grey-900 mb-4">
                 Omnichannel Engagement
@@ -466,8 +464,6 @@ const LeadQualification = () => {
                 <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
                   <Users className="w-10 h-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-grey-900 mb-4">
                 Streamline Support
@@ -482,8 +478,6 @@ const LeadQualification = () => {
                 <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
                   <MessageSquare className="w-10 h-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
               </div>
               <h3 className="text-2xl font-bold text-grey-900 mb-4">
                 Handoff to Human Agents
