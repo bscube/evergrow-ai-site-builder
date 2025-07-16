@@ -40,14 +40,11 @@ const InstagramChatbot = () => {
                 Harness the power of Instagram's 2 billion users with intelligent DM automation that converts followers into customers through personalized visual commerce experiences.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex justify-center sm:justify-start">
                 <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Build Instagram Bot
+                  Get a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  See Success Stories
-                </button>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
