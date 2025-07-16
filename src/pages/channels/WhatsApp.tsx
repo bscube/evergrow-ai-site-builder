@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { MessageSquare, ArrowRight, CheckCircle, Zap, Users, BarChart3, Bot, Phone, Calendar, ShoppingCart, Target, Play, Star, TrendingUp, Shield, Globe, Languages, Headphones } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
 
 const WhatsApp = () => {
   const features = [
@@ -451,6 +455,150 @@ const WhatsApp = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Book a Demo Form Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Start Your WhatsApp Commerce Journey with Haptik
+            </h2>
+            <p className="text-xl text-grey-600">
+              Get personalized recommendations and see how WhatsApp automation can transform your business
+            </p>
+          </div>
+
+          <form className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="firstName" className="text-sm font-medium text-grey-700">
+                  First name*
+                </Label>
+                <Input 
+                  id="firstName" 
+                  placeholder="First name*" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="lastName" className="text-sm font-medium text-grey-700">
+                  Last name*
+                </Label>
+                <Input 
+                  id="lastName" 
+                  placeholder="Last name*" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="companyName" className="text-sm font-medium text-grey-700">
+                  Company name*
+                </Label>
+                <Input 
+                  id="companyName" 
+                  placeholder="Company name*" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="businessEmail" className="text-sm font-medium text-grey-700">
+                  Business email*
+                </Label>
+                <Input 
+                  id="businessEmail" 
+                  type="email" 
+                  placeholder="Business email*" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="jobTitle" className="text-sm font-medium text-grey-700">
+                  Job title*
+                </Label>
+                <Input 
+                  id="jobTitle" 
+                  placeholder="Job title*" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="annualRevenue" className="text-sm font-medium text-grey-700">
+                  Company Annual Revenue*
+                </Label>
+                <Select required>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Company Annual Revenue*" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="less-than-1m">Less than $1M</SelectItem>
+                    <SelectItem value="1m-10m">$1M - $10M</SelectItem>
+                    <SelectItem value="10m-50m">$10M - $50M</SelectItem>
+                    <SelectItem value="50m-100m">$50M - $100M</SelectItem>
+                    <SelectItem value="100m-500m">$100M - $500M</SelectItem>
+                    <SelectItem value="more-than-500m">More than $500M</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="country" className="text-sm font-medium text-grey-700">
+                  Country*
+                </Label>
+                <Select required>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="India" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="india">India</SelectItem>
+                    <SelectItem value="uae">UAE</SelectItem>
+                    <SelectItem value="saudi-arabia">Saudi Arabia</SelectItem>
+                    <SelectItem value="qatar">Qatar</SelectItem>
+                    <SelectItem value="kuwait">Kuwait</SelectItem>
+                    <SelectItem value="bahrain">Bahrain</SelectItem>
+                    <SelectItem value="oman">Oman</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="phoneNumber" className="text-sm font-medium text-grey-700">
+                  Phone number*
+                </Label>
+                <Input 
+                  id="phoneNumber" 
+                  placeholder="+91" 
+                  required 
+                  className="w-full"
+                />
+              </div>
+            </div>
+
+            <div className="text-center pt-6">
+              <Button 
+                type="submit" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-semibold rounded-lg"
+              >
+                Get A Demo
+              </Button>
+            </div>
+          </form>
         </div>
       </section>
 
