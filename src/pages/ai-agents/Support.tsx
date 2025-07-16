@@ -784,75 +784,83 @@ const Support = () => {
               Get Your Custom AI Support Agent
             </h2>
             
-            <form className="space-y-6" onSubmit={(e) => {
+            <form className="space-y-8" onSubmit={(e) => {
               e.preventDefault();
               // TODO: Handle form submission
               console.log('Form submitted');
             }}>
               {/* First Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">First Name *</label>
                   <input
                     type="text"
-                    placeholder="First name*"
+                    placeholder="Enter your first name"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Last Name</label>
                   <input
                     type="text"
-                    placeholder="Last Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your last name"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Email Address *</label>
                   <input
                     type="email"
-                    placeholder="Your Email*"
+                    placeholder="Enter your email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
               </div>
 
               {/* Second Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex">
-                  <div className="relative">
-                    <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-3 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
-                      <option value="+91">🇮🇳 +91</option>
-                      <option value="+1">🇺🇸 +1</option>
-                      <option value="+44">🇬🇧 +44</option>
-                      <option value="+1">🇨🇦 +1</option>
-                      <option value="+61">🇦🇺 +61</option>
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Phone Number</label>
+                  <div className="flex">
+                    <div className="relative">
+                      <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-4 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer text-gray-700 h-[56px]">
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+1">🇨🇦 +1</option>
+                        <option value="+61">🇦🇺 +61</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </div>
                     </div>
+                    <input
+                      type="tel"
+                      placeholder="Enter phone number"
+                      className="flex-1 px-4 py-4 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                    />
                   </div>
-                  <input
-                    type="tel"
-                    placeholder="Your phone number"
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
                 </div>
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Company Name *</label>
                   <input
                     type="text"
-                    placeholder="Your Company name*"
+                    placeholder="Enter company name"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Job Title *</label>
                   <input
                     type="text"
-                    placeholder="Job title*"
+                    placeholder="Enter job title"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
               </div>
