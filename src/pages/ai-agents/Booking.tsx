@@ -376,8 +376,66 @@ const Booking = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Built for the Modern Enterprise Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-4">
+              Built for the Modern Enterprise
+            </h2>
+            <p className="text-xl text-grey-600">
+              To enhance booking journeys
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Bespoke Solution
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Our AI booking agent is a pioneering initiative highly customized for enterprises in industries like entertainment, retail, healthcare, real estate, and more
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Powerful Integrations
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Easily connect to 100+ integrations including CRMs, messaging channels, payment gateways, and other 3rd-party tools to auto-sync bookings and manage leads in real-time
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Highly Scalable
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Easily manage high booking volumes without disruptions. Our systems handle peak demand for the largest enterprises, ensuring reliability and operational efficiency at scale
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
