@@ -39,14 +39,11 @@ const Education = () => {
                 Enhance student engagement and streamline education with AI automation for course enrollment, support, and personalized learning experiences.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex justify-center sm:justify-start">
                 <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Start Education AI
+                  Get a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  View Demo
-                </button>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
@@ -164,7 +161,7 @@ const Education = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-              Start Education AI
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
