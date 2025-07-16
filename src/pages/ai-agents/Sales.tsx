@@ -344,6 +344,95 @@ const Sales = () => {
         </div>
       </section>
 
+      {/* Engage Post-Purchase Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Engage Post-Purchase
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Offers and discounts:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Proactively reach customers with personalized offers and back-in-stock alerts to facilitate conversions and sales.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Win loyalty:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Keep customers engaged with order status, return policies, and product feedback to foster lasting relationships at scale.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-grey-900 mb-2">Higher AOV:</h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Amplify average order value through upsell and cross-selling of products related to customers' recent purchases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 relative overflow-hidden">
+                <div className="bg-white rounded-2xl p-6 shadow-lg max-w-md">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="text-right text-sm text-grey-600">Where's my order?</div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/c1a92e03-717c-49f6-b56a-882576f79f7b.png"
+                      alt="SoundWave Go speaker product"
+                      className="w-32 h-24 object-contain rounded-lg mx-auto"
+                    />
+                  </div>
+                  
+                  <div className="bg-blue-500 text-white rounded-xl p-4 mb-4">
+                    <p className="text-sm leading-relaxed">
+                      Your SoundWave Go music speaker is set to arrive on April 10th! While you wait, want to check out the protective case for just $20 more?
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-grey-300 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-grey-600" />
+                    </div>
+                    <div className="bg-grey-50 rounded-xl p-3 flex-1">
+                      <p className="text-grey-700 text-sm">I'm good for now, thanks!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
