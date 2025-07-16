@@ -413,94 +413,114 @@ const WebsiteChatbot = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-blue-600 mb-6">
-              Start Your Website Commerce Journey with AI
+              Start Your WhatsApp Commerce Journey with Haptik
             </h2>
           </div>
           
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <form className="space-y-6">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <form className="space-y-8">
+              {/* First Row - Three columns */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <Input 
+                    type="text"
                     placeholder="First name*" 
-                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
+                    required
                   />
                 </div>
                 <div>
                   <Input 
+                    type="text"
                     placeholder="Last name*" 
-                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
+                    required
                   />
                 </div>
                 <div>
                   <Input 
+                    type="text"
                     placeholder="Company name*" 
-                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
+                    required
                   />
                 </div>
               </div>
 
+              {/* Second Row - Three columns */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <Input 
                     type="email"
                     placeholder="Business email*" 
-                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
+                    required
                   />
                 </div>
                 <div>
                   <Input 
+                    type="text"
                     placeholder="Job title*" 
-                    className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
+                    required
                   />
                 </div>
                 <div>
-                  <Select>
-                    <SelectTrigger className="h-12 border-grey-300 focus:border-blue-500 focus:ring-blue-500">
+                  <Select required>
+                    <SelectTrigger className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm">
                       <SelectValue placeholder="Company Annual Revenue*" />
                     </SelectTrigger>
-                    <SelectContent className="bg-white z-50">
-                      <SelectItem value="0-1m">$0 - $1M</SelectItem>
-                      <SelectItem value="1-10m">$1M - $10M</SelectItem>
-                      <SelectItem value="10-50m">$10M - $50M</SelectItem>
-                      <SelectItem value="50-100m">$50M - $100M</SelectItem>
-                      <SelectItem value="100m+">$100M+</SelectItem>
+                    <SelectContent className="bg-white border-2 border-grey-200 shadow-xl rounded-lg z-50">
+                      <SelectItem value="under-1m">Under $1M</SelectItem>
+                      <SelectItem value="1m-10m">$1M - $10M</SelectItem>
+                      <SelectItem value="10m-50m">$10M - $50M</SelectItem>
+                      <SelectItem value="50m-100m">$50M - $100M</SelectItem>
+                      <SelectItem value="over-100m">Over $100M</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex gap-2">
-                  <Select>
-                    <SelectTrigger className="h-12 w-32 border-grey-300 focus:border-blue-500 focus:ring-blue-500">
-                      <SelectValue placeholder="India" />
+              {/* Third Row - Country and Phone */}
+              <div className="flex gap-4">
+                <div className="w-40">
+                  <Select defaultValue="india">
+                    <SelectTrigger className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm">
+                      <SelectValue />
                     </SelectTrigger>
-                    <SelectContent className="bg-white z-50">
-                      <SelectItem value="in">🇮🇳 India</SelectItem>
-                      <SelectItem value="us">🇺🇸 USA</SelectItem>
-                      <SelectItem value="gb">🇬🇧 UK</SelectItem>
-                      <SelectItem value="ca">🇨🇦 Canada</SelectItem>
-                      <SelectItem value="au">🇦🇺 Australia</SelectItem>
+                    <SelectContent className="bg-white border-2 border-grey-200 shadow-xl rounded-lg z-50">
+                      <SelectItem value="india">India</SelectItem>
+                      <SelectItem value="usa">United States</SelectItem>
+                      <SelectItem value="uk">United Kingdom</SelectItem>
+                      <SelectItem value="canada">Canada</SelectItem>
+                      <SelectItem value="australia">Australia</SelectItem>
+                      <SelectItem value="singapore">Singapore</SelectItem>
+                      <SelectItem value="uae">UAE</SelectItem>
+                      <SelectItem value="germany">Germany</SelectItem>
+                      <SelectItem value="france">France</SelectItem>
+                      <SelectItem value="netherlands">Netherlands</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+                <div className="flex-1">
                   <Input 
                     type="tel"
                     placeholder="+91" 
-                    className="h-12 flex-1 border-grey-300 focus:border-blue-500 focus:ring-blue-500"
+                    defaultValue="+91"
+                    className="h-14 rounded-lg border-2 border-grey-200 px-4 text-base bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all shadow-sm"
                   />
                 </div>
-                <div className="md:col-span-2"></div>
               </div>
 
-              <div className="text-center pt-6">
+              {/* Submit Button */}
+              <div className="text-center pt-8">
                 <Button 
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 h-12 text-lg font-semibold rounded-lg transition-all duration-200 hover:scale-105"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-16 py-4 h-14 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg min-w-[200px]"
                 >
                   Get A Demo
                 </Button>
