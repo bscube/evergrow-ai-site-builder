@@ -262,8 +262,8 @@ const CaseStudies = () => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1489599663071-b39ce4bf4b26?w=800&h=600&fit=crop&auto=format"
-                  alt="Cinema interior with modern seating and screens"
+                  src="/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png"
+                  alt="PVR cinema interior"
                   className="w-full h-[400px] object-cover"
                   loading="lazy"
                 />
