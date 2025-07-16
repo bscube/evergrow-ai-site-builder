@@ -39,14 +39,11 @@ const Retail = () => {
                 Drive sales, reduce support costs, and deliver exceptional customer experiences with AI-powered chatbots designed specifically for retail businesses.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="mb-8">
                 <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Start Your Retail AI
+                  Get a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  View Demo
-                </button>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
@@ -162,9 +159,9 @@ const Retail = () => {
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Join thousands of retailers using AI to increase sales and improve customer satisfaction
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-              Start Your Retail AI
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
