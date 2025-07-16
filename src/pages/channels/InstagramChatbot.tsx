@@ -482,14 +482,11 @@ const InstagramChatbot = () => {
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Transform your Instagram presence into a powerful sales channel with automated DM conversations
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-              Start Free Trial
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-pink-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
-              Get Success Blueprint
-            </button>
           </div>
         </div>
       </section>
