@@ -432,8 +432,72 @@ const LeadQualification = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Enhancing Lead Qualification Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-4">
+              Enhancing Lead Qualification
+            </h2>
+            <p className="text-xl text-grey-600">
+              with intelligent and scalable agents
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                  <Globe className="w-10 h-10 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Omnichannel Engagement
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Acquire leads across websites, social media, chat, and voice with a consistent experience across touchpoints.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Streamline Support
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Automate personalized support that resonates with customers, resolving their queries and collecting opt-ins for future engagement.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                  <MessageSquare className="w-10 h-10 text-white" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-1 -left-2 w-3 h-3 bg-blue-300 rounded-full animate-pulse delay-300"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-grey-900 mb-4">
+                Handoff to Human Agents
+              </h3>
+              <p className="text-grey-600 leading-relaxed">
+                Initiate handoff to human agents to guide customers through their journey and enhance the buying experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
