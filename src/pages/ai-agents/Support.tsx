@@ -824,8 +824,8 @@ const Support = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">Phone Number</label>
                   <div className="flex">
-                    <div className="relative min-w-[120px]">
-                      <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-4 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer text-gray-700 h-[56px] w-full">
+                    <div className="relative">
+                      <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-4 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer text-gray-700 h-[56px]">
                         <option value="+91">🇮🇳 +91</option>
                         <option value="+1">🇺🇸 +1</option>
                         <option value="+44">🇬🇧 +44</option>
@@ -841,7 +841,7 @@ const Support = () => {
                     <input
                       type="tel"
                       placeholder="Enter phone number"
-                      className="flex-1 px-4 py-4 border border-gray-300 border-l-0 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                      className="flex-1 px-4 py-4 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                     />
                   </div>
                 </div>
