@@ -163,15 +163,18 @@ const WhatsApp = () => {
               Deploy intelligent WhatsApp bots that handle customer inquiries, process orders, and book appointments 24/7 across the Middle East.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                <Play className="mr-2 h-5 w-5" />
-                See WhatsApp Bot Demo
-              </button>
-              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                Get WhatsApp Bot
+            <div className="flex justify-center mb-8">
+              <a 
+                href="#demo-form" 
+                className="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg scroll-smooth"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Get a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </div>
             
             <div className="flex items-center justify-center gap-6 text-sm text-grey-500">
