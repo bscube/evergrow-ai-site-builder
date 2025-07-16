@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock, Users, CheckCircle, Zap, Globe, BarChart3, MessageSquare, Bell } from 'lucide-react';
@@ -174,8 +173,111 @@ const Booking = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Book Anytime, Anywhere Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Book Anytime, Anywhere
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Omnichannel support:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Help customers to book across chat, voice, and web platforms, providing flexible and convenient options at their fingertips.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Easy navigation:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Eliminate the hassle of multiple screens and web URLs with a streamlined, single-interface booking experience.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Highly flexible:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Allow customers to easily modify, reschedule, or cancel bookings for increased convenience and flexibility.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Chat Interface */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-2xl p-8 max-w-lg mx-auto">
+                <div className="space-y-6">
+                  {/* User Message */}
+                  <div className="flex justify-end">
+                    <div className="bg-white text-grey-900 rounded-2xl rounded-tr-md px-4 py-3 max-w-xs shadow-sm">
+                      Hi, can you reschedule my pickup from LAX from July 10th to July 11th at 9am?
+                    </div>
+                  </div>
+                  
+                  {/* AI Response */}
+                  <div className="flex items-start space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <MessageSquare className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="bg-white text-grey-900 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs shadow-sm">
+                      Sure. Let me check availability for a pickup on July 11th at 9 AM.
+                    </div>
+                  </div>
+                  
+                  {/* AI Confirmation */}
+                  <div className="flex items-start space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <MessageSquare className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="bg-white text-grey-900 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs shadow-sm">
+                      <p className="mb-2">Your pickup has been successfully <strong>rescheduled to July 11th at 9 AM.</strong></p>
+                      <p className="text-sm text-grey-600">You'll receive driver details an hour before your ride.</p>
+                    </div>
+                  </div>
+                  
+                  {/* User Response */}
+                  <div className="flex justify-end items-end space-x-2">
+                    <div className="bg-white text-grey-900 rounded-2xl rounded-tr-md px-4 py-3 shadow-sm">
+                      Great, thanks!
+                    </div>
+                    <div className="w-8 h-8 bg-grey-300 rounded-full flex items-center justify-center">
+                      <div className="w-6 h-6 bg-grey-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
