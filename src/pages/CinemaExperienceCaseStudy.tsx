@@ -364,14 +364,10 @@ const CinemaExperienceCaseStudy = () => {
             Get the same results that CineMax achieved - faster response times, higher satisfaction, and exceptional ROI.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex justify-center mb-8">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-              Start Your Transformation
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link to="/case-studies" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 font-semibold rounded-xl text-lg transition-all duration-200">
-              View More Case Studies
-              <BarChart3 className="ml-2 h-5 w-5" />
             </Link>
           </div>
           
