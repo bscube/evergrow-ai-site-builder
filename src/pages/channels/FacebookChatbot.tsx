@@ -359,19 +359,13 @@ const FacebookChatbot = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses leveraging Facebook Messenger to drive sales and customer engagement
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-500 font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Start Free Trial
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-500 font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105"
-            >
-              Book Strategy Call
             </Link>
           </div>
         </div>
