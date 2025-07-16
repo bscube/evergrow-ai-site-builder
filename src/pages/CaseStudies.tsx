@@ -236,6 +236,47 @@ const CaseStudies = () => {
         </div>
       </section>
 
+      {/* Customer Stories */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-6">
+              <div className="text-xs font-bold tracking-wide uppercase text-blue-600 mb-4">
+                CUSTOMER STORIES
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 leading-tight">
+                Elevating the Cinema Experience with{' '}
+                <span className="text-blue-600">Gen-AI Powered Chatbot</span>
+              </h2>
+              <Link 
+                to="/case-studies/cinema-experience" 
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Read More
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png"
+                  alt="PVR cinema interior"
+                  className="w-full h-[400px] object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-end">
+                  <div className="p-8">
+                    <h3 className="text-white text-4xl font-bold">PVR</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Case Studies */}
       <section className="py-24 bg-grey-50">
