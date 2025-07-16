@@ -371,8 +371,6 @@ const FacebookChatbot = () => {
         </div>
       </section>
 
-      <Footer />
-
       {/* Relevant Blogs Section */}
       <section className="py-16 bg-white border-t border-grey-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -523,6 +521,9 @@ const FacebookChatbot = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
+
     </div>
   );
 };
