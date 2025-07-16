@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Users, TrendingUp, CheckCircle, Zap, Globe, BarChart3, MessageSquare, Filter } from 'lucide-react';
@@ -192,8 +191,121 @@ const LeadQualification = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Nurture Warm Leads Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Nurture Warm Leads
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Automate scheduling:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Enable prospects to book test drives, schedule site visits, and consultations within the conversation - converting leads instantly.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Tailor engagement:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Send personalized product recommendations and offers to nudge potential customers to make the purchase.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Initiate handoff:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Qualify leads and hand them to sales for outreach campaigns, turning prospects into customers at scale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Chat Interface */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-3xl p-8 shadow-2xl">
+                {/* User Message */}
+                <div className="mb-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl rounded-tl-none p-4 max-w-sm">
+                      <p className="text-white text-sm">
+                        Hi, I want to visit the upcoming resident project in Bandra West.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* AI Response with Image */}
+                <div className="mb-6">
+                  <div className="bg-white rounded-2xl rounded-bl-none p-4 max-w-sm ml-auto">
+                    <div className="mb-3">
+                      <img 
+                        src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&h=200&fit=crop&crop=center" 
+                        alt="Aura Residences" 
+                        className="w-full h-32 object-cover rounded-lg"
+                      />
+                    </div>
+                    <p className="text-grey-800 text-sm mb-2">
+                      <strong>"Aura Residences"</strong> is one of the several new residential projects with 3 & 4 BHK duplex apartments. Would you like to see our digital brochure and floor plans before your site visit?
+                    </p>
+                  </div>
+                </div>
+                
+                {/* User Response */}
+                <div className="mb-6">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl rounded-br-none p-4 max-w-xs">
+                    <p className="text-white text-sm">
+                      Yes, that would be helpful.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Final AI Response */}
+                <div>
+                  <div className="bg-white rounded-2xl rounded-bl-none p-4 max-w-sm ml-auto">
+                    <p className="text-grey-800 text-sm">
+                      Can I have your email ID where you'd want to receive the brochure?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
