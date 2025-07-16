@@ -262,12 +262,12 @@ const CaseStudies = () => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/lovable-uploads/ed7e5f40-942b-4465-861b-b352c6471cb9.png"
-                  alt="PVR cinema case study - Gen-AI powered chatbot"
+                  src="https://images.unsplash.com/photo-1489599663071-b39ce4bf4b26?w=800&h=600&fit=crop&auto=format"
+                  alt="Cinema interior with modern seating and screens"
                   className="w-full h-[400px] object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/20 flex items-end">
+                <div className="absolute inset-0 bg-black/40 flex items-end">
                   <div className="p-8">
                     <h3 className="text-white text-4xl font-bold">PVR</h3>
                   </div>
