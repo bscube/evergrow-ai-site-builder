@@ -276,8 +276,108 @@ const Booking = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Offer Voice-Enabled Bookings Section */}
       <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Voice Interface */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-2xl p-8 max-w-lg mx-auto">
+                <div className="space-y-6">
+                  {/* Voice Waveform */}
+                  <div className="bg-white rounded-2xl p-6 shadow-sm">
+                    <div className="flex items-center justify-center space-x-1 mb-4">
+                      {Array.from({ length: 20 }).map((_, i) => (
+                        <div
+                          key={i}
+                          className="bg-blue-500 rounded-full"
+                          style={{
+                            width: '3px',
+                            height: `${Math.random() * 30 + 10}px`,
+                            opacity: Math.random() * 0.5 + 0.5
+                          }}
+                        />
+                      ))}
+                    </div>
+                    <p className="text-center text-grey-700 font-medium">
+                      "Where is my order?"
+                    </p>
+                  </div>
+                  
+                  {/* AI Voice Response */}
+                  <div className="flex items-start space-x-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full"></div>
+                    </div>
+                    <div className="bg-white text-grey-900 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs shadow-sm">
+                      <p className="mb-2">
+                        <strong>Hi James!</strong><br />
+                        We can totally feel your excitement! 😊<br />
+                        🚚 Your order #12345 is on its way.<br />
+                        📅 Expected delivery: April 1st.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Offer Voice-Enabled Bookings
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Fully automated:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Allow customers to chat with the booking agent for movie ticket bookings, hotel reservations, and more.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Effortless bookings:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Speak naturally and let the AI booking agent handle the rest. No menus and no typing, just a fast and efficient way to book in seconds.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-grey-900 mb-2">
+                      Multilingual support:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Our AI booking agent supports 100+ languages, making voice bookings accessible to global customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
