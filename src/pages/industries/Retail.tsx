@@ -150,6 +150,108 @@ const Retail = () => {
         </div>
       </section>
 
+      {/* Book a Demo Form Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Win the Retail Game with Haptik
+            </h2>
+          </div>
+          
+          <form className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="First name*"
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Last Name*"
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Company name*"
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Business Email*"
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Job title*"
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <select
+                  required
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200 bg-white"
+                >
+                  <option value="">Select Country*</option>
+                  <option value="india">India</option>
+                  <option value="us">United States</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="canada">Canada</option>
+                  <option value="australia">Australia</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div className="flex gap-2">
+                <select
+                  required
+                  className="px-3 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200 bg-white"
+                >
+                  <option value="+91">+91</option>
+                  <option value="+1">+1</option>
+                  <option value="+44">+44</option>
+                  <option value="+61">+61</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Phone Number*"
+                  required
+                  className="flex-1 px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
+                />
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center px-12 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Book a Demo
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-brand-green-500 to-brand-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
