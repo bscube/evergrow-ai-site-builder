@@ -361,6 +361,118 @@ const InstagramChatbot = () => {
         </div>
       </section>
 
+      {/* Relevant Blogs Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
+              Relevant Blogs
+            </h2>
+            <p className="text-xl text-grey-700">
+              Read more about Instagram Chatbots
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog Card 1 */}
+            <Link 
+              to="/blog/guide-to-messenger-chatbots"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-grey-200 hover:border-pink-500/30 cursor-pointer"
+              tabIndex={0}
+            >
+              <div className="p-8">
+                <div className="bg-green-50 rounded-xl p-6 mb-6 h-48 flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-white rounded-lg p-4 shadow-lg">
+                        <BarChart3 className="h-16 w-16 text-green-500" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                      %
+                    </div>
+                    <div className="absolute top-4 left-4">
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 leading-tight group-hover:text-pink-500 transition-colors">
+                  Conversational Commerce: Your definitive guide to C-Commerce
+                </h3>
+              </div>
+            </Link>
+
+            {/* Blog Card 2 */}
+            <Link 
+              to="/blog/ai-voice-agents"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-grey-200 hover:border-pink-500/30 cursor-pointer"
+              tabIndex={0}
+            >
+              <div className="p-8">
+                <div className="bg-purple-50 rounded-xl p-6 mb-6 h-48 flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <div className="bg-white rounded-lg shadow-lg p-4 max-w-xs mx-auto">
+                      <div className="flex items-center mb-3">
+                        <Instagram className="h-6 w-6 text-pink-500 mr-2" />
+                        <span className="text-sm font-medium">Instagram DM</span>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="bg-grey-100 rounded-lg p-2 text-xs">
+                          Hi! Need help finding the perfect product?
+                        </div>
+                        <div className="bg-pink-500 text-white rounded-lg p-2 text-xs ml-8">
+                          Yes, looking for skincare
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 leading-tight group-hover:text-pink-500 transition-colors">
+                  Create impactful support experiences with Instagram Chatbots
+                </h3>
+              </div>
+            </Link>
+
+            {/* Blog Card 3 */}
+            <Link 
+              to="/blog/whatsapp-chatbot-shopping-experience"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-grey-200 hover:border-pink-500/30 cursor-pointer"
+              tabIndex={0}
+            >
+              <div className="p-8">
+                <div className="bg-blue-50 rounded-xl p-6 mb-6 h-48 flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="grid grid-cols-2 gap-2 w-full max-w-xs">
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <ShoppingBag className="h-8 w-8 text-blue-500 mx-auto" />
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <MessageCircle className="h-8 w-8 text-green-500 mx-auto" />
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <Users className="h-8 w-8 text-purple-500 mx-auto" />
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <TrendingUp className="h-8 w-8 text-orange-500 mx-auto" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-grey-900 leading-tight group-hover:text-pink-500 transition-colors">
+                  Solving eCommerce Challenges with Conversational Commerce
+                </h3>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-pink-500 to-pink-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
