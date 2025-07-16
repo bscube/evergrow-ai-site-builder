@@ -8,7 +8,7 @@ import SEO from '../../components/SEO';
 
 const Retail = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white scroll-smooth">
       <SEO 
         title="AI Chatbots for Retail - Transform Customer Experience & Sales"
         description="AI-powered chatbots for retail businesses. Increase sales, reduce support costs, and enhance customer experience with intelligent automation."
@@ -40,10 +40,10 @@ const Retail = () => {
               </p>
               
               <div className="mb-8">
-                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                <a href="#demo-form" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg scroll-smooth">
                   Get a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
@@ -151,7 +151,7 @@ const Retail = () => {
       </section>
 
       {/* Book a Demo Form Section */}
-      <section className="py-24 bg-grey-50">
+      <section id="demo-form" className="py-24 bg-grey-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
@@ -262,10 +262,10 @@ const Retail = () => {
             Join thousands of retailers using AI to increase sales and improve customer satisfaction
           </p>
           <div className="flex justify-center">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+            <a href="#demo-form" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg scroll-smooth">
               Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
