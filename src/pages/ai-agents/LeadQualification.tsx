@@ -77,6 +77,121 @@ const LeadQualification = () => {
         </div>
       </section>
 
+      {/* Seamless Lead Qualification Section */}
+      <section className="py-24 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Chat Interface */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-3xl p-8 shadow-2xl">
+                {/* AI Avatar and Message */}
+                <div className="mb-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl rounded-tl-none p-4 max-w-xs">
+                      <p className="text-white text-sm">
+                        I'm scouting for home loans with low interest rates. Can you help?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* AI Response */}
+                <div className="mb-6">
+                  <div className="bg-white rounded-2xl rounded-bl-none p-4 max-w-xs ml-auto">
+                    <p className="text-grey-800 text-sm">
+                      Sure. May I know your preferred loan amount and tenure?
+                    </p>
+                  </div>
+                </div>
+                
+                {/* User Response */}
+                <div className="mb-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-white rounded-full overflow-hidden">
+                      <img 
+                        src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                        alt="User" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl rounded-tl-none p-4 max-w-xs">
+                      <p className="text-white text-sm">
+                        I'm looking for around $200,000 over 15 years.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Final AI Response */}
+                <div>
+                  <div className="bg-white rounded-2xl rounded-bl-none p-4 max-w-sm ml-auto">
+                    <p className="text-grey-800 text-sm">
+                      I'll connect you to our loan consultant. Can I have your credit score and contact details?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-8">
+                Seamless Lead Qualification
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Dynamic support:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Smartly guide customers through their journey by answering queries, resolving concerns, and collecting key details for automated follow-ups.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      No friction:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Power natural conversations, handled with the precision of AI agent, removing friction and enhancing conversions.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-brand-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-grey-900 mb-2">
+                      Intelligent query handling:
+                    </h3>
+                    <p className="text-grey-600 leading-relaxed">
+                      Efficiently resolve queries around competitor capabilities, pricing, and even questions beyond the agent's scope.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
