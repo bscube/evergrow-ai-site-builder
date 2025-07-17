@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { BookOpen, Download, Video, FileText, ArrowRight, Clock, Star } from 'lucide-react';
+import { BookOpen, Download, Video, FileText, ArrowRight, Clock, Star, Settings, Users, Target, Zap, Shield, TrendingUp } from 'lucide-react';
 
 const KnowledgeCenter = () => {
   const guides = [
@@ -13,6 +13,7 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "15 min read",
       category: "Getting Started",
+      icon: BookOpen,
       featured: true
     },
     {
@@ -20,21 +21,56 @@ const KnowledgeCenter = () => {
       description: "Step-by-step checklist to ensure successful AI agent deployment.",
       downloadUrl: "#",
       readTime: "8 min read",
-      category: "Implementation"
+      category: "Implementation",
+      icon: Settings
     },
     {
       title: "ROI Measurement Framework for AI Agents",
       description: "Learn how to measure and track the return on investment of your AI agents.",
       downloadUrl: "#",
       readTime: "12 min read",
-      category: "Analytics"
+      category: "Analytics",
+      icon: TrendingUp
     },
     {
       title: "Best Practices for AI Agent Training",
       description: "Proven methods to train and optimize your AI agents for better performance.",
       downloadUrl: "#",
       readTime: "10 min read",
-      category: "Optimization"
+      category: "Optimization",
+      icon: Target
+    },
+    {
+      title: "Security & Compliance Guide for AI Agents",
+      description: "Comprehensive security protocols and compliance frameworks for enterprise AI deployment.",
+      downloadUrl: "#",
+      readTime: "18 min read",
+      category: "Security",
+      icon: Shield
+    },
+    {
+      title: "Team Collaboration with AI Agents",
+      description: "Strategies for seamless human-AI collaboration and team productivity enhancement.",
+      downloadUrl: "#",
+      readTime: "14 min read",
+      category: "Collaboration",
+      icon: Users
+    },
+    {
+      title: "Advanced AI Agent Automation",
+      description: "Next-level automation techniques to maximize efficiency and reduce manual work.",
+      downloadUrl: "#",
+      readTime: "16 min read",
+      category: "Advanced",
+      icon: Zap
+    },
+    {
+      title: "AI Agent Integration Playbook",
+      description: "Step-by-step guide to integrating AI agents with existing business systems.",
+      downloadUrl: "#",
+      readTime: "20 min read",
+      category: "Integration",
+      icon: FileText
     }
   ];
 
@@ -100,7 +136,7 @@ const KnowledgeCenter = () => {
                         <h3 className="text-xl font-bold text-grey-900 mb-3">{guide.title}</h3>
                         <p className="text-grey-600 mb-4">{guide.description}</p>
                       </div>
-                      <BookOpen className="h-8 w-8 text-brand-green-500 ml-4" />
+                      <guide.icon className="h-8 w-8 text-brand-green-500 ml-4" />
                     </div>
                     
                     <div className="flex items-center text-grey-500 text-sm">
