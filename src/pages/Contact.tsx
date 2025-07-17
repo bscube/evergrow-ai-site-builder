@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MessageSquare, Phone, Mail, MapPin, Calendar, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import Map from '../components/Map';
 import { toast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -501,13 +502,18 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-grey-900 mb-6">Visit Our Office</h3>
               <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-brand-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="font-medium text-grey-900">Dubai Office</div>
-                    <div className="text-grey-600">Business Bay, Dubai, UAE</div>
+                  <div className="flex items-start">
+                    <MapPin className="h-6 w-6 text-brand-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="font-medium text-grey-900">Dubai Office</div>
+                      <div className="text-grey-600">
+                        Evergrow Building, Office #2<br/>
+                        Plot 128-168<br/>
+                        Behind Abu Baker Al Siddique Metro Station<br/>
+                        Dubai, UAE
+                      </div>
+                    </div>
                   </div>
-                </div>
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-brand-green-500 mr-3 flex-shrink-0" />
                   <div className="text-grey-600">+971 123 456 789</div>
@@ -537,11 +543,8 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="bg-grey-100 rounded-2xl h-64 lg:h-auto flex items-center justify-center">
-              <div className="text-center text-grey-500">
-                <MapPin className="h-12 w-12 mx-auto mb-4" />
-                <p>Interactive Map Coming Soon</p>
-              </div>
+            <div className="h-64 lg:h-auto">
+              <Map />
             </div>
           </div>
         </div>
