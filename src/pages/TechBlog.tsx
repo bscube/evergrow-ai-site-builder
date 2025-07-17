@@ -18,7 +18,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["Microservices", "Scalability", "AI Architecture"],
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
-      slug: "#architecture-deep-dive",
+      slug: "/tech-blog/architecture-deep-dive",
       featured: true
     },
     {
@@ -32,7 +32,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["NLP", "Transformers", "Performance"],
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
-      slug: "#nlp-optimization"
+      slug: "/tech-blog/nlp-optimization"
     },
     {
       title: "Real-time Conversation State Management",
@@ -45,7 +45,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["Redis", "State Management", "Distributed Systems"],
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
-      slug: "#conversation-state"
+      slug: "/tech-blog/conversation-state"
     },
     {
       title: "Implementing Secure Multi-tenant AI Infrastructure",
@@ -58,7 +58,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["Security", "Multi-tenancy", "Infrastructure"],
       image: "/lovable-uploads/c1a92e03-717c-49f6-b56a-882576f79f7b.png",
-      slug: "#secure-infrastructure"
+      slug: "/tech-blog/secure-infrastructure"
     },
     {
       title: "Fine-tuning Large Language Models for Domain-Specific Tasks",
@@ -71,7 +71,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["LLM", "Fine-tuning", "Domain Adaptation"],
       image: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png",
-      slug: "#llm-fine-tuning"
+      slug: "/tech-blog/llm-fine-tuning"
     },
     {
       title: "Building Resilient AI APIs with Circuit Breakers",
@@ -84,7 +84,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["API Design", "Resilience", "Circuit Breakers"],
       image: "/lovable-uploads/665274b0-11f1-46f6-9c20-29a4bc35a12b.png",
-      slug: "#api-resilience"
+      slug: "/tech-blog/api-resilience"
     }
   ];
 
