@@ -35,6 +35,7 @@ import Testimonials from "./pages/Testimonials";
 import CustomerShowcase from "./pages/CustomerShowcase";
 import KnowledgeCenter from "./pages/KnowledgeCenter";
 import Webinars from "./pages/Webinars";
+import WebinarDetail from "./pages/webinars/WebinarDetail";
 import ReportsResearch from "./pages/ReportsResearch";
 import CompanyBlog from "./pages/CompanyBlog";
 import TechBlog from "./pages/TechBlog";
@@ -96,6 +97,7 @@ const App = () => (
             <Route path="/customer-showcase" element={<CustomerShowcase />} />
             <Route path="/knowledge-center" element={<KnowledgeCenter />} />
             <Route path="/webinars" element={<Webinars />} />
+            <Route path="/webinars/:slug" element={<WebinarDetail />} />
             <Route path="/reports-research" element={<ReportsResearch />} />
             <Route path="/company-blog" element={<CompanyBlog />} />
             <Route path="/tech-blog" element={<TechBlog />} />

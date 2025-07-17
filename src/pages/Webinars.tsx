@@ -6,6 +6,14 @@ import SEO from '../components/SEO';
 import { Calendar, Clock, Users, Video, ArrowRight, Play } from 'lucide-react';
 
 const Webinars = () => {
+  // Helper function to convert title to URL slug
+  const titleToSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  };
+
   const upcomingWebinars = [
     {
       title: "AI Agents for E-commerce: Boosting Sales & Customer Experience",
@@ -37,7 +45,7 @@ const Webinars = () => {
       date: "December 15, 2023",
       duration: "42 min",
       viewers: "1,200+",
-      watchUrl: "#",
+      watchUrl: "/webinars/ai-agent-revolution",
       image: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png"
     },
     {
@@ -46,7 +54,7 @@ const Webinars = () => {
       date: "November 28, 2023",
       duration: "38 min",
       viewers: "950+",
-      watchUrl: "#",
+      watchUrl: "/webinars/roi-masterclass",
       image: "/lovable-uploads/665274b0-11f1-46f6-9c20-29a4bc35a12b.png"
     },
     {
@@ -55,7 +63,7 @@ const Webinars = () => {
       date: "November 10, 2023",
       duration: "35 min",
       viewers: "1,500+",
-      watchUrl: "#",
+      watchUrl: "/webinars/ai-agents-vs-chatbots",
       image: "/lovable-uploads/6b11361d-e93e-47a7-8d6d-0165caa79795.png"
     },
     {
@@ -64,7 +72,7 @@ const Webinars = () => {
       date: "October 25, 2023",
       duration: "45 min",
       viewers: "875+",
-      watchUrl: "#",
+      watchUrl: "/webinars/conversational-ai-deployment",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop"
     },
     {
@@ -73,7 +81,7 @@ const Webinars = () => {
       date: "October 12, 2023",
       duration: "52 min",
       viewers: "1,100+",
-      watchUrl: "#",
+      watchUrl: "/webinars/enterprise-ai-integration",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop"
     },
     {
@@ -82,7 +90,7 @@ const Webinars = () => {
       date: "September 28, 2023",
       duration: "40 min",
       viewers: "720+",
-      watchUrl: "#",
+      watchUrl: "/webinars/nlp-business-applications",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"
     },
     {
@@ -91,7 +99,7 @@ const Webinars = () => {
       date: "September 15, 2023",
       duration: "48 min",
       viewers: "990+",
-      watchUrl: "#",
+      watchUrl: "/webinars/ai-agent-security",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
     },
     {
@@ -100,7 +108,7 @@ const Webinars = () => {
       date: "August 30, 2023",
       duration: "43 min",
       viewers: "1,300+",
-      watchUrl: "#",
+      watchUrl: "/webinars/multi-channel-ai",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop"
     },
     {
@@ -109,7 +117,7 @@ const Webinars = () => {
       date: "August 16, 2023",
       duration: "37 min",
       viewers: "850+",
-      watchUrl: "#",
+      watchUrl: "/webinars/voice-ai-revolution",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop"
     }
   ];
@@ -157,23 +165,25 @@ const Webinars = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {pastWebinars.map((webinar, index) => (
                 <div key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
-                  <div className="relative">
-                    <img 
-                      src={webinar.image} 
-                      alt={webinar.title}
-                      className="w-full h-48 object-cover rounded-t-2xl"
-                    />
-                    <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 rounded-full p-4">
-                        <Play className="h-8 w-8 text-brand-green-500" />
+                  <Link to={webinar.watchUrl} className="block">
+                    <div className="relative">
+                      <img 
+                        src={webinar.image} 
+                        alt={webinar.title}
+                        className="w-full h-48 object-cover rounded-t-2xl"
+                      />
+                      <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-white/90 rounded-full p-4">
+                          <Play className="h-8 w-8 text-brand-green-500" />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-grey-900 mb-2">{webinar.title}</h3>
                     <p className="text-grey-600 mb-4 text-sm">{webinar.description}</p>
                     
-                    <div className="space-y-2 mb-4 text-sm text-grey-500">
+                    <div className="space-y-2 mb-6 text-sm text-grey-500">
                       <div className="flex items-center">
                         <Calendar className="h-3 w-3 mr-2" />
                         <span>{webinar.date}</span>
@@ -188,6 +198,13 @@ const Webinars = () => {
                       </div>
                     </div>
 
+                    <Link 
+                      to={webinar.watchUrl}
+                      className="inline-flex items-center text-brand-green-500 hover:text-brand-green-600 font-semibold transition-colors"
+                    >
+                      <Play className="h-4 w-4 mr-2" />
+                      Watch Now
+                    </Link>
                   </div>
                 </div>
               ))}
