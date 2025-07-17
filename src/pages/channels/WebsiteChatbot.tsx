@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Zap, Users, TrendingUp, CheckCircle, MessageSquare, BarChart3, Clock, Shield, Bot, Sparkles, ChevronDown, ShoppingCart, MessageCircle, CreditCard, MousePointer } from 'lucide-react';
@@ -48,9 +47,6 @@ const WebsiteChatbot = () => {
                   Add Website Chat
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  Try Live Demo
-                </button>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
@@ -408,7 +404,6 @@ const WebsiteChatbot = () => {
           </div>
         </div>
       </section>
-
 
       <Footer />
     </div>
