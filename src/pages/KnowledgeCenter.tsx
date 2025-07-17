@@ -14,7 +14,8 @@ const KnowledgeCenter = () => {
       readTime: "15 min read",
       category: "Getting Started",
       icon: BookOpen,
-      featured: true
+      featured: true,
+      slug: "complete-guide-to-ai-agents"
     },
     {
       title: "AI Agent Implementation Checklist",
@@ -116,7 +117,11 @@ const KnowledgeCenter = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {guides.map((guide, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 ${guide.featured ? 'ring-2 ring-brand-green-500' : ''}`}>
+                <Link 
+                  key={index} 
+                  to={`/guides/${guide.slug || guide.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+                  className={`block bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 hover:scale-105 ${guide.featured ? 'ring-2 ring-brand-green-500' : ''}`}
+                >
                   {guide.featured && (
                     <div className="bg-brand-green-500 text-white px-4 py-2 rounded-t-2xl">
                       <div className="flex items-center">
@@ -144,7 +149,7 @@ const KnowledgeCenter = () => {
                       {guide.readTime}
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

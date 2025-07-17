@@ -46,6 +46,16 @@ import StateOfAIAgents2024 from "./pages/reports/StateOfAIAgents2024";
 import CustomerServiceAutomation from "./pages/reports/CustomerServiceAutomation";
 import EcommerceAIAgents from "./pages/reports/EcommerceAIAgents";
 
+// Guide Detail Pages
+import CompleteGuideAIAgents from "./pages/guides/CompleteGuideAIAgents";
+import AIAgentImplementationChecklist from "./pages/guides/AIAgentImplementationChecklist";
+import ROIMeasurementFramework from "./pages/guides/ROIMeasurementFramework";
+import BestPracticesTraining from "./pages/guides/BestPracticesTraining";
+import SecurityComplianceGuide from "./pages/guides/SecurityComplianceGuide";
+import TeamCollaboration from "./pages/guides/TeamCollaboration";
+import AdvancedAutomation from "./pages/guides/AdvancedAutomation";
+import IntegrationPlaybook from "./pages/guides/IntegrationPlaybook";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -95,6 +105,16 @@ const App = () => (
             <Route path="/reports/state-of-ai-agents-2024" element={<StateOfAIAgents2024 />} />
             <Route path="/reports/customer-service-automation" element={<CustomerServiceAutomation />} />
             <Route path="/reports/ecommerce-ai-agents" element={<EcommerceAIAgents />} />
+            
+            {/* Guide Detail Routes */}
+            <Route path="/guides/complete-guide-to-ai-agents" element={<CompleteGuideAIAgents />} />
+            <Route path="/guides/ai-agent-implementation-checklist" element={<AIAgentImplementationChecklist />} />
+            <Route path="/guides/roi-measurement-framework" element={<ROIMeasurementFramework />} />
+            <Route path="/guides/best-practices-for-training" element={<BestPracticesTraining />} />
+            <Route path="/guides/security-compliance-guide" element={<SecurityComplianceGuide />} />
+            <Route path="/guides/team-collaboration" element={<TeamCollaboration />} />
+            <Route path="/guides/advanced-automation" element={<AdvancedAutomation />} />
+            <Route path="/guides/integration-playbook" element={<IntegrationPlaybook />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
