@@ -42,6 +42,14 @@ import TechBlog from "./pages/TechBlog";
 import ConversationsOnAI from "./pages/ConversationsOnAI";
 import NotFound from "./pages/NotFound";
 
+// Company Blog Detail Pages
+import FutureOfCustomerExperience from "./pages/company-blog/FutureOfCustomerExperience";
+import OurJourneyStartupToLeader from "./pages/company-blog/OurJourneyStartupToLeader";
+import SeriesAFunding from "./pages/company-blog/SeriesAFunding";
+import BuildingEthicalAI from "./pages/company-blog/BuildingEthicalAI";
+import TeamSpotlight from "./pages/company-blog/TeamSpotlight";
+import PartnershipAnnouncement from "./pages/company-blog/PartnershipAnnouncement";
+
 // Report Detail Pages
 import StateOfAIAgents2024 from "./pages/reports/StateOfAIAgents2024";
 import CustomerServiceAutomation from "./pages/reports/CustomerServiceAutomation";
@@ -102,6 +110,14 @@ const App = () => (
             <Route path="/company-blog" element={<CompanyBlog />} />
             <Route path="/tech-blog" element={<TechBlog />} />
             <Route path="/conversations-on-ai" element={<ConversationsOnAI />} />
+            
+            {/* Company Blog Detail Routes */}
+            <Route path="/company-blog/future-of-customer-experience" element={<FutureOfCustomerExperience />} />
+            <Route path="/company-blog/our-journey-startup-to-leader" element={<OurJourneyStartupToLeader />} />
+            <Route path="/company-blog/series-a-funding" element={<SeriesAFunding />} />
+            <Route path="/company-blog/building-ethical-ai" element={<BuildingEthicalAI />} />
+            <Route path="/company-blog/team-spotlight" element={<TeamSpotlight />} />
+            <Route path="/company-blog/partnership-announcement" element={<PartnershipAnnouncement />} />
             
             {/* Report Detail Routes */}
             <Route path="/reports/state-of-ai-agents-2024" element={<StateOfAIAgents2024 />} />

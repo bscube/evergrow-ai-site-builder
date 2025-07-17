@@ -16,7 +16,7 @@ const CompanyBlog = () => {
       readTime: "8 min read",
       category: "Industry Insights",
       image: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png",
-      slug: "#",
+      slug: "/company-blog/future-of-customer-experience",
       featured: true
     },
     {
@@ -28,7 +28,7 @@ const CompanyBlog = () => {
       readTime: "6 min read",
       category: "Company News",
       image: "/lovable-uploads/665274b0-11f1-46f6-9c20-29a4bc35a12b.png",
-      slug: "#"
+      slug: "/company-blog/our-journey-startup-to-leader"
     },
     {
       title: "Announcing Our Series A: $15M to Scale AI Agent Technology",
@@ -39,7 +39,7 @@ const CompanyBlog = () => {
       readTime: "4 min read",
       category: "Company News",
       image: "/lovable-uploads/6b11361d-e93e-47a7-8d6d-0165caa79795.png",
-      slug: "#"
+      slug: "/company-blog/series-a-funding"
     },
     {
       title: "Building Ethical AI: Our Commitment to Responsible Innovation",
@@ -50,7 +50,7 @@ const CompanyBlog = () => {
       readTime: "7 min read",
       category: "AI Ethics",
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
-      slug: "#"
+      slug: "/company-blog/building-ethical-ai"
     },
     {
       title: "Team Spotlight: Meet Our AI Research Division",
@@ -61,7 +61,7 @@ const CompanyBlog = () => {
       readTime: "5 min read",
       category: "Team & Culture",
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
-      slug: "#"
+      slug: "/company-blog/team-spotlight"
     },
     {
       title: "Partnership Announcement: Integrating with Leading CRM Platforms",
@@ -72,7 +72,7 @@ const CompanyBlog = () => {
       readTime: "3 min read",
       category: "Partnerships",
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
-      slug: "#"
+      slug: "/company-blog/partnership-announcement"
     }
   ];
 
