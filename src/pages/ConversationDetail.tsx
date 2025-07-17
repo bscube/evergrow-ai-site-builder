@@ -160,10 +160,10 @@ const ConversationDetail = () => {
       
       <main className="min-h-screen">
         {/* Breadcrumb */}
-        <section className="bg-grey-50 py-4">
+        <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center text-sm text-grey-600">
-              <Link to="/conversations-on-ai" className="hover:text-brand-green-500">
+              <Link to="/conversations-on-ai" className="hover:text-purple-600 transition-colors">
                 Conversations on AI
               </Link>
               <ChevronRight className="h-4 w-4 mx-2" />
@@ -173,12 +173,12 @@ const ConversationDetail = () => {
         </section>
 
         {/* Header */}
-        <section className="py-12">
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-6">
               <Link 
                 to="/conversations-on-ai"
-                className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium mb-6"
+                className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium mb-6 transition-colors"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to all conversations
@@ -186,8 +186,8 @@ const ConversationDetail = () => {
             </div>
             
             <div className="flex items-center mb-4 flex-wrap gap-2">
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(conversation.type)}`}>
-                {conversation.type}
+              <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-medium">
+                Interview
               </span>
               <div className="flex items-center text-grey-500 text-sm">
                 <Calendar className="h-4 w-4 mr-1" />
@@ -195,23 +195,32 @@ const ConversationDetail = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-bold text-grey-900 mb-6">{conversation.title}</h1>
-            <p className="text-xl text-grey-600 mb-8 max-w-4xl">{conversation.description}</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-grey-900 mb-6 leading-tight">
+              {conversation.title.split(' ').slice(0, 4).join(' ')}
+              <span className="text-blue-600 block md:inline md:ml-2">
+                {conversation.title.split(' ').slice(4).join(' ')}
+              </span>
+            </h1>
+            <p className="text-xl text-grey-600 mb-8 max-w-4xl leading-relaxed">{conversation.description}</p>
             
-            <div className="flex items-center mb-8 text-grey-500">
-              <Clock className="h-5 w-5 mr-2" />
-              <span className="mr-6">{conversation.duration}</span>
-              <Users className="h-5 w-5 mr-2" />
-              <span>{conversation.listens} listens</span>
+            <div className="flex items-center mb-8 text-grey-500 gap-6">
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5" />
+                <span>{conversation.duration}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                <span>{conversation.listens} listens</span>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Video Player */}
-        <section className="pb-12">
+        <section className="pb-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-black rounded-2xl overflow-hidden">
-              <div className="aspect-video">
+            <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-video relative">
                 <iframe
                   src={conversation.videoUrl}
                   title={conversation.title}
@@ -224,26 +233,26 @@ const ConversationDetail = () => {
             </div>
             
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex flex-wrap gap-4 mt-8 justify-center">
               <a 
                 href={conversation.audioUrl}
-                className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Play className="h-4 w-4 mr-2" />
+                <Play className="h-5 w-5 mr-2" />
                 Listen to Audio
               </a>
               <a 
                 href={conversation.transcriptUrl}
-                className="inline-flex items-center border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
+                className="inline-flex items-center bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 download
               >
-                <Download className="h-4 w-4 mr-2" />
+                <Download className="h-5 w-5 mr-2" />
                 Download Transcript
               </a>
-              <button className="inline-flex items-center border-2 border-grey-300 text-grey-700 hover:bg-grey-50 px-6 py-3 rounded-xl font-semibold transition-all duration-200">
-                <Share2 className="h-4 w-4 mr-2" />
+              <button className="inline-flex items-center bg-white border-2 border-grey-300 text-grey-700 hover:bg-grey-50 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                <Share2 className="h-5 w-5 mr-2" />
                 Share
               </button>
             </div>
@@ -251,44 +260,50 @@ const ConversationDetail = () => {
         </section>
 
         {/* Content */}
-        <section className="pb-20">
+        <section className="pb-20 bg-grey-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">
-                <h2 className="text-2xl font-bold text-grey-900 mb-6">About This Conversation</h2>
-                <p className="text-grey-600 mb-8 text-lg leading-relaxed">{conversation.fullDescription}</p>
-                
-                <h3 className="text-xl font-bold text-grey-900 mb-4">Key Takeaways</h3>
-                <ul className="space-y-3 mb-8">
-                  {conversation.keyTakeaways.map((takeaway, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="bg-brand-green-500 rounded-full w-2 h-2 mt-2 mr-4 flex-shrink-0"></div>
-                      <span className="text-grey-600">{takeaway}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="bg-white rounded-2xl shadow-lg p-8">
+                  <h2 className="text-3xl font-bold text-grey-900 mb-6">About This Conversation</h2>
+                  <p className="text-grey-600 mb-8 text-lg leading-relaxed">{conversation.fullDescription}</p>
+                  
+                  <h3 className="text-2xl font-bold text-grey-900 mb-6">Key Takeaways</h3>
+                  <ul className="space-y-4 mb-8">
+                    {conversation.keyTakeaways.map((takeaway, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
+                        <span className="text-grey-600 text-lg">{takeaway}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
               
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-2xl border shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-grey-900 mb-6">Participants</h3>
-                  <div className="space-y-4">
+                <div className="bg-white rounded-2xl shadow-lg p-8">
+                  <h3 className="text-2xl font-bold text-grey-900 mb-6">Participants</h3>
+                  <div className="space-y-6">
                     {conversation.participants.map((participant, index) => (
                       <div key={index} className="flex items-start">
-                        <Mic className="h-5 w-5 text-brand-green-500 mr-3 mt-1 flex-shrink-0" />
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                          <span className="text-white font-bold text-lg">
+                            {participant.split(' - ')[0].split(' ').map(n => n[0]).join('')}
+                          </span>
+                        </div>
                         <div>
-                          <p className="font-medium text-grey-900">{participant.split(' - ')[0]}</p>
-                          <p className="text-sm text-grey-600">{participant.split(' - ')[1]}</p>
+                          <p className="font-semibold text-grey-900 text-lg">{participant.split(' - ')[0]}</p>
+                          <p className="text-grey-600">{participant.split(' - ')[1]}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                   
                   <div className="mt-8">
-                    <h4 className="font-semibold text-grey-900 mb-3">Topics Covered</h4>
+                    <h4 className="font-semibold text-grey-900 mb-4 text-lg">Topics Covered</h4>
                     <div className="flex flex-wrap gap-2">
                       {conversation.topics.map((topic) => (
-                        <span key={topic} className="bg-grey-100 text-grey-700 px-3 py-1 rounded-full text-sm">
+                        <span key={topic} className="bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-3 py-2 rounded-full text-sm font-medium">
                           {topic}
                         </span>
                       ))}

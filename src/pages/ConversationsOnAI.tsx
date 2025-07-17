@@ -101,93 +101,112 @@ const ConversationsOnAI = () => {
       
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-brand-green-50 to-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-purple-400 via-blue-500 to-teal-400 relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-grey-900 mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Conversations
-                <span className="text-brand-green-500"> on AI</span>
+                <span className="text-teal-300 block md:inline md:ml-4">on AI</span>
               </h1>
-              <p className="text-xl text-grey-600 mb-8">
-                Thoughtful discussions with leading experts, researchers, and visionaries 
-                shaping the future of artificial intelligence and its impact on society.
+              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Demystifying AI for Business
+              </p>
+              <p className="text-lg text-white/80 font-medium">
+                Interviews | Analysis | Research
               </p>
             </div>
           </div>
         </section>
 
         {/* Featured Conversation */}
-        <section className="py-20">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden">
-              <div className="bg-brand-green-500 px-6 py-3">
-                <span className="text-white font-medium">Featured Conversation</span>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="p-8">
-                  <div className="flex items-center mb-4 flex-wrap gap-2">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(conversations[0].type)}`}>
-                      {conversations[0].type}
-                    </span>
-                    <div className="flex items-center text-grey-500 text-sm">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {conversations[0].date}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Visual Section */}
+              <div className="relative">
+                <div className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500 rounded-3xl p-8 overflow-hidden">
+                  <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
+                  <div className="absolute top-4 left-4 w-16 h-16 bg-white/10 rounded-full"></div>
+                  <div className="absolute bottom-4 right-4 w-24 h-24 bg-white/10 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/5 rounded-full"></div>
+                  
+                  <div className="relative z-10 text-center">
+                    <div className="text-white/90 text-sm font-medium mb-4">Conversations on AI</div>
+                    <div className="text-white text-2xl md:text-3xl font-bold mb-8">
+                      Ethics in AI Business
+                    </div>
+                    
+                    {/* Participant Avatars */}
+                    <div className="flex justify-center gap-4 mb-8">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 font-bold text-lg">SC</span>
+                      </div>
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 font-bold text-lg">MR</span>
+                      </div>
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-teal-600 font-bold text-lg">EV</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-white/80 text-sm">
+                      <span className="mr-4">Dr. Sarah Chen</span>
+                      <span className="mr-4">Michael Rodriguez</span>
+                      <span>Prof. Elena Vasquez</span>
                     </div>
                   </div>
-                  
-                  <h2 className="text-3xl font-bold text-grey-900 mb-4">{conversations[0].title}</h2>
-                  <p className="text-grey-600 mb-6 text-lg">{conversations[0].description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-grey-900 mb-3">Participants:</h4>
-                    <ul className="space-y-1">
-                      {conversations[0].participants.map((participant, idx) => (
-                        <li key={idx} className="flex items-center text-grey-600">
-                          <Mic className="h-4 w-4 text-brand-green-500 mr-3 flex-shrink-0" />
-                          {participant}
-                        </li>
-                      ))}
-                    </ul>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-medium">
+                    Interview
+                  </span>
+                </div>
+                
+                <h2 className="text-4xl md:text-5xl font-bold text-grey-900 leading-tight">
+                  The Ethics of 
+                  <span className="text-blue-600"> Artificial Intelligence</span>
+                </h2>
+                
+                <p className="text-lg text-grey-600 leading-relaxed">
+                  {conversations[0].description}
+                </p>
+                
+                <div className="prose prose-grey max-w-none">
+                  <p className="text-grey-600">
+                    Dr. Sarah Chen's expertise in AI ethics frameworks, Michael Rodriguez's Fortune 500 implementation experience, and Prof. Elena Vasquez's policy insights create a comprehensive discussion on responsible AI deployment.
+                  </p>
+                </div>
+                
+                <div className="flex items-center gap-6 text-sm text-grey-500 mb-8">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="h-4 w-4" />
+                    {conversations[0].date}
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {conversations[0].topics.map((topic) => (
-                      <span key={topic} className="bg-grey-100 text-grey-600 px-3 py-1 rounded-full text-sm">
-                        {topic}
-                      </span>
-                    ))}
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-4 w-4" />
+                    {conversations[0].duration}
                   </div>
-                  
-                  <div className="flex items-center mb-6 text-grey-500 text-sm">
-                    <Clock className="h-4 w-4 mr-1" />
-                    <span className="mr-6">{conversations[0].duration}</span>
-                    <Users className="h-4 w-4 mr-1" />
-                    <span>{conversations[0].listens} listens</span>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <Link 
-                      to={`/conversations-on-ai/${conversations[0].id}`}
-                      className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
-                    >
-                      <Play className="h-4 w-4 mr-2" />
-                      Watch Now
-                    </Link>
-                    <Link 
-                      to={conversations[0].transcriptUrl}
-                      className="inline-flex items-center border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
-                    >
-                      <Download className="h-4 w-4 mr-2" />
-                      Transcript
-                    </Link>
+                  <div className="flex items-center gap-1">
+                    <Users className="h-4 w-4" />
+                    {conversations[0].listens}
                   </div>
                 </div>
-                <div className="lg:p-8">
-                  <img 
-                    src={conversations[0].image} 
-                    alt={conversations[0].title}
-                    className="w-full h-full object-cover rounded-xl"
-                  />
+                
+                <div className="pt-4">
+                  <Link 
+                    to={`/conversations-on-ai/${conversations[0].id}`}
+                    className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <Play className="h-5 w-5 mr-2" />
+                    Watch Now
+                  </Link>
                 </div>
               </div>
             </div>
@@ -195,11 +214,14 @@ const ConversationsOnAI = () => {
         </section>
 
         {/* Conversations Grid */}
-        <section className="pb-20">
+        <section className="pb-20 bg-grey-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-4">
-                Latest Conversations
+              <h2 className="text-4xl md:text-5xl font-bold text-grey-900 mb-4">
+                Decoding the capability of 
+                <span className="text-gradient bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                  Artificial Intelligence
+                </span>
               </h2>
               <p className="text-xl text-grey-600 max-w-3xl mx-auto">
                 Explore our collection of thought-provoking discussions
@@ -208,23 +230,22 @@ const ConversationsOnAI = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {conversations.slice(1).map((conversation, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
+                <div key={index} className="group bg-white rounded-2xl shadow-lg border hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105">
                   <div className="relative">
-                    <img 
-                      src={conversation.image} 
-                      alt={conversation.title}
-                      className="w-full h-48 object-cover rounded-t-2xl"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(conversation.type)}`}>
-                        {conversation.type}
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 rounded-full p-4">
-                        <Play className="h-8 w-8 text-brand-green-500" />
+                    <div className="w-full h-48 bg-gradient-to-br from-purple-400 via-blue-500 to-teal-400 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-white/90 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+                          {conversation.type}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                          <Play className="h-8 w-8 text-white" />
+                        </div>
                       </div>
                     </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-3 text-sm text-grey-500">
@@ -234,13 +255,15 @@ const ConversationsOnAI = () => {
                       <span>{conversation.duration}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2">{conversation.title}</h3>
+                    <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                      {conversation.title}
+                    </h3>
                     <p className="text-grey-600 mb-4 text-sm line-clamp-3">{conversation.description}</p>
                     
                     <div className="mb-4">
                       <p className="text-sm text-grey-500 mb-2">With:</p>
                       <p className="text-sm text-grey-700 line-clamp-2">
-                        {conversation.participants.slice(0, 2).join(', ')}
+                        {conversation.participants.slice(0, 2).map(p => p.split(' - ')[0]).join(', ')}
                         {conversation.participants.length > 2 && ' & more'}
                       </p>
                     </div>
@@ -260,7 +283,7 @@ const ConversationsOnAI = () => {
                       </div>
                       <Link 
                         to={`/conversations-on-ai/${conversation.id}`}
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
+                        className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 hover:scale-105"
                       >
                         <Play className="h-4 w-4 mr-1" />
                         Watch Now
@@ -274,17 +297,20 @@ const ConversationsOnAI = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-brand-green-500 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-500 py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Join the Conversation
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Have insights to share? We're always looking for thought leaders and experts to join our conversations about the future of AI.
             </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
+              className="inline-flex items-center bg-white text-purple-600 hover:bg-grey-50 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Suggest a Topic
               <ArrowRight className="ml-2 h-5 w-5" />
