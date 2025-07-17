@@ -257,7 +257,7 @@ const TechBlog = () => {
                       </div>
                       <Link 
                         to={post.slug}
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
+                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm transition-colors duration-200 hover:underline"
                       >
                         Read More
                         <ArrowRight className="ml-1 h-4 w-4" />
