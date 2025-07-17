@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { MessageSquare, Phone, Mail, MapPin, Calendar, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
+import { MessageSquare, Phone, Mail, MapPin, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Map from '../components/Map';
@@ -165,13 +166,6 @@ const Contact = () => {
       description: "Send us your requirements",
       action: "Email Us",
       link: "mailto:hello@evergrowdigital.com"
-    },
-    {
-      icon: Calendar,
-      title: "Schedule Call",
-      description: "Book a convenient time slot",
-      action: "Book Meeting",
-      link: "#"
     }
   ];
 
@@ -220,7 +214,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactMethods.map((method, index) => (
               <a
                 key={index}
