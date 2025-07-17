@@ -236,16 +236,16 @@ const ReportsResearch = () => {
         <section className="bg-brand-green-500 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Need Custom Research?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Our research team can conduct custom studies and analysis tailored to your specific industry or use case.
+              See how AI agents can revolutionize your operations. Schedule a personalized demo today.
             </p>
             <Link 
               to="/contact" 
               className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
             >
-              Request Custom Research
+              Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
