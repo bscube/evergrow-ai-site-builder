@@ -40,7 +40,6 @@ import ReportsResearch from "./pages/ReportsResearch";
 import CompanyBlog from "./pages/CompanyBlog";
 import TechBlog from "./pages/TechBlog";
 import ConversationsOnAI from "./pages/ConversationsOnAI";
-import ConversationDetail from "./pages/ConversationDetail";
 import NotFound from "./pages/NotFound";
 
 // Company Blog Detail Pages
@@ -110,8 +109,7 @@ const App = () => (
             <Route path="/reports-research" element={<ReportsResearch />} />
             <Route path="/company-blog" element={<CompanyBlog />} />
             <Route path="/tech-blog" element={<TechBlog />} />
-        <Route path="/conversations-on-ai" element={<ConversationsOnAI />} />
-        <Route path="/conversations-on-ai/:id" element={<ConversationDetail />} />
+            <Route path="/conversations-on-ai" element={<ConversationsOnAI />} />
             
             {/* Company Blog Detail Routes */}
             <Route path="/company-blog/future-of-customer-experience" element={<FutureOfCustomerExperience />} />
