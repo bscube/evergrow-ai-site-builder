@@ -18,7 +18,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["Microservices", "Scalability", "AI Architecture"],
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
-      slug: "#",
+      slug: "#architecture-deep-dive",
       featured: true
     },
     {
@@ -32,7 +32,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["NLP", "Transformers", "Performance"],
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
-      slug: "#"
+      slug: "#nlp-optimization"
     },
     {
       title: "Real-time Conversation State Management",
@@ -45,7 +45,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["Redis", "State Management", "Distributed Systems"],
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
-      slug: "#"
+      slug: "#conversation-state"
     },
     {
       title: "Implementing Secure Multi-tenant AI Infrastructure",
@@ -58,7 +58,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["Security", "Multi-tenancy", "Infrastructure"],
       image: "/lovable-uploads/c1a92e03-717c-49f6-b56a-882576f79f7b.png",
-      slug: "#"
+      slug: "#secure-infrastructure"
     },
     {
       title: "Fine-tuning Large Language Models for Domain-Specific Tasks",
@@ -71,7 +71,7 @@ const TechBlog = () => {
       difficulty: "Advanced",
       tags: ["LLM", "Fine-tuning", "Domain Adaptation"],
       image: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png",
-      slug: "#"
+      slug: "#llm-fine-tuning"
     },
     {
       title: "Building Resilient AI APIs with Circuit Breakers",
@@ -84,7 +84,7 @@ const TechBlog = () => {
       difficulty: "Intermediate",
       tags: ["API Design", "Resilience", "Circuit Breakers"],
       image: "/lovable-uploads/665274b0-11f1-46f6-9c20-29a4bc35a12b.png",
-      slug: "#"
+      slug: "#api-resilience"
     }
   ];
 
@@ -286,6 +286,91 @@ const TechBlog = () => {
               Join Community
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
+          </div>
+        </section>
+
+        {/* Article Content Sections */}
+        <section id="architecture-deep-dive" className="py-20 bg-grey-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Building Scalable AI Agents: Architecture Deep Dive</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                Our microservices architecture enables AI agents to handle millions of conversations simultaneously by distributing workload across multiple specialized services. Each service is designed for specific functions like natural language processing, context management, and response generation.
+              </p>
+              <p className="text-grey-600 mb-6">
+                The system uses event-driven communication patterns with Apache Kafka for real-time message streaming, ensuring low latency and high throughput. Load balancing is handled through Kubernetes with auto-scaling policies based on CPU and memory metrics.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="nlp-optimization" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Natural Language Processing Pipeline Optimization</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                We achieved 40% faster response times by implementing custom transformer models with efficient tokenization strategies. Our optimization pipeline includes model quantization, dynamic batching, and caching mechanisms for frequently used patterns.
+              </p>
+              <p className="text-grey-600 mb-6">
+                The key breakthrough came from implementing pipeline parallelization where tokenization, embedding generation, and model inference happen concurrently rather than sequentially.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="conversation-state" className="py-20 bg-grey-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Real-time Conversation State Management</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                Our Redis-based state management system maintains conversation context across distributed AI agents using a hybrid approach of in-memory caching and persistent storage. Each conversation maintains a rolling window of context with intelligent pruning algorithms.
+              </p>
+              <p className="text-grey-600 mb-6">
+                State synchronization across multiple agent instances is handled through Redis Streams, ensuring consistency while maintaining sub-millisecond access times.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="secure-infrastructure" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Implementing Secure Multi-tenant AI Infrastructure</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                Security in multi-tenant AI infrastructure requires isolation at multiple levels: data, compute, and network. We implement tenant-specific encryption keys, isolated compute namespaces, and strict API access controls with rate limiting per tenant.
+              </p>
+              <p className="text-grey-600 mb-6">
+                Data isolation is enforced through encrypted database partitioning and tenant-specific AI model instances, ensuring complete separation of sensitive information.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="llm-fine-tuning" className="py-20 bg-grey-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Fine-tuning Large Language Models for Domain-Specific Tasks</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                Fine-tuning LLMs for specific industries requires careful data preparation, custom training strategies, and domain-specific evaluation metrics. Our approach includes transfer learning techniques and parameter-efficient fine-tuning methods.
+              </p>
+              <p className="text-grey-600 mb-6">
+                We use LoRA (Low-Rank Adaptation) and QLoRA techniques to fine-tune models efficiently while maintaining base model performance on general tasks.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="api-resilience" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-grey-900 mb-8">Building Resilient AI APIs with Circuit Breakers</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-grey-600 mb-6">
+                Circuit breaker patterns ensure high availability and graceful degradation in our AI service APIs. When services experience high error rates or latency, circuit breakers prevent cascade failures by temporarily blocking requests.
+              </p>
+              <p className="text-grey-600 mb-6">
+                Our implementation includes configurable thresholds, exponential backoff strategies, and automatic recovery mechanisms with health checks.
+              </p>
+            </div>
           </div>
         </section>
       </main>
