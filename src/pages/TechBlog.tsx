@@ -194,13 +194,6 @@ const TechBlog = () => {
                     </div>
                   </div>
                   
-                  <Link 
-                    to={techPosts[0].slug}
-                    className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
-                  >
-                    Read Technical Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </div>
                 <div className="lg:p-8">
                   <img 
