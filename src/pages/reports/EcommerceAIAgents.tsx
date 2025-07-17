@@ -40,14 +40,6 @@ const EcommerceAIAgents = () => {
                   Research study on how AI agents drive sales in e-commerce, featuring data from 200+ online retailers and their conversion optimization results.
                 </p>
                 
-                <a 
-                  href="/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png"
-                  download="Ecommerce-AI-Agents-Sales-Impact-Report.pdf"
-                  className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                >
-                  <Download className="h-5 w-5 mr-3" />
-                  Download Full Report
-                </a>
               </div>
               
               <div>
