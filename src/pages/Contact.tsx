@@ -15,6 +15,16 @@ const Contact = () => {
     projectType: ''
   });
 
+  const [tourFormData, setTourFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    jobTitle: '',
+    phone: '',
+    countryCode: '+91'
+  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
@@ -93,6 +103,54 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleTourInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setTourFormData({
+      ...tourFormData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleTourSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate required fields
+    if (!tourFormData.firstName || !tourFormData.lastName || !tourFormData.email || 
+        !tourFormData.company || !tourFormData.jobTitle) {
+      toast({
+        title: "Please fill in all required fields",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We'll contact you soon to schedule your product tour.",
+      });
+
+      // Reset form
+      setTourFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        jobTitle: '',
+        phone: '',
+        countryCode: '+91'
+      });
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const benefits = [
@@ -491,6 +549,106 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Get a Quick Tour Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-blue-600 mb-12">
+            Get a Quick Tour of Our Gen AI Product Suite
+          </h2>
+          
+          <form onSubmit={handleTourSubmit} className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  required
+                  value={tourFormData.firstName}
+                  onChange={handleTourInputChange}
+                  placeholder="First name*"
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="lastName"
+                  required
+                  value={tourFormData.lastName}
+                  onChange={handleTourInputChange}
+                  placeholder="Last Name*"
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={tourFormData.email}
+                  onChange={handleTourInputChange}
+                  placeholder="Your Email*"
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex gap-2">
+                <select
+                  name="countryCode"
+                  value={tourFormData.countryCode}
+                  onChange={handleTourInputChange}
+                  className="px-3 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors bg-grey-50"
+                >
+                  <option value="+91">India</option>
+                  <option value="+1">USA</option>
+                  <option value="+44">UK</option>
+                  <option value="+971">UAE</option>
+                </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={tourFormData.phone}
+                  onChange={handleTourInputChange}
+                  placeholder="+91"
+                  className="flex-1 px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="company"
+                  required
+                  value={tourFormData.company}
+                  onChange={handleTourInputChange}
+                  placeholder="Your Company name*"
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="jobTitle"
+                  required
+                  value={tourFormData.jobTitle}
+                  onChange={handleTourInputChange}
+                  placeholder="Job title*"
+                  className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors placeholder-grey-400"
+                />
+              </div>
+            </div>
+            
+            <button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+            >
+              Talk to Our Experts
+            </button>
+          </form>
         </div>
       </section>
 
