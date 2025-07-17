@@ -197,14 +197,6 @@ const Webinars = () => {
                         <span>{webinar.viewers} viewers</span>
                       </div>
                     </div>
-
-                    <Link 
-                      to={webinar.watchUrl}
-                      className="inline-flex items-center text-brand-green-500 hover:text-brand-green-600 font-semibold transition-colors"
-                    >
-                      <Play className="h-4 w-4 mr-2" />
-                      Watch Now
-                    </Link>
                   </div>
                 </div>
               ))}
