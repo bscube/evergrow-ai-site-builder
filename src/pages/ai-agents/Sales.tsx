@@ -31,14 +31,11 @@ const Sales = () => {
                 AI-powered sales agent that qualifies leads, nurtures prospects, and closes deals 24/7. Increase conversions by 40% while reducing sales cycle time.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex justify-start mb-8">
                 <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                   Get AI Sales Agent
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  Watch Demo
-                </button>
               </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
