@@ -13,7 +13,7 @@ const ReportsResearch = () => {
       type: "Industry Report",
       pages: "64 pages",
       publishDate: "January 2024",
-      downloadUrl: "#",
+      downloadUrl: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
       featured: true,
       highlights: [
@@ -28,7 +28,7 @@ const ReportsResearch = () => {
       type: "Performance Study",
       pages: "32 pages",
       publishDate: "December 2023",
-      downloadUrl: "#",
+      downloadUrl: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
       highlights: [
         "Average 73% reduction in response time",
@@ -42,7 +42,7 @@ const ReportsResearch = () => {
       type: "Market Research",
       pages: "28 pages",
       publishDate: "November 2023",
-      downloadUrl: "#",
+      downloadUrl: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
       highlights: [
         "42% average increase in conversions",
@@ -59,7 +59,7 @@ const ReportsResearch = () => {
       type: "Whitepaper",
       pages: "16 pages",
       publishDate: "January 2024",
-      downloadUrl: "#"
+      downloadUrl: "/lovable-uploads/c1a92e03-717c-49f6-b56a-882576f79f7b.png"
     },
     {
       title: "The Psychology of Human-AI Interaction",
@@ -67,7 +67,7 @@ const ReportsResearch = () => {
       type: "Research Paper",
       pages: "20 pages",
       publishDate: "December 2023",
-      downloadUrl: "#"
+      downloadUrl: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png"
     },
     {
       title: "Cost-Benefit Analysis: AI Agents vs Traditional Solutions",
@@ -75,7 +75,7 @@ const ReportsResearch = () => {
       type: "Analysis Report",
       pages: "12 pages",
       publishDate: "November 2023",
-      downloadUrl: "#"
+      downloadUrl: "/lovable-uploads/6b11361d-e93e-47a7-8d6d-0165caa79795.png"
     }
   ];
 
