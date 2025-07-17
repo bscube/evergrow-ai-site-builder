@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Headphones, MessageSquare, Phone, Clock, Users, CheckCircle, Zap, Globe, BarChart3, Shield } from 'lucide-react';
@@ -29,16 +28,6 @@ const Support = () => {
               <p className="text-xl text-grey-600 mb-8 leading-relaxed">
                 Streamline customer support without pre-built journeys. Our AI support agent resolves 95% of queries instantly while seamlessly escalating complex issues to human agents.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Get AI Support Agent
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105">
-                  Watch Demo
-                </button>
-              </div>
               
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-grey-200">
                 <div className="text-center">
