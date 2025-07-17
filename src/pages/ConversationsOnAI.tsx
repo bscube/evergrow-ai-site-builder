@@ -8,6 +8,7 @@ import { Calendar, Clock, Users, Mic, Play, ArrowRight, Download } from 'lucide-
 const ConversationsOnAI = () => {
   const conversations = [
     {
+      id: "ethics-ai-business",
       title: "The Ethics of AI in Business: A Roundtable Discussion",
       description: "Leading AI ethicists and business leaders discuss the responsible implementation of AI in enterprise environments.",
       participants: [
@@ -26,6 +27,7 @@ const ConversationsOnAI = () => {
       topics: ["AI Ethics", "Business Implementation", "Policy & Regulation"]
     },
     {
+      id: "ai-journey-mainstream",
       title: "From Research to Reality: AI's Journey into Mainstream Business",
       description: "A deep conversation about how AI research translates into practical business applications and real-world impact.",
       participants: [
@@ -42,6 +44,7 @@ const ConversationsOnAI = () => {
       topics: ["AI Research", "Product Development", "Market Adoption"]
     },
     {
+      id: "future-of-work",
       title: "The Future of Work: How AI Agents Transform Human Roles",
       description: "Exploring how AI agents are reshaping job roles and creating new opportunities for human-AI collaboration.",
       participants: [
@@ -58,6 +61,7 @@ const ConversationsOnAI = () => {
       topics: ["Future of Work", "Human-AI Collaboration", "Workforce Development"]
     },
     {
+      id: "building-trust-ai",
       title: "Building Trust in AI: Transparency and Explainability",
       description: "A technical discussion about making AI systems more transparent and explainable for business stakeholders.",
       participants: [
@@ -188,7 +192,11 @@ const ConversationsOnAI = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {conversations.slice(1).map((conversation, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
+                <Link 
+                  key={index} 
+                  to={`/conversations/${conversation.id}`}
+                  className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 block group cursor-pointer"
+                >
                   <div className="relative">
                     <img 
                       src={conversation.image} 
@@ -200,7 +208,7 @@ const ConversationsOnAI = () => {
                         {conversation.type}
                       </span>
                     </div>
-                    <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-white/90 rounded-full p-4">
                         <Play className="h-8 w-8 text-brand-green-500" />
                       </div>
@@ -214,7 +222,9 @@ const ConversationsOnAI = () => {
                       <span>{conversation.duration}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2">{conversation.title}</h3>
+                    <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2 group-hover:text-brand-green-600 transition-colors">
+                      {conversation.title}
+                    </h3>
                     <p className="text-grey-600 mb-4 text-sm line-clamp-3">{conversation.description}</p>
                     
                     <div className="mb-4">
@@ -238,16 +248,13 @@ const ConversationsOnAI = () => {
                         <Users className="h-4 w-4 mr-1" />
                         <span>{conversation.listens}</span>
                       </div>
-                      <Link 
-                        to={conversation.audioUrl}
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
-                      >
+                      <div className="inline-flex items-center text-brand-green-600 group-hover:text-brand-green-700 font-medium text-sm">
                         <Play className="h-4 w-4 mr-1" />
                         Listen
-                      </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
