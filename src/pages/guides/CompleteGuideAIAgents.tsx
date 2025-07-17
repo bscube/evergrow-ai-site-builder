@@ -51,10 +51,6 @@ const CompleteGuideAIAgents = () => {
               </div>
             </div>
             
-            <button className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105">
-              <Download className="h-5 w-5 mr-2" />
-              Download PDF Guide
-            </button>
           </div>
         </section>
 
