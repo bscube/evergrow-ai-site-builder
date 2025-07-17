@@ -55,14 +55,6 @@ const StateOfAIAgents2024 = () => {
                   </div>
                 </div>
                 
-                <a 
-                  href="/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png"
-                  download="State-of-AI-Agents-2024-Report.pdf"
-                  className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                >
-                  <Download className="h-5 w-5 mr-3" />
-                  Download Full Report
-                </a>
               </div>
               
               <div>
