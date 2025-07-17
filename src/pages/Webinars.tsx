@@ -87,68 +87,6 @@ const Webinars = () => {
           </div>
         </section>
 
-        {/* Upcoming Webinars */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-4">
-                Upcoming Webinars
-              </h2>
-              <p className="text-xl text-grey-600 max-w-3xl mx-auto">
-                Register now for our upcoming expert-led sessions
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {upcomingWebinars.map((webinar, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 ${webinar.featured ? 'ring-2 ring-brand-green-500' : ''}`}>
-                  {webinar.featured && (
-                    <div className="bg-brand-green-500 text-white px-4 py-2 rounded-t-2xl">
-                      <span className="text-sm font-medium">Featured Webinar</span>
-                    </div>
-                  )}
-                  <div className="relative">
-                    <img 
-                      src={webinar.image} 
-                      alt={webinar.title}
-                      className="w-full h-48 object-cover rounded-t-2xl"
-                    />
-                    <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Live
-                    </div>
-                  </div>
-                  <div className="p-8">
-                    <h3 className="text-xl font-bold text-grey-900 mb-3">{webinar.title}</h3>
-                    <p className="text-grey-600 mb-6">{webinar.description}</p>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center text-grey-700">
-                        <Calendar className="h-4 w-4 mr-3 text-brand-green-500" />
-                        <span>{webinar.date}</span>
-                      </div>
-                      <div className="flex items-center text-grey-700">
-                        <Clock className="h-4 w-4 mr-3 text-brand-green-500" />
-                        <span>{webinar.time} • {webinar.duration}</span>
-                      </div>
-                      <div className="flex items-center text-grey-700">
-                        <Users className="h-4 w-4 mr-3 text-brand-green-500" />
-                        <span>{webinar.speaker}</span>
-                      </div>
-                    </div>
-
-                    <Link 
-                      to={webinar.registrationUrl}
-                      className="inline-flex items-center w-full justify-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
-                    >
-                      Register Now - Free
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Past Webinars */}
         <section className="py-20 bg-grey-50">
