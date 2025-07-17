@@ -134,13 +134,6 @@ const Webinars = () => {
                       </div>
                     </div>
 
-                    <Link 
-                      to={webinar.watchUrl}
-                      className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium"
-                    >
-                      <Video className="h-4 w-4 mr-2" />
-                      Watch Recording
-                    </Link>
                   </div>
                 </div>
               ))}
