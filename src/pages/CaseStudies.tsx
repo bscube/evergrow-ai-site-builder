@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, TrendingUp, Clock, Users, DollarSign, CheckCircle, Star, Target, Zap, BarChart3, Award } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 
 const CaseStudies = () => {
   const featuredCaseStudies = [
@@ -421,6 +424,83 @@ const CaseStudies = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Get a Quick Tour Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-blue-600 mb-6">
+              Get a Quick Tour of Our Gen AI Product Suite
+            </h2>
+          </div>
+
+          <form className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Input 
+                type="text"
+                placeholder="First name*"
+                required
+                className="h-12 text-gray-500 placeholder:text-gray-400"
+              />
+              <Input 
+                type="text"
+                placeholder="Last Name*"
+                required
+                className="h-12 text-gray-500 placeholder:text-gray-400"
+              />
+              <Input 
+                type="email"
+                placeholder="Your Email*"
+                required
+                className="h-12 text-gray-500 placeholder:text-gray-400"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex gap-2">
+                <Select>
+                  <SelectTrigger className="w-24 h-12">
+                    <SelectValue placeholder="IND" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="ind">IND</SelectItem>
+                    <SelectItem value="usa">USA</SelectItem>
+                    <SelectItem value="uk">UK</SelectItem>
+                    <SelectItem value="ca">CA</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Input 
+                  type="tel"
+                  placeholder="+91"
+                  required
+                  className="flex-1 h-12 text-gray-500 placeholder:text-gray-400"
+                />
+              </div>
+              <Input 
+                type="text"
+                placeholder="Your Company name*"
+                required
+                className="h-12 text-gray-500 placeholder:text-gray-400"
+              />
+              <Input 
+                type="text"
+                placeholder="Job title*"
+                required
+                className="h-12 text-gray-500 placeholder:text-gray-400"
+              />
+            </div>
+
+            <div className="text-center pt-4">
+              <Button 
+                type="submit"
+                className="px-12 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg"
+              >
+                Talk to Our Experts
+              </Button>
+            </div>
+          </form>
         </div>
       </section>
 
