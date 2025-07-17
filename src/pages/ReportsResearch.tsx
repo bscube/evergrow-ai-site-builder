@@ -13,7 +13,7 @@ const ReportsResearch = () => {
       type: "Industry Report",
       pages: "64 pages",
       publishDate: "January 2024",
-      downloadUrl: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
+      downloadUrl: "/reports/state-of-ai-agents-2024",
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
       featured: true,
       highlights: [
@@ -28,7 +28,7 @@ const ReportsResearch = () => {
       type: "Performance Study",
       pages: "32 pages",
       publishDate: "December 2023",
-      downloadUrl: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
+      downloadUrl: "/reports/customer-service-automation",
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
       highlights: [
         "Average 73% reduction in response time",
@@ -42,7 +42,7 @@ const ReportsResearch = () => {
       type: "Market Research",
       pages: "28 pages",
       publishDate: "November 2023",
-      downloadUrl: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
+      downloadUrl: "/reports/ecommerce-ai-agents",
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
       highlights: [
         "42% average increase in conversions",
@@ -165,15 +165,13 @@ const ReportsResearch = () => {
                           <FileText className="h-4 w-4 mr-1" />
                           {report.pages}
                         </div>
-                        <a 
-                          href={report.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link 
+                          to={report.downloadUrl}
                           className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
                         >
                           <Download className="h-4 w-4 mr-2" />
-                          Download Report
-                        </a>
+                          View Report
+                        </Link>
                       </div>
                     </div>
                   </div>

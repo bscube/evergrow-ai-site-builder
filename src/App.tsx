@@ -41,6 +41,11 @@ import TechBlog from "./pages/TechBlog";
 import ConversationsOnAI from "./pages/ConversationsOnAI";
 import NotFound from "./pages/NotFound";
 
+// Report Detail Pages
+import StateOfAIAgents2024 from "./pages/reports/StateOfAIAgents2024";
+import CustomerServiceAutomation from "./pages/reports/CustomerServiceAutomation";
+import EcommerceAIAgents from "./pages/reports/EcommerceAIAgents";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -85,6 +90,12 @@ const App = () => (
             <Route path="/company-blog" element={<CompanyBlog />} />
             <Route path="/tech-blog" element={<TechBlog />} />
             <Route path="/conversations-on-ai" element={<ConversationsOnAI />} />
+            
+            {/* Report Detail Routes */}
+            <Route path="/reports/state-of-ai-agents-2024" element={<StateOfAIAgents2024 />} />
+            <Route path="/reports/customer-service-automation" element={<CustomerServiceAutomation />} />
+            <Route path="/reports/ecommerce-ai-agents" element={<EcommerceAIAgents />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
