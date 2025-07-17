@@ -57,6 +57,60 @@ const Webinars = () => {
       viewers: "1,500+",
       watchUrl: "#",
       image: "/lovable-uploads/6b11361d-e93e-47a7-8d6d-0165caa79795.png"
+    },
+    {
+      title: "Building Conversational AI: From Concept to Deployment",
+      description: "Step-by-step guide to designing, developing, and deploying effective conversational AI solutions.",
+      date: "October 25, 2023",
+      duration: "45 min",
+      viewers: "875+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop"
+    },
+    {
+      title: "Enterprise AI Integration: Best Practices & Pitfalls",
+      description: "Critical insights for successfully integrating AI agents into large-scale enterprise environments.",
+      date: "October 12, 2023",
+      duration: "52 min",
+      viewers: "1,100+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop"
+    },
+    {
+      title: "Natural Language Processing for Business Applications",
+      description: "Deep dive into NLP techniques that power modern AI agents and their business applications.",
+      date: "September 28, 2023",
+      duration: "40 min",
+      viewers: "720+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"
+    },
+    {
+      title: "AI Agent Security: Protecting Your Conversational AI",
+      description: "Essential security measures and compliance requirements for deploying AI agents safely.",
+      date: "September 15, 2023",
+      duration: "48 min",
+      viewers: "990+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+    },
+    {
+      title: "Multi-Channel AI: Connecting Across Platforms",
+      description: "Strategies for deploying AI agents across multiple channels for seamless customer experiences.",
+      date: "August 30, 2023",
+      duration: "43 min",
+      viewers: "1,300+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop"
+    },
+    {
+      title: "Voice AI Revolution: Beyond Text-Based Interactions",
+      description: "Exploring voice-enabled AI agents and their impact on customer engagement strategies.",
+      date: "August 16, 2023",
+      duration: "37 min",
+      viewers: "850+",
+      watchUrl: "#",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop"
     }
   ];
 
