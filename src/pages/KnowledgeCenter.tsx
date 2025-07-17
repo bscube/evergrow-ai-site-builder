@@ -23,7 +23,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "8 min read",
       category: "Implementation",
-      icon: Settings
+      icon: Settings,
+      slug: "ai-agent-implementation-checklist"
     },
     {
       title: "ROI Measurement Framework for AI Agents",
@@ -31,7 +32,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "12 min read",
       category: "Analytics",
-      icon: TrendingUp
+      icon: TrendingUp,
+      slug: "roi-measurement-framework"
     },
     {
       title: "Best Practices for AI Agent Training",
@@ -39,7 +41,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "10 min read",
       category: "Optimization",
-      icon: Target
+      icon: Target,
+      slug: "best-practices-for-training"
     },
     {
       title: "Security & Compliance Guide for AI Agents",
@@ -47,7 +50,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "18 min read",
       category: "Security",
-      icon: Shield
+      icon: Shield,
+      slug: "security-compliance-guide"
     },
     {
       title: "Team Collaboration with AI Agents",
@@ -55,7 +59,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "14 min read",
       category: "Collaboration",
-      icon: Users
+      icon: Users,
+      slug: "team-collaboration"
     },
     {
       title: "Advanced AI Agent Automation",
@@ -63,7 +68,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "16 min read",
       category: "Advanced",
-      icon: Zap
+      icon: Zap,
+      slug: "advanced-automation"
     },
     {
       title: "AI Agent Integration Playbook",
@@ -71,7 +77,8 @@ const KnowledgeCenter = () => {
       downloadUrl: "#",
       readTime: "20 min read",
       category: "Integration",
-      icon: FileText
+      icon: FileText,
+      slug: "integration-playbook"
     }
   ];
 
@@ -119,7 +126,7 @@ const KnowledgeCenter = () => {
               {guides.map((guide, index) => (
                 <Link 
                   key={index} 
-                  to={`/guides/${guide.slug || guide.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+                  to={`/guides/${guide.slug}`}
                   className={`block bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 hover:scale-105 ${guide.featured ? 'ring-2 ring-brand-green-500' : ''}`}
                 >
                   {guide.featured && (
