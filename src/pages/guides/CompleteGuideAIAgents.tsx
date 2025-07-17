@@ -232,17 +232,6 @@ const CompleteGuideAIAgents = () => {
                 Ready to implement AI agents in your business? Our comprehensive approach ensures successful deployment and measurable results. Contact our experts for a personalized consultation and implementation strategy tailored to your specific needs.
               </p>
 
-              <div className="bg-brand-green-500 text-white p-6 rounded-lg mt-8">
-                <h4 className="font-semibold mb-3">Ready to Get Started?</h4>
-                <p className="mb-4">Implement AI agents successfully with our expert guidance and proven methodologies.</p>
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center bg-white text-brand-green-500 px-6 py-3 rounded-lg font-medium hover:bg-grey-50 transition-colors"
-                >
-                  Schedule a Consultation
-                  <CheckCircle className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </section>
