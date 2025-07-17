@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, TrendingUp, Users, DollarSign, CheckCircle, Zap, Globe, BarChart3, MessageSquare } from 'lucide-react';
@@ -576,14 +575,11 @@ const Sales = () => {
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Start converting more prospects into customers with AI that never sleeps
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Get AI Sales Agent
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
-              Schedule Demo
-            </button>
           </div>
         </div>
       </section>
