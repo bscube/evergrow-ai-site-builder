@@ -38,22 +38,6 @@ const KnowledgeCenter = () => {
     }
   ];
 
-  const tutorials = [
-    {
-      title: "Setting Up Your First AI Agent",
-      description: "Video walkthrough of creating and configuring your first AI agent.",
-      type: "video",
-      duration: "12 min",
-      thumbnail: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png"
-    },
-    {
-      title: "Advanced Conversation Flows",
-      description: "Learn to create complex conversation paths for better user experience.",
-      type: "video",
-      duration: "18 min",
-      thumbnail: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png"
-    }
-  ];
 
   return (
     <>
@@ -139,52 +123,6 @@ const KnowledgeCenter = () => {
           </div>
         </section>
 
-        {/* Video Tutorials */}
-        <section className="py-20 bg-grey-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-4">
-                Video Tutorials
-              </h2>
-              <p className="text-xl text-grey-600 max-w-3xl mx-auto">
-                Step-by-step video guides to help you get started quickly
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {tutorials.map((tutorial, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
-                  <div className="relative">
-                    <img 
-                      src={tutorial.thumbnail} 
-                      alt={tutorial.title}
-                      className="w-full h-48 object-cover rounded-t-2xl"
-                    />
-                    <div className="absolute inset-0 bg-black/20 rounded-t-2xl flex items-center justify-center">
-                      <div className="bg-white/90 rounded-full p-4">
-                        <Video className="h-8 w-8 text-brand-green-500" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-grey-900 mb-2">{tutorial.title}</h3>
-                    <p className="text-grey-600 mb-4">{tutorial.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-grey-500 text-sm">{tutorial.duration}</span>
-                      <Link 
-                        to="#"
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium"
-                      >
-                        Watch Now
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="bg-brand-green-500 py-20">
