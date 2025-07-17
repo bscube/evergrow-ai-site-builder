@@ -40,14 +40,6 @@ const CustomerServiceAutomation = () => {
                   Deep dive into measurable benefits of AI-powered customer service, including response times, cost savings, and satisfaction scores.
                 </p>
                 
-                <a 
-                  href="/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png"
-                  download="Customer-Service-Automation-ROI-Report.pdf"
-                  className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                >
-                  <Download className="h-5 w-5 mr-3" />
-                  Download Full Report
-                </a>
               </div>
               
               <div>
