@@ -161,22 +161,6 @@ const ConversationsOnAI = () => {
                     <span>{conversations[0].listens} listens</span>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <Link 
-                      to={conversations[0].audioUrl}
-                      className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
-                    >
-                      <Play className="h-4 w-4 mr-2" />
-                      Listen Now
-                    </Link>
-                    <Link 
-                      to={conversations[0].transcriptUrl}
-                      className="inline-flex items-center border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
-                    >
-                      <Download className="h-4 w-4 mr-2" />
-                      Transcript
-                    </Link>
-                  </div>
                 </div>
                 <div className="lg:p-8">
                   <img 
