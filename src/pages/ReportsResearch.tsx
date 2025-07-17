@@ -165,13 +165,15 @@ const ReportsResearch = () => {
                           <FileText className="h-4 w-4 mr-1" />
                           {report.pages}
                         </div>
-                        <Link 
-                          to={report.downloadUrl}
+                        <a 
+                          href={report.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
                         >
                           <Download className="h-4 w-4 mr-2" />
                           Download Report
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -218,13 +220,15 @@ const ReportsResearch = () => {
                       </div>
                     </div>
 
-                    <Link 
-                      to={paper.downloadUrl}
+                    <a 
+                      href={paper.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center w-full justify-center border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
                     >
                       <Download className="h-4 w-4 mr-2" />
                       Download
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
