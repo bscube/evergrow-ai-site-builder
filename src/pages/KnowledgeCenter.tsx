@@ -103,18 +103,9 @@ const KnowledgeCenter = () => {
                       <BookOpen className="h-8 w-8 text-brand-green-500 ml-4" />
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-grey-500 text-sm">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {guide.readTime}
-                      </div>
-                      <Link 
-                        to={guide.downloadUrl}
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium"
-                      >
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Guide
-                      </Link>
+                    <div className="flex items-center text-grey-500 text-sm">
+                      <Clock className="h-4 w-4 mr-1" />
+                      {guide.readTime}
                     </div>
                   </div>
                 </div>
