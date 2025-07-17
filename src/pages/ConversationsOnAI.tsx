@@ -8,6 +8,7 @@ import { Calendar, Clock, Users, Mic, Play, ArrowRight, Download } from 'lucide-
 const ConversationsOnAI = () => {
   const conversations = [
     {
+      id: "ethics-ai-business-roundtable",
       title: "The Ethics of AI in Business: A Roundtable Discussion",
       description: "Leading AI ethicists and business leaders discuss the responsible implementation of AI in enterprise environments.",
       participants: [
@@ -26,6 +27,7 @@ const ConversationsOnAI = () => {
       topics: ["AI Ethics", "Business Implementation", "Policy & Regulation"]
     },
     {
+      id: "research-to-reality-ai-journey",
       title: "From Research to Reality: AI's Journey into Mainstream Business",
       description: "A deep conversation about how AI research translates into practical business applications and real-world impact.",
       participants: [
@@ -42,6 +44,7 @@ const ConversationsOnAI = () => {
       topics: ["AI Research", "Product Development", "Market Adoption"]
     },
     {
+      id: "future-of-work-ai-agents",
       title: "The Future of Work: How AI Agents Transform Human Roles",
       description: "Exploring how AI agents are reshaping job roles and creating new opportunities for human-AI collaboration.",
       participants: [
@@ -58,6 +61,7 @@ const ConversationsOnAI = () => {
       topics: ["Future of Work", "Human-AI Collaboration", "Workforce Development"]
     },
     {
+      id: "building-trust-ai-transparency",
       title: "Building Trust in AI: Transparency and Explainability",
       description: "A technical discussion about making AI systems more transparent and explainable for business stakeholders.",
       participants: [
@@ -163,11 +167,11 @@ const ConversationsOnAI = () => {
                   
                   <div className="flex gap-4">
                     <Link 
-                      to={conversations[0].audioUrl}
+                      to={`/conversations-on-ai/${conversations[0].id}`}
                       className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
                     >
                       <Play className="h-4 w-4 mr-2" />
-                      Listen Now
+                      Watch Now
                     </Link>
                     <Link 
                       to={conversations[0].transcriptUrl}
@@ -255,11 +259,11 @@ const ConversationsOnAI = () => {
                         <span>{conversation.listens}</span>
                       </div>
                       <Link 
-                        to={conversation.audioUrl}
+                        to={`/conversations-on-ai/${conversation.id}`}
                         className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
                       >
                         <Play className="h-4 w-4 mr-1" />
-                        Listen
+                        Watch Now
                       </Link>
                     </div>
                   </div>
