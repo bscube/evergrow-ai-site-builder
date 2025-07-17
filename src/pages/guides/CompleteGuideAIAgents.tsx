@@ -235,37 +235,7 @@ const CompleteGuideAIAgents = () => {
               <p>
                 Ready to implement AI agents in your business? Our comprehensive approach ensures successful deployment and measurable results. Contact our experts for a personalized consultation and implementation strategy tailored to your specific needs.
               </p>
-
-              <div className="bg-brand-green-500 text-white p-6 rounded-lg mt-8">
-                <h4 className="font-semibold mb-3">Ready to Get Started?</h4>
-                <p className="mb-4">Implement AI agents successfully with our expert guidance and proven methodologies.</p>
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center bg-white text-brand-green-500 px-6 py-3 rounded-lg font-medium hover:bg-grey-50 transition-colors"
-                >
-                  Schedule a Consultation
-                  <CheckCircle className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-brand-green-500 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Implement AI Agents?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Get expert guidance tailored to your business needs.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Get Expert Consultation
-            </Link>
           </div>
         </section>
       </main>
