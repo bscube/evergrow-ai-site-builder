@@ -264,23 +264,6 @@ const WebinarDetail = () => {
           </div>
         </section>
 
-        {/* Video Section */}
-        <section className="bg-grey-50 py-16">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="aspect-video bg-grey-900 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <Play className="h-16 w-16 mx-auto mb-4 text-brand-green-500" />
-                  <p className="text-lg">Video Player</p>
-                  <p className="text-sm text-grey-400 mt-2">
-                    In production, this would embed the actual video player
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Key Topics */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
