@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
-import { Calendar, Clock, Users, ArrowLeft, Play } from 'lucide-react';
+import { Calendar, Clock, Users, ArrowLeft, Play, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../../components/ui/dialog';
 
 // Webinar data - in a real app, this would come from an API
 const webinarData = {
@@ -174,6 +175,7 @@ const webinarData = {
 const WebinarDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const webinar = slug ? webinarData[slug as keyof typeof webinarData] : null;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (!webinar) {
     return (
@@ -293,12 +295,85 @@ const WebinarDetail = () => {
             <p className="text-xl text-white/90 mb-8">
               Schedule a personalized consultation to see how AI agents can transform your specific use case.
             </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Book Your Demo
-            </Link>
+            <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+              <DialogTrigger asChild>
+                <button className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+                  <Play className="h-5 w-5 mr-2" />
+                  Watch Now
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
+                <DialogHeader className="p-6 pb-0">
+                  <DialogTitle className="text-2xl font-bold text-grey-900">
+                    {webinar.title}
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="flex-1 p-6 space-y-6">
+                  {/* Video Player */}
+                  <div className="relative w-full h-64 md:h-80 bg-grey-100 rounded-lg overflow-hidden">
+                    <img 
+                      src={webinar.image} 
+                      alt={webinar.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                      <button className="bg-white/90 hover:bg-white rounded-full p-4 transition-all duration-200 hover:scale-110">
+                        <Play className="h-8 w-8 text-brand-green-500" />
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Webinar Details */}
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-6 text-sm text-grey-600">
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-2 text-brand-green-500" />
+                        <span>{webinar.date}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="h-4 w-4 mr-2 text-brand-green-500" />
+                        <span>{webinar.duration}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="h-4 w-4 mr-2 text-brand-green-500" />
+                        <span>{webinar.viewers} viewers</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-grey-700">{webinar.fullDescription}</p>
+                    
+                    <div className="border-t pt-4">
+                      <p className="font-semibold text-grey-900 mb-2">Speaker: {webinar.speaker}</p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div>
+                          <h4 className="font-semibold text-grey-900 mb-2">Key Topics:</h4>
+                          <ul className="text-sm text-grey-600 space-y-1">
+                            {webinar.keyTopics.slice(0, 3).map((topic, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="text-brand-green-500 mr-2">•</span>
+                                {topic}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <div className="hidden md:block">
+                            <ul className="text-sm text-grey-600 space-y-1 mt-8">
+                              {webinar.keyTopics.slice(3).map((topic, index) => (
+                                <li key={index} className="flex items-start">
+                                  <span className="text-brand-green-500 mr-2">•</span>
+                                  {topic}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </section>
       </main>
