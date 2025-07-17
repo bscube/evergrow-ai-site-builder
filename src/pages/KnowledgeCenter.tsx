@@ -73,16 +73,9 @@ const KnowledgeCenter = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-grey-900 mb-4">
                 Comprehensive Guides
               </h2>
-              <p className="text-xl text-grey-600 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-grey-600 max-w-3xl mx-auto">
                 In-depth guides covering everything from implementation to optimization
               </p>
-              <div className="max-w-4xl mx-auto">
-                <img 
-                  src="/lovable-uploads/32f939c9-cfee-4f8f-abe9-c312562695f9.png" 
-                  alt="AI Chatbot Examples - Finance, Insurance, and Customer Experience"
-                  className="w-full rounded-2xl shadow-lg"
-                />
-              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
