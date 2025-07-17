@@ -13,7 +13,7 @@ const ReportsResearch = () => {
       type: "Industry Report",
       pages: "64 pages",
       publishDate: "January 2024",
-      downloadUrl: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
+      downloadUrl: "https://example.com/reports/state-of-ai-agents-2024.pdf",
       image: "/lovable-uploads/760e5965-c5c5-4c2c-812d-42b5436a8245.png",
       featured: true,
       highlights: [
@@ -28,7 +28,7 @@ const ReportsResearch = () => {
       type: "Performance Study",
       pages: "32 pages",
       publishDate: "December 2023",
-      downloadUrl: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
+      downloadUrl: "https://example.com/reports/customer-service-automation-roi.pdf",
       image: "/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png",
       highlights: [
         "Average 73% reduction in response time",
@@ -42,7 +42,7 @@ const ReportsResearch = () => {
       type: "Market Research",
       pages: "28 pages",
       publishDate: "November 2023",
-      downloadUrl: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
+      downloadUrl: "https://example.com/reports/ecommerce-ai-agents-analysis.pdf",
       image: "/lovable-uploads/9ddce30e-8318-49f1-9d10-de0dcae149c3.png",
       highlights: [
         "42% average increase in conversions",
@@ -59,7 +59,7 @@ const ReportsResearch = () => {
       type: "Whitepaper",
       pages: "16 pages",
       publishDate: "January 2024",
-      downloadUrl: "/lovable-uploads/c1a92e03-717c-49f6-b56a-882576f79f7b.png"
+      downloadUrl: "https://example.com/whitepapers/ai-agent-security-compliance.pdf"
     },
     {
       title: "The Psychology of Human-AI Interaction",
@@ -67,7 +67,7 @@ const ReportsResearch = () => {
       type: "Research Paper",
       pages: "20 pages",
       publishDate: "December 2023",
-      downloadUrl: "/lovable-uploads/4da42fa1-bfea-4100-a308-3fd54824a62d.png"
+      downloadUrl: "https://example.com/whitepapers/psychology-human-ai-interaction.pdf"
     },
     {
       title: "Cost-Benefit Analysis: AI Agents vs Traditional Solutions",
@@ -75,7 +75,7 @@ const ReportsResearch = () => {
       type: "Analysis Report",
       pages: "12 pages",
       publishDate: "November 2023",
-      downloadUrl: "/lovable-uploads/6b11361d-e93e-47a7-8d6d-0165caa79795.png"
+      downloadUrl: "https://example.com/whitepapers/cost-benefit-analysis-ai-agents.pdf"
     }
   ];
 
@@ -165,13 +165,15 @@ const ReportsResearch = () => {
                           <FileText className="h-4 w-4 mr-1" />
                           {report.pages}
                         </div>
-                        <Link 
-                          to={report.downloadUrl}
+                        <a 
+                          href={report.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
                         >
                           <Download className="h-4 w-4 mr-2" />
                           Download Report
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -218,13 +220,15 @@ const ReportsResearch = () => {
                       </div>
                     </div>
 
-                    <Link 
-                      to={paper.downloadUrl}
+                    <a 
+                      href={paper.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center w-full justify-center border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200"
                     >
                       <Download className="h-4 w-4 mr-2" />
                       Download
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
