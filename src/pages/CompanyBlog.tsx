@@ -124,7 +124,10 @@ const CompanyBlog = () => {
         {/* Featured Post */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden">
+            <Link 
+              to={blogPosts[0].slug}
+              className="block bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+            >
               <div className="bg-brand-green-500 px-6 py-3">
                 <span className="text-white font-medium">Featured Article</span>
               </div>
@@ -157,13 +160,10 @@ const CompanyBlog = () => {
                     </div>
                   </div>
                   
-                  <Link 
-                    to={blogPosts[0].slug}
-                    className="inline-flex items-center bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
-                  >
+                  <div className="inline-flex items-center bg-brand-green-500 text-white px-6 py-3 rounded-xl font-semibold">
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </div>
                 </div>
                 <div className="lg:p-8">
                   <img 
@@ -173,7 +173,7 @@ const CompanyBlog = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -182,45 +182,48 @@ const CompanyBlog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(1).map((post, index) => (
-                <article key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
-                  <div className="relative">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-48 object-cover rounded-t-2xl"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-white/90 backdrop-blur-sm text-grey-700 px-3 py-1 rounded-full text-sm font-medium">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-3 text-sm text-grey-500">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      <span className="mr-4">{post.publishDate}</span>
-                      <Clock className="h-4 w-4 mr-1" />
-                      <span>{post.readTime}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2">{post.title}</h3>
-                    <p className="text-grey-600 mb-4 text-sm line-clamp-3">{post.excerpt}</p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm">
-                        <User className="h-4 w-4 text-grey-400 mr-1" />
-                        <span className="text-grey-600">{post.author}</span>
+                <Link 
+                  key={index}
+                  to={post.slug}
+                  className="block bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <article>
+                    <div className="relative">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-48 object-cover rounded-t-2xl"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-white/90 backdrop-blur-sm text-grey-700 px-3 py-1 rounded-full text-sm font-medium">
+                          {post.category}
+                        </span>
                       </div>
-                      <Link 
-                        to={post.slug}
-                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
-                      >
-                        Read More
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
                     </div>
-                  </div>
-                </article>
+                    <div className="p-6">
+                      <div className="flex items-center mb-3 text-sm text-grey-500">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        <span className="mr-4">{post.publishDate}</span>
+                        <Clock className="h-4 w-4 mr-1" />
+                        <span>{post.readTime}</span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-grey-900 mb-3 line-clamp-2">{post.title}</h3>
+                      <p className="text-grey-600 mb-4 text-sm line-clamp-3">{post.excerpt}</p>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center text-sm">
+                          <User className="h-4 w-4 text-grey-400 mr-1" />
+                          <span className="text-grey-600">{post.author}</span>
+                        </div>
+                        <div className="inline-flex items-center text-brand-green-600 font-medium text-sm">
+                          Read More
+                          <ArrowRight className="ml-1 h-4 w-4" />
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>
