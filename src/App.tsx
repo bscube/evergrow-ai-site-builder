@@ -33,7 +33,7 @@ import FacebookMessengerEcommerce from "./pages/blog/FacebookMessengerEcommerce"
 import WhatsAppChatbotShopping from "./pages/blog/WhatsAppChatbotShopping";
 import Testimonials from "./pages/Testimonials";
 import CustomerShowcase from "./pages/CustomerShowcase";
-import KnowledgeCenter from "./pages/KnowledgeCenter";
+
 import Webinars from "./pages/Webinars";
 import WebinarDetail from "./pages/webinars/WebinarDetail";
 import ReportsResearch from "./pages/ReportsResearch";
@@ -104,7 +104,7 @@ const App = () => (
             <Route path="/blog/whatsapp-chatbot-shopping-experience" element={<WhatsAppChatbotShopping />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/customer-showcase" element={<CustomerShowcase />} />
-            <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+            
             <Route path="/webinars" element={<Webinars />} />
             <Route path="/webinars/:slug" element={<WebinarDetail />} />
             <Route path="/reports-research" element={<ReportsResearch />} />
