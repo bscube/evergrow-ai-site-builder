@@ -28,30 +28,6 @@ const HeroSection = () => {
             Deploy custom AI agents for your industry — drive leads, engage customers 24/7, and see results in days, not months.
           </p>
           
-          {/* Trust Indicators */}
-          <div className="mb-8">
-            <p className="text-sm text-grey-500 mb-4">Trusted by leading brands across industries</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-80">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">J</span>
-                </div>
-                <span className="text-sm font-medium text-grey-600">Jio Haptik Partner</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">V</span>
-                </div>
-                <span className="text-sm font-medium text-grey-600">Vibgyor</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-green-600 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">E</span>
-                </div>
-                <span className="text-sm font-medium text-grey-600">Everbright</span>
-              </div>
-            </div>
-          </div>
           
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-grey-500">
