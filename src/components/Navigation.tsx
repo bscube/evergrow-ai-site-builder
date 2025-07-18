@@ -167,7 +167,7 @@ const Navigation = () => {
               <img 
                 src={logo} 
                 alt="EverGrow Digital" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
