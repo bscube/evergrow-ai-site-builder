@@ -489,60 +489,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Office Info */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-grey-900 mb-6">Visit Our Office</h3>
-              <div className="space-y-4 mb-8">
-                  <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-brand-green-500 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-grey-900">Dubai Office</div>
-                      <div className="text-grey-600">
-                        Evergrow Building, Office #2<br/>
-                        Plot 128-168<br/>
-                        Behind Abu Baker Al Siddique Metro Station<br/>
-                        Dubai, UAE
-                      </div>
-                    </div>
-                  </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <div className="text-grey-600">+971 123 456 789</div>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-brand-green-500 mr-3 flex-shrink-0" />
-                  <div className="text-grey-600">hello@evergrowdigital.com</div>
-                </div>
-              </div>
-              
-              <div className="bg-grey-50 rounded-lg p-6">
-                <h4 className="font-bold text-grey-900 mb-4">Business Hours</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-grey-600">Monday - Friday</span>
-                    <span className="text-grey-900 font-medium">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-grey-600">Saturday</span>
-                    <span className="text-grey-900 font-medium">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-grey-600">Sunday</span>
-                    <span className="text-grey-900 font-medium">Closed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="h-64 lg:h-auto">
-              <Map />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
