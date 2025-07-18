@@ -115,28 +115,10 @@ const Navigation = () => {
       benefit: 'Real success stories from our clients'
     },
     { 
-      name: 'Knowledge Center', 
-      path: '/knowledge-center', 
-      icon: BookOpen,
-      benefit: 'Comprehensive guides and documentation'
-    },
-    { 
       name: 'Customer Showcase', 
       path: '/customer-showcase', 
       icon: Users,
       benefit: 'See how businesses transform with AI'
-    },
-    { 
-      name: 'Webinars', 
-      path: '/webinars', 
-      icon: Video,
-      benefit: 'Live demos and expert insights'
-    },
-    { 
-      name: 'Reports & Research', 
-      path: '/reports-research', 
-      icon: BarChart3,
-      benefit: 'Industry trends and analysis'
     },
     { 
       name: 'Company Blog', 
