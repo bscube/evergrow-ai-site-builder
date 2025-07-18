@@ -25,10 +25,6 @@ const WebsiteChatbot = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
-                <Globe className="w-4 h-4 mr-2" />
-                Website Chat
-              </div>
               
               <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-8">
                 <span className="text-grey-900">Boost Website</span>
