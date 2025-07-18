@@ -43,6 +43,12 @@ const Navigation = () => {
 
   const channels = [
     { 
+      name: 'Website Chat', 
+      path: '/channels/website-chatbot', 
+      icon: Globe,
+      benefit: 'Instant support on your website & mobile app'
+    },
+    { 
       name: 'Facebook Messenger', 
       path: '/channels/facebook-chatbot', 
       icon: MessageSquare,
