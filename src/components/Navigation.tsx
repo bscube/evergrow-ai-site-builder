@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe, BookOpen, FileText, Video, Download, HelpCircle } from 'lucide-react';
-import logo from '../assets/evergrow-digital-logo.png';
+import logo from '../assets/evergrow-digital-logo-new.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
