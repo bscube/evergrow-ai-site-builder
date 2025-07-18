@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
-import FloatingCTA from '../components/FloatingCTA';
+
 import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import QuickStatsSection from '../components/sections/QuickStatsSection';
@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <FloatingCTA />
+      
       
       <HeroSection />
       <QuickStatsSection />
