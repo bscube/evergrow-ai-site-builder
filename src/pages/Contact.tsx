@@ -489,21 +489,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Office Map */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-grey-900 mb-4">Visit Our Office</h3>
-            <p className="text-grey-600">Find us in the heart of Dubai</p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="h-96 rounded-2xl overflow-hidden shadow-lg">
-              <Map />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
