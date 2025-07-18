@@ -33,7 +33,6 @@ const Index = () => {
       
       <HeroSection />
       <QuickStatsSection />
-      <TrustBadgesSection />
       <StatsSection />
       <AnalyticsDashboardSection />
       <AIAgentBuilderSection />
