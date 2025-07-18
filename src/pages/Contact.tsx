@@ -146,12 +146,19 @@ const Contact = () => {
 
   const contactMethods = [
     {
+      icon: MessageSquare,
+      title: "WhatsApp",
+      description: "Chat with our AI specialist instantly",
+      action: "Chat Now",
+      link: "https://wa.me/971123456789",
+      highlight: true
+    },
+    {
       icon: Phone,
       title: "Phone",
       description: "Speak with our team directly",
       action: "Call Now",
-      link: "tel:+971123456789",
-      highlight: true
+      link: "tel:+971123456789"
     },
     {
       icon: Mail,
