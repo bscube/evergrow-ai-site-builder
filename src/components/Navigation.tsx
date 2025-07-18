@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe, BookOpen, FileText, Video, Download, HelpCircle } from 'lucide-react';
+import logo from '../assets/evergrow-digital-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -163,8 +164,11 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-brand-green-500">EverGrow</span>
-              <span className="text-2xl font-bold text-grey-900">Digital</span>
+              <img 
+                src={logo} 
+                alt="EverGrow Digital" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
