@@ -290,7 +290,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/contact"
-              className="btn-primary px-6 py-2 rounded-md text-sm font-medium focus-brand"
+              className="btn-primary px-6 py-2 rounded-md text-sm font-medium focus-brand flex items-center"
             >
               Book AI Audit
             </Link>
