@@ -161,13 +161,13 @@ const Navigation = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center ml-4 sm:ml-6 lg:ml-8">
               <img 
                 src={logo} 
                 alt="EverGrow Digital" 
-                className="h-16 w-auto"
+                className="h-10 sm:h-11 lg:h-12 w-auto"
               />
             </Link>
           </div>
