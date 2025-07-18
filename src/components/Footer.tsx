@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Channels</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/channels/website-chatbot" className="text-grey-300 hover:text-brand-green-500 transition-colors">Website Chat</Link></li>
+              
               <li><Link to="/channels/whatsapp" className="text-grey-300 hover:text-brand-green-500 transition-colors">WhatsApp</Link></li>
               <li><Link to="/channels/instagram-chatbots" className="text-grey-300 hover:text-brand-green-500 transition-colors">Instagram Direct</Link></li>
               <li><Link to="/channels/facebook-chatbot" className="text-grey-300 hover:text-brand-green-500 transition-colors">Facebook Messenger</Link></li>
