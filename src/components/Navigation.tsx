@@ -141,7 +141,7 @@ const Navigation = () => {
               <img 
                 src="https://evergrowdigital.com/wp-content/uploads/2024/04/evergrow-logo-jpg.jpg" 
                 alt="EverGrow Digital" 
-                className="h-12 sm:h-14 lg:h-16 w-auto"
+                className="h-8 sm:h-10 lg:h-12 w-auto"
               />
             </Link>
           </div>
