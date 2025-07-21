@@ -134,23 +134,23 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center ml-4 sm:ml-6 lg:ml-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex flex-wrap items-center justify-between min-h-[5rem] py-2 gap-4">
+          <div className="flex items-center flex-shrink-0 order-1">
+            <Link to="/" className="flex items-center">
               <img 
                 src="https://evergrowdigital.com/wp-content/uploads/2024/04/evergrow-logo-jpg.jpg" 
                 alt="EverGrow Digital" 
-                className="h-5 sm:h-6 lg:h-7 w-auto"
+                className="h-8 w-auto max-w-[120px] object-contain sm:h-10 sm:max-w-[140px] md:h-12 md:max-w-[160px] lg:h-14 lg:max-w-[180px]"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 order-2 flex-shrink-0">
             <div className="relative group">
               <button 
-                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-2 py-2 rounded-md text-sm font-medium transition-colors duration-250 whitespace-nowrap"
                 onClick={() => handleDropdown('ai-agents')}
                 aria-label="AI Agents menu"
               >
@@ -183,7 +183,7 @@ const Navigation = () => {
 
             <div className="relative group">
               <button 
-                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-2 py-2 rounded-md text-sm font-medium transition-colors duration-250 whitespace-nowrap"
                 onClick={() => handleDropdown('channels')}
                 aria-label="By Channels menu"
               >
@@ -216,7 +216,7 @@ const Navigation = () => {
 
             <div className="relative group">
               <button 
-                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-2 py-2 rounded-md text-sm font-medium transition-colors duration-250 whitespace-nowrap"
                 onClick={() => handleDropdown('industries')}
                 aria-label="By Industry menu"
               >
@@ -249,7 +249,7 @@ const Navigation = () => {
 
             <div className="relative group">
               <button 
-                className="flex items-center text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+                className="flex items-center text-grey-700 hover:text-brand-green-500 px-2 py-2 rounded-md text-sm font-medium transition-colors duration-250 whitespace-nowrap"
                 onClick={() => handleDropdown('resources')}
                 aria-label="Resources menu"
               >
@@ -282,23 +282,23 @@ const Navigation = () => {
 
             <Link
               to="/contact"
-              className="text-grey-700 hover:text-brand-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-250"
+              className="text-grey-700 hover:text-brand-green-500 px-2 py-2 rounded-md text-sm font-medium transition-colors duration-250 whitespace-nowrap"
             >
               Contact
             </Link>
             <Link
               to="/contact"
-              className="btn-primary px-6 py-2 rounded-md text-sm font-medium focus-brand flex items-center"
+              className="btn-primary px-4 py-2 rounded-md text-sm font-medium focus-brand flex items-center whitespace-nowrap"
             >
               Book AI Audit
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center order-3">
             <button
               onClick={toggleMenu}
-              className="text-grey-700 hover:text-brand-green-500 focus:outline-none focus-brand"
+              className="text-grey-700 hover:text-brand-green-500 focus:outline-none focus-brand p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -309,8 +309,8 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="lg:hidden bg-white border-t">
+          <div className="px-4 pt-4 pb-6 space-y-2">
             <div className="space-y-1">
               <button
                 onClick={() => handleDropdown('ai-agents-mobile')}
