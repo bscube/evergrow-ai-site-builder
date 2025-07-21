@@ -152,10 +152,7 @@ const TechBlog = () => {
         {/* Featured Post */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Link 
-              to={techPosts[0].slug}
-              className="block bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
-            >
+            <div className="bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden">
               <div className="bg-brand-green-500 px-6 py-3">
                 <span className="text-white font-medium">Featured Technical Article</span>
               </div>
@@ -206,7 +203,7 @@ const TechBlog = () => {
                   />
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </section>
 
@@ -215,11 +212,7 @@ const TechBlog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {techPosts.slice(1).map((post, index) => (
-                <Link 
-                  key={index} 
-                  to={post.slug}
-                  className="block bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300 cursor-pointer"
-                >
+                <article key={index} className="bg-white rounded-2xl shadow-lg border hover:shadow-xl transition-all duration-300">
                   <div className="relative">
                     <img 
                       src={post.image} 
@@ -262,13 +255,16 @@ const TechBlog = () => {
                         <Code className="h-4 w-4 text-grey-400 mr-1" />
                         <span className="text-grey-600">{post.author}</span>
                       </div>
-                      <div className="inline-flex items-center text-brand-green-600 font-medium text-sm">
+                      <Link 
+                        to={post.slug}
+                        className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm transition-colors duration-200 hover:underline"
+                      >
                         Read More
                         <ArrowRight className="ml-1 h-4 w-4" />
-                      </div>
+                      </Link>
                     </div>
                   </div>
-                </Link>
+                </article>
               ))}
             </div>
           </div>
