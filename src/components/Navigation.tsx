@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, MessageSquare, Phone, Zap, Shield, Users, BarChart3, ShoppingBag, Plane, CreditCard, GraduationCap, Film, Activity, Mic, Headphones, Target, Calendar, Globe, BookOpen, FileText, Video, Download, HelpCircle } from 'lucide-react';
-import logo from '../assets/evergrow-logo-new.jpg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -141,7 +139,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center ml-4 sm:ml-6 lg:ml-8">
               <img 
-                src={logo} 
+                src="https://evergrowdigital.com/wp-content/uploads/2024/04/evergrow-logo-jpg.jpg" 
                 alt="EverGrow Digital" 
                 className="h-12 sm:h-14 lg:h-16 w-auto"
               />
