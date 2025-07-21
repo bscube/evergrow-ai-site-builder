@@ -66,6 +66,14 @@ import TeamCollaboration from "./pages/guides/TeamCollaboration";
 import AdvancedAutomation from "./pages/guides/AdvancedAutomation";
 import IntegrationPlaybook from "./pages/guides/IntegrationPlaybook";
 
+// Tech Blog Detail Pages
+import ArchitectureDeepDive from "./pages/tech-blog/ArchitectureDeepDive";
+import NLPOptimization from "./pages/tech-blog/NLPOptimization";
+import ConversationStateManagement from "./pages/tech-blog/ConversationStateManagement";
+import SecureInfrastructure from "./pages/tech-blog/SecureInfrastructure";
+import LLMFineTuning from "./pages/tech-blog/LLMFineTuning";
+import APIResilience from "./pages/tech-blog/APIResilience";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -135,6 +143,14 @@ const App = () => (
             <Route path="/guides/team-collaboration" element={<TeamCollaboration />} />
             <Route path="/guides/advanced-automation" element={<AdvancedAutomation />} />
             <Route path="/guides/integration-playbook" element={<IntegrationPlaybook />} />
+            
+            {/* Tech Blog Detail Routes */}
+            <Route path="/tech-blog/architecture-deep-dive" element={<ArchitectureDeepDive />} />
+            <Route path="/tech-blog/nlp-optimization" element={<NLPOptimization />} />
+            <Route path="/tech-blog/conversation-state" element={<ConversationStateManagement />} />
+            <Route path="/tech-blog/secure-infrastructure" element={<SecureInfrastructure />} />
+            <Route path="/tech-blog/llm-fine-tuning" element={<LLMFineTuning />} />
+            <Route path="/tech-blog/api-resilience" element={<APIResilience />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
