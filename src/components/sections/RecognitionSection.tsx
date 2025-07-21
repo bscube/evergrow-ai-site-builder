@@ -1,63 +1,64 @@
 import React from 'react';
+import { Star } from 'lucide-react';
 
 const RecognitionSection = () => {
   const awards = [
     {
       title: "Regional Leader",
       subtitle: "G2 Spring 2024",
-      color: "from-purple-500 to-pink-500"
+      gradient: "from-purple-400 via-purple-500 to-pink-400"
     },
     {
       title: "Regional Leader", 
       subtitle: "Software Advice 2024",
-      color: "from-purple-500 to-pink-500"
+      gradient: "from-violet-400 via-purple-500 to-indigo-400"
     },
     {
       title: "Grid Leader",
       subtitle: "G2 Summer 2024", 
-      color: "from-orange-400 to-red-500"
+      gradient: "from-orange-400 via-red-400 to-pink-400"
     },
     {
       title: "Best Innovation in Chatbots",
       subtitle: "CogX Awards",
-      color: "from-blue-400 to-purple-500"
+      gradient: "from-blue-400 via-indigo-500 to-purple-500"
     },
     {
       title: "Best Conversational Tool",
       subtitle: "MarTech Breakthrough Awards",
-      color: "from-purple-500 to-pink-500"
+      gradient: "from-pink-400 via-purple-500 to-violet-400"
     },
     {
       title: "Best Conversational AI Platform", 
       subtitle: "AI Breakthrough Awards",
-      color: "from-cyan-400 to-blue-500"
+      gradient: "from-cyan-400 via-blue-500 to-indigo-500"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section className="py-20 bg-gradient-to-br from-background to-muted/30">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Recognized as a Leading Software Across Categories
           </h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
           {awards.map((award, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg shadow-lg p-4 text-center hover:shadow-xl transition-shadow duration-300 w-full max-w-[180px]"
+              className="group bg-card rounded-2xl shadow-sm border border-border/50 p-6 text-center hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer backdrop-blur-sm"
             >
-              <div className={`w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r ${award.color} flex items-center justify-center`}>
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-gray-700">★</span>
+              <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${award.gradient} flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
+                <div className="w-10 h-10 bg-white/95 rounded-xl flex items-center justify-center shadow-inner">
+                  <Star className="w-5 h-5 text-primary fill-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold text-sm text-gray-900 mb-1">
+              <h3 className="font-semibold text-base text-foreground mb-2 leading-tight group-hover:text-primary transition-colors duration-300">
                 {award.title}
               </h3>
-              <p className="text-xs text-gray-600">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {award.subtitle}
               </p>
             </div>
