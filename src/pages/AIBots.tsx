@@ -358,10 +358,6 @@ const AIBots = () => {
               Get Your AI Agent
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
-              <Play className="mr-2 h-5 w-5" />
-              Watch Live Demo
-            </button>
           </div>
         </div>
       </section>
