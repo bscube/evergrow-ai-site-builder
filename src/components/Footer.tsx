@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* AI Agents */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">AI Agents</h3>
+            <Link to="/ai-agents" className="text-lg font-semibold text-white hover:text-brand-green-500 transition-colors duration-300 block">AI Agents</Link>
             <ul className="space-y-2 text-sm">
               <li><Link to="/ai-agents/support" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Support Agent</Link></li>
               <li><Link to="/ai-agents/sales" className="text-grey-300 hover:text-brand-green-500 transition-colors">AI Sales Agent</Link></li>

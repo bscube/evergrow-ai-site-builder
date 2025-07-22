@@ -14,6 +14,7 @@ import WhatsApp from "./pages/channels/WhatsApp";
 import FacebookChatbot from "./pages/channels/FacebookChatbot";
 import InstagramChatbot from "./pages/channels/InstagramChatbot";
 import WebsiteChatbot from "./pages/channels/WebsiteChatbot";
+import AIBots from "./pages/AIBots";
 import Support from "./pages/ai-agents/Support";
 import Sales from "./pages/ai-agents/Sales";
 import Booking from "./pages/ai-agents/Booking";
@@ -89,6 +90,7 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/cinema-experience" element={<CinemaExperienceCaseStudy />} />
+            <Route path="/ai-agents" element={<AIBots />} />
             <Route path="/ai-agents/support" element={<Support />} />
             <Route path="/ai-agents/sales" element={<Sales />} />
             <Route path="/ai-agents/booking" element={<Booking />} />
