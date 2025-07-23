@@ -262,157 +262,20 @@ const Contact = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-grey-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-grey-700 mb-2">
-                      Business Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                      placeholder="your@company.com"
-                    />
-                  </div>
-                </div>
+              {/* Zoho CRM Form */}
+              <div className="w-full">
+                <iframe 
+                  aria-label="Book AI consultation" 
+                  frameBorder="0" 
+                  style={{height: '500px', width: '100%', border: 'none'}} 
+                  src="https://forms.zohopublic.com/evergrowdigitalcom1/form/BookAIconsultation/formperma/TY0C9i99YK6kAdGAWm9byI0EeOlwuv-BT0tW8AZ3lfk"
+                  title="Book AI Consultation Form"
+                />
+              </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-grey-700 mb-2">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      required
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                      placeholder="Your company"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-grey-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                      placeholder="+971 XX XXX XXXX"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="industry" className="block text-sm font-medium text-grey-700 mb-2">
-                      Industry
-                    </label>
-                    <select
-                      id="industry"
-                      name="industry"
-                      value={formData.industry}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">Select your industry</option>
-                      <option value="retail">Retail & E-commerce</option>
-                      <option value="realestate">Real Estate</option>
-                      <option value="travel">Travel & Tourism</option>
-                      <option value="fintech">Fintech & Banking</option>
-                      <option value="healthcare">Healthcare</option>
-                      <option value="education">Education</option>
-                      <option value="media">Media & Entertainment</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="projectType" className="block text-sm font-medium text-grey-700 mb-2">
-                      Project Type
-                    </label>
-                    <select
-                      id="projectType"
-                      name="projectType"
-                      value={formData.projectType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">What do you need?</option>
-                      <option value="sales-agent">AI Sales Agent</option>
-                      <option value="support-agent">AI Support Agent</option>
-                      <option value="booking-agent">AI Booking Agent</option>
-                      <option value="lead-qualification">Lead Qualification</option>
-                      <option value="voice-agent">Voice AI Agent</option>
-                      <option value="custom">Custom Solution</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-grey-700 mb-2">
-                    Tell us about your project
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent transition-colors"
-                    placeholder="Describe your current challenges and what you'd like to achieve with AI agents..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-brand-green-500 hover:bg-brand-green-600 disabled:bg-brand-green-300 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      Get Free AI Consultation
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </>
-                  )}
-                </button>
-
-                <p className="text-sm text-grey-500 text-center">
-                  We'll respond within 2 hours during business hours
-                </p>
-              </form>
+              <p className="text-sm text-grey-500 text-center mt-6">
+                We'll respond within 2 hours during business hours
+              </p>
             </div>
 
             {/* Benefits & Testimonials */}
