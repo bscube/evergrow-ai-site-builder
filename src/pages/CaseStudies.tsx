@@ -248,13 +248,13 @@ export default function CaseStudies() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-brand-green-50 to-white">
+      <section className="relative pt-20 pb-12 bg-gradient-to-br from-brand-green-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-8 text-grey-900">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4 text-grey-900">
               Real Success <span className="text-brand-green-500">Stories</span>
             </h1>
-            <p className="text-xl text-grey-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-grey-700 mb-6 leading-relaxed max-w-3xl mx-auto">
               Discover how businesses across industries are transforming their customer experience and achieving remarkable ROI with intelligent AI automation.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-grey-600">
@@ -276,7 +276,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Success Metrics */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
