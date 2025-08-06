@@ -321,7 +321,7 @@ export default function CaseStudies() {
                 <img
                   src="/lovable-uploads/8f80e73a-3604-4714-ad8c-85d9c8425fc4.png"
                   alt="PVR cinema interior"
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-full max-h-[60vh] object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-end">
@@ -404,7 +404,7 @@ export default function CaseStudies() {
                     <img 
                       src={study.image} 
                       alt={study.company}
-                      className="w-full h-full object-cover min-h-[400px]"
+                      className="w-full h-full max-h-[60vh] object-cover min-h-[300px] lg:min-h-[400px]"
                       loading="lazy"
                     />
                   </div>
