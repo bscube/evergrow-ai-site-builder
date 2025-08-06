@@ -45,6 +45,9 @@ import ConversationDetail from "./pages/ConversationDetail";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
 import ScrollToTop from "./components/ScrollToTop";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import SupportPage from "./pages/Support";
 
 // Company Blog Detail Pages
 import FutureOfCustomerExperience from "./pages/company-blog/FutureOfCustomerExperience";
@@ -157,6 +160,11 @@ const App = () => (
             <Route path="/tech-blog/secure-infrastructure" element={<SecureInfrastructure />} />
             <Route path="/tech-blog/llm-fine-tuning" element={<LLMFineTuning />} />
             <Route path="/tech-blog/api-resilience" element={<APIResilience />} />
+            
+            {/* Legal and Support Pages */}
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/support" element={<SupportPage />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
