@@ -158,14 +158,14 @@ const Contact = () => {
       title: "Phone",
       description: "Speak with our team directly",
       action: "Call Now",
-      link: "tel:+971123456789"
+      link: "tel:+971554966233"
     },
     {
       icon: Mail,
       title: "Email",
       description: "Send us your requirements",
       action: "Email Us",
-      link: "mailto:hello@evergrowdigital.com"
+      link: "mailto:pravin@evergrowdigital.com"
     }
   ];
 
