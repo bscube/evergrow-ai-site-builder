@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
+import FloatingCTA from '../components/FloatingCTA';
 
 import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
@@ -53,6 +54,7 @@ const Index = () => {
       <FAQSection />
 
       <Footer />
+      <FloatingCTA />
     </div>
   );
 };

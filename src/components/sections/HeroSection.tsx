@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { CheckCircle, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Sparkles, ArrowRight, MessageSquare } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -28,6 +29,25 @@ const HeroSection = () => {
             Deploy custom AI agents for your industry — drive leads, engage customers 24/7, and see results in days, not months.
           </p>
           
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link 
+              to="/contact#consultation-form" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg"
+            >
+              Get Free AI Audit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <a 
+              href="https://wa.me/971554966233" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105"
+            >
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Chat on WhatsApp
+            </a>
+          </div>
           
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-grey-500">
