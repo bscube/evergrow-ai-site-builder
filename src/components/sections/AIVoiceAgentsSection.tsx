@@ -49,10 +49,6 @@ const AIVoiceAgentsSection = () => {
                 AI agents that understand context, emotion, and intent through advanced speech recognition.
               </p>
               
-              <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
-                <span className="text-sm">Learn more</span>
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
             </div>
           </div>
 
@@ -84,10 +80,6 @@ const AIVoiceAgentsSection = () => {
                 Voice AI that detects sentiment, adapts tone, and provides personalized responses with empathy.
               </p>
               
-              <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
-                <span className="text-sm">Learn more</span>
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
             </div>
           </div>
 
@@ -119,10 +111,6 @@ const AIVoiceAgentsSection = () => {
                 Automated phone answering with intelligent call routing and escalation protocols.
               </p>
               
-              <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
-                <span className="text-sm">Learn more</span>
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
             </div>
           </div>
 
@@ -154,10 +142,6 @@ const AIVoiceAgentsSection = () => {
                 Smart routing to human agents with full conversation context and customer history.
               </p>
               
-              <div className="flex items-center text-brand-green-500 font-medium group-hover:text-brand-green-600 transition-colors duration-300">
-                <span className="text-sm">Learn more</span>
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
             </div>
           </div>
         </div>
