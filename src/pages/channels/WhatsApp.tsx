@@ -196,7 +196,10 @@ const WhatsApp = () => {
                 size="lg"
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg px-8 py-4"
                 onClick={() => {
-                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                  const demoForm = document.getElementById('demo-form');
+                  if (demoForm) {
+                    demoForm.scrollIntoView({ behavior: 'smooth' });
+                  }
                 }}
               >
                 Get a Demo
@@ -500,7 +503,7 @@ const WhatsApp = () => {
             </p>
           </div>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form id="demo-form" className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-sm font-medium text-grey-700">
