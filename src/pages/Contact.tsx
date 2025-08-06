@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageSquare, Phone, Mail, MapPin, CheckCircle, ArrowRight, Clock, Users, Star, Zap, Bot, Shield, BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -169,6 +169,17 @@ const Contact = () => {
     }
   ];
 
+  
+  useEffect(() => {
+    // Check if the URL contains the consultation-form hash and scroll to it
+    if (window.location.hash === '#consultation-form') {
+      const element = document.getElementById('consultation-form');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -254,7 +265,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div id="consultation-form" className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-grey-900 mb-4">
                   Get Your Free AI Consultation
