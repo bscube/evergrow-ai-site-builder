@@ -254,9 +254,9 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-grey-900 mb-4">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="mb-6">
+                <h2 className="text-3xl font-bold text-grey-900 mb-3">
                   Get Your Free AI Consultation
                 </h2>
                 <p className="text-grey-600">
@@ -269,13 +269,13 @@ const Contact = () => {
                 <iframe 
                   aria-label="Book AI consultation" 
                   frameBorder="0" 
-                  style={{height: '500px', width: '100%', border: 'none'}} 
+                  style={{height: '400px', width: '100%', border: 'none'}} 
                   src="https://forms.zohopublic.com/evergrowdigitalcom1/form/BookAIconsultation/formperma/TY0C9i99YK6kAdGAWm9byI0EeOlwuv-BT0tW8AZ3lfk"
                   title="Book AI Consultation Form"
                 />
               </div>
 
-              <p className="text-sm text-grey-500 text-center mt-6">
+              <p className="text-sm text-grey-500 text-center mt-4">
                 We'll respond within 2 hours during business hours
               </p>
             </div>
