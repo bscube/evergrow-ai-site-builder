@@ -12,7 +12,7 @@ import AIAgentBuilderSection from '../components/sections/AIAgentBuilderSection'
 import EnterpriseDataSection from '../components/sections/EnterpriseDataSection';
 import AIAgentTypesSection from '../components/sections/AIAgentTypesSection';
 import AIVoiceAgentsSection from '../components/sections/AIVoiceAgentsSection';
-import ProductDemoSection from '../components/sections/ProductDemoSection';
+
 import AIHumanCollaborationSection from '../components/sections/AIHumanCollaborationSection';
 import AIControlSection from '../components/sections/AIControlSection';
 import FeaturedTestimonialSection from '../components/sections/FeaturedTestimonialSection';
@@ -39,7 +39,7 @@ const Index = () => {
       <EnterpriseDataSection />
       <AIAgentTypesSection />
       <AIVoiceAgentsSection />
-      <ProductDemoSection />
+      
       <AIHumanCollaborationSection />
       <AIControlSection />
       <FeaturedTestimonialSection />
