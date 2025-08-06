@@ -165,7 +165,7 @@ const Contact = () => {
       title: "Email",
       description: "Send us your requirements",
       action: "Email Us",
-      link: "mailto:pravin@evergrowdigital.com"
+      link: "mailto:pravin@evergrowdigital.com?subject=AI%20Consultation%20Request"
     }
   ];
 
