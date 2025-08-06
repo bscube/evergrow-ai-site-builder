@@ -1,12 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Headphones, MessageSquare, Phone, Clock, Users, CheckCircle, Zap, Globe, BarChart3, Shield } from 'lucide-react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import React, { useState } from 'react';
+import { ArrowRight, Phone, Mail, CheckCircle, Users, Zap, Clock, Shield, Globe, Award, Star, ExternalLink, MessageSquare, Bot, Headphones, BarChart3, Smartphone, ShoppingCart, UserCheck, Calendar, FileText, Settings, Target, TrendingUp, Sparkles } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
+import { Link, useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 
-const Support = () => {
+export default function Support() {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneCode: '+91',
+    phoneNumber: '',
+    company: '',
+    jobTitle: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate submission for now - replace with actual API call when needed
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We've received your request and will contact you within 24 hours.",
+      });
+
+      // Navigate to thank you page for conversion tracking
+      navigate('/thank-you');
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="AI Support Agent - 24/7 Customer Support Automation"
+        description="Transform your customer support with AI agents that resolve 95% of queries instantly. Reduce costs by 80% while improving satisfaction."
+        keywords="AI support agent, customer support automation, chatbot support, AI customer service"
+        canonicalUrl="/ai-agents/support"
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -770,19 +825,18 @@ const Support = () => {
               Get Your Custom AI Support Agent
             </h2>
             
-            <form className="space-y-8" onSubmit={(e) => {
-              e.preventDefault();
-              // TODO: Handle form submission
-              console.log('Form submitted');
-            }}>
+            <form className="space-y-8" onSubmit={handleSubmit}>
               {/* First Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">First Name *</label>
                   <input
                     type="text"
+                    name="firstName"
                     placeholder="Enter your first name"
                     required
+                    value={formData.firstName}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
@@ -790,7 +844,10 @@ const Support = () => {
                   <label className="text-sm font-medium text-gray-700">Last Name</label>
                   <input
                     type="text"
+                    name="lastName"
                     placeholder="Enter your last name"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
@@ -798,8 +855,11 @@ const Support = () => {
                   <label className="text-sm font-medium text-gray-700">Email Address *</label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Enter your email"
                     required
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
@@ -811,7 +871,12 @@ const Support = () => {
                   <label className="text-sm font-medium text-gray-700">Phone Number</label>
                   <div className="flex">
                     <div className="relative">
-                      <select className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-4 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer text-gray-700 h-[56px]">
+                      <select 
+                        name="phoneCode"
+                        value={formData.phoneCode}
+                        onChange={handleInputChange}
+                        className="appearance-none bg-white border border-gray-300 border-r-0 rounded-l-lg px-3 py-4 pr-8 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer text-gray-700 h-[56px]"
+                      >
                         <option value="+91">🇮🇳 +91</option>
                         <option value="+1">🇺🇸 +1</option>
                         <option value="+44">🇬🇧 +44</option>
@@ -826,7 +891,10 @@ const Support = () => {
                     </div>
                     <input
                       type="tel"
+                      name="phoneNumber"
                       placeholder="Enter phone number"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
                       className="flex-1 px-4 py-4 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                     />
                   </div>
@@ -835,8 +903,11 @@ const Support = () => {
                   <label className="text-sm font-medium text-gray-700">Company Name *</label>
                   <input
                     type="text"
+                    name="company"
                     placeholder="Enter company name"
                     required
+                    value={formData.company}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
@@ -844,8 +915,11 @@ const Support = () => {
                   <label className="text-sm font-medium text-gray-700">Job Title *</label>
                   <input
                     type="text"
+                    name="jobTitle"
                     placeholder="Enter job title"
                     required
+                    value={formData.jobTitle}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                 </div>
@@ -855,9 +929,10 @@ const Support = () => {
               <div className="flex justify-center pt-6">
                 <button
                   type="submit"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg"
+                  disabled={isSubmitting}
+                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-grey-400 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg"
                 >
-                  Talk to Our Experts
+                  {isSubmitting ? 'Submitting...' : 'Talk to Our Experts'}
                 </button>
               </div>
             </form>
@@ -868,6 +943,4 @@ const Support = () => {
       <Footer />
     </div>
   );
-};
-
-export default Support;
+}

@@ -1,6 +1,7 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 import { MessageSquare, ArrowRight, CheckCircle, Zap, Users, BarChart3, Bot, Phone, Calendar, ShoppingCart, Target, Play, Star, TrendingUp, Shield, Globe, Languages, Headphones } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -10,6 +11,33 @@ import { Label } from "../../components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
 
 const WhatsApp = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We've received your request and will contact you within 24 hours.",
+      });
+
+      navigate('/thank-you');
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const features = [
     {
       icon: MessageSquare,
@@ -473,7 +501,7 @@ const WhatsApp = () => {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-sm font-medium text-grey-700">
@@ -595,10 +623,11 @@ const WhatsApp = () => {
 
             <div className="text-center pt-6">
               <Button 
-                type="submit" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-semibold rounded-lg"
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-blue-600 hover:bg-blue-700 disabled:bg-grey-400 text-white px-12 py-4 text-lg font-semibold rounded-lg"
               >
-                Get A Demo
+                {isSubmitting ? 'Submitting...' : 'Get A Demo'}
               </Button>
             </div>
           </form>

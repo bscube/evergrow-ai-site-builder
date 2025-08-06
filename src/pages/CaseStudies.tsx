@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Building2, TrendingUp, Clock, Users, DollarSign, CheckCircle, Star, Target, Zap, BarChart3, Award } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -8,8 +8,62 @@ import SEO from '../components/SEO';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { useToast } from '@/hooks/use-toast';
 
-const CaseStudies = () => {
+export default function CaseStudies() {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneCode: 'ind',
+    phoneNumber: '',
+    company: '',
+    jobTitle: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate submission for now - replace with actual API call when needed
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We've received your request and will contact you within 24 hours.",
+      });
+
+      // Navigate to thank you page for conversion tracking
+      navigate('/thank-you');
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const featuredCaseStudies = [
     {
       title: "Fashion Forward: 400% ROI with AI Customer Service",
@@ -436,31 +490,40 @@ const CaseStudies = () => {
             </h2>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Input 
                 type="text"
+                name="firstName"
                 placeholder="First name*"
                 required
+                value={formData.firstName}
+                onChange={handleInputChange}
                 className="h-12 text-gray-500 placeholder:text-gray-400"
               />
               <Input 
                 type="text"
+                name="lastName"
                 placeholder="Last Name*"
                 required
+                value={formData.lastName}
+                onChange={handleInputChange}
                 className="h-12 text-gray-500 placeholder:text-gray-400"
               />
               <Input 
                 type="email"
+                name="email"
                 placeholder="Your Email*"
                 required
+                value={formData.email}
+                onChange={handleInputChange}
                 className="h-12 text-gray-500 placeholder:text-gray-400"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex gap-2">
-                <Select>
+                <Select value={formData.phoneCode} onValueChange={(value) => handleSelectChange('phoneCode', value)}>
                   <SelectTrigger className="w-24 h-12">
                     <SelectValue placeholder="IND" />
                   </SelectTrigger>
@@ -473,21 +536,30 @@ const CaseStudies = () => {
                 </Select>
                 <Input 
                   type="tel"
+                  name="phoneNumber"
                   placeholder="+91"
                   required
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
                   className="flex-1 h-12 text-gray-500 placeholder:text-gray-400"
                 />
               </div>
               <Input 
                 type="text"
+                name="company"
                 placeholder="Your Company name*"
                 required
+                value={formData.company}
+                onChange={handleInputChange}
                 className="h-12 text-gray-500 placeholder:text-gray-400"
               />
               <Input 
                 type="text"
+                name="jobTitle"
                 placeholder="Job title*"
                 required
+                value={formData.jobTitle}
+                onChange={handleInputChange}
                 className="h-12 text-gray-500 placeholder:text-gray-400"
               />
             </div>
@@ -495,9 +567,10 @@ const CaseStudies = () => {
             <div className="text-center pt-4">
               <Button 
                 type="submit"
-                className="px-12 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg"
+                disabled={isSubmitting}
+                className="px-12 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-grey-400 disabled:cursor-not-allowed text-white font-semibold rounded-lg text-lg"
               >
-                Talk to Our Experts
+                {isSubmitting ? 'Submitting...' : 'Talk to Our Experts'}
               </Button>
             </div>
           </form>
@@ -530,6 +603,6 @@ const CaseStudies = () => {
       <Footer />
     </div>
   );
-};
+}
 
-export default CaseStudies;
+
