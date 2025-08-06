@@ -182,18 +182,18 @@ const Contact = () => {
               Free AI Consultation Available
             </div>
             
-            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
               <span className="text-grey-900">Ready to Transform Your</span>
               <br />
               <span className="text-brand-green-500">Customer Experience?</span>
             </h1>
             
-            <p className="text-xl text-grey-600 mb-12 leading-relaxed">
+            <p className="text-xl text-grey-600 mb-8 leading-relaxed">
               Get a free AI audit and discover exactly how our agents will boost your conversions. 
               No commitments, just actionable insights.
             </p>
             
-            <div className="flex items-center justify-center gap-6 text-sm text-grey-500 mb-8">
+            <div className="flex items-center justify-center gap-6 text-sm text-grey-500 mb-6">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-brand-green-500 mr-2" />
                 Free consultation
