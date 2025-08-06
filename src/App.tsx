@@ -44,6 +44,7 @@ import ConversationsOnAI from "./pages/ConversationsOnAI";
 import ConversationDetail from "./pages/ConversationDetail";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Company Blog Detail Pages
 import FutureOfCustomerExperience from "./pages/company-blog/FutureOfCustomerExperience";
@@ -85,6 +86,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
