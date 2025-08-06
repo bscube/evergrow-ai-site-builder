@@ -42,15 +42,18 @@ const Retail = () => {
       });
 
       if (response.ok) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         navigate('/thank-you');
       } else {
         const error = await response.json();
         console.error('Submission error:', error);
         alert('There was an error submitting your request. Please try again.');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     } catch (error) {
       console.error('Network error:', error);
       alert('There was a network error. Please check your connection and try again.');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } finally {
       setIsSubmitting(false);
     }
@@ -89,7 +92,11 @@ const Retail = () => {
               </p>
               
               <div className="mb-8">
-                <a href="#demo-form" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg scroll-smooth">
+                <a 
+                  href="#demo-form" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg scroll-smooth"
+                >
                   Get a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
@@ -336,7 +343,11 @@ const Retail = () => {
             Join thousands of retailers using AI to increase sales and improve customer satisfaction
           </p>
           <div className="flex justify-center">
-            <a href="#demo-form" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg scroll-smooth">
+            <a 
+              href="#demo-form" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg scroll-smooth"
+            >
               Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
