@@ -5,12 +5,12 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-gradient-to-r from-brand-green-500 to-brand-green-600">
+    <section className="py-16 bg-gradient-to-r from-brand-green-500 to-brand-green-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
           Ready to Transform Your Business?
         </h2>
-        <p className="text-xl text-white/90 mb-8 leading-relaxed">
+        <p className="text-xl text-white/90 mb-6 leading-relaxed">
           Get a free AI audit and see exactly how voice and chat agents will boost your conversions
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
