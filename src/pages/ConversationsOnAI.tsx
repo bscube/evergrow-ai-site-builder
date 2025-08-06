@@ -101,14 +101,14 @@ const ConversationsOnAI = () => {
       
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-brand-green-50 to-white py-20">
+        <section className="bg-gradient-to-br from-brand-green-50 to-white pt-20 pb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-grey-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-grey-900 mb-4">
                 Conversations
                 <span className="text-brand-green-500"> on AI</span>
               </h1>
-              <p className="text-xl text-grey-600 mb-8">
+              <p className="text-xl text-grey-600 mb-6">
                 Thoughtful discussions with leading experts, researchers, and visionaries 
                 shaping the future of artificial intelligence and its impact on society.
               </p>
@@ -117,7 +117,7 @@ const ConversationsOnAI = () => {
         </section>
 
         {/* Featured Conversation */}
-        <section className="py-20">
+        <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-2xl shadow-lg border ring-2 ring-brand-green-500 overflow-hidden">
               <div className="bg-brand-green-500 px-6 py-3">
