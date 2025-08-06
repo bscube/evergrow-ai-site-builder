@@ -11,7 +11,7 @@ const FloatingCTA = () => {
       {/* WhatsApp Widget */}
       <div className="mb-4">
         <a
-          href="https://wa.me/971554966233"
+          href="https://wa.me/1234567890"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus-brand"
@@ -43,7 +43,7 @@ const FloatingCTA = () => {
                 Book AI Audit
               </Link>
               <a
-                href="tel:+971554966233"
+                href="tel:+1234567890"
                 className="block w-full bg-grey-100 hover:bg-grey-300 text-grey-900 text-center px-4 py-2 rounded-md text-sm font-medium transition-colors duration-250"
                 onClick={() => setIsExpanded(false)}
               >
