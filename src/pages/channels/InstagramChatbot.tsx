@@ -65,8 +65,8 @@ const InstagramChatbot = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&crop=center" 
-                alt="Instagram Direct Message Chatbot" 
+                src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop&crop=center" 
+                alt="Instagram Direct Message Interface" 
                 className="w-full rounded-2xl shadow-2xl"
                 loading="lazy"
               />
