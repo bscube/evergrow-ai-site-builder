@@ -62,33 +62,6 @@ const ThankYou = () => {
             </div>
           </div>
           
-          {/* Contact Information */}
-          <div className="bg-white border-2 border-grey-200 rounded-2xl p-8 mb-12 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-grey-900 mb-4">Have Questions?</h3>
-            <p className="text-grey-700 mb-6">
-              If you have any immediate questions or need to speak with someone right away, feel free to contact us directly.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:pravin@evergrowdigital.com" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-lg transition-all duration-200"
-              >
-                <Mail className="mr-2 h-4 w-4" />
-                Email Us
-              </a>
-              
-              <a 
-                href="https://wa.me/971554966233" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-brand-green-500 text-brand-green-500 hover:bg-brand-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
-              >
-                <MessageSquare className="mr-2 h-4 w-4" />
-                WhatsApp
-              </a>
-            </div>
-          </div>
           
           {/* Return to Homepage */}
           <div className="flex justify-center">
