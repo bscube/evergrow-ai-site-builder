@@ -18,7 +18,7 @@ const CTASection = () => {
             Get Free AI Audit
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
+          <a href="https://wa.me/971554966233" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105">
             <MessageSquare className="mr-2 h-5 w-5" />
             Chat on WhatsApp
           </a>
