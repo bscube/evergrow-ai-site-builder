@@ -219,6 +219,8 @@ const Contact = () => {
               <a
                 key={index}
                 href={method.link}
+                target={method.link.startsWith('mailto:') ? '_self' : '_blank'}
+                rel={method.link.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                 className={`group p-6 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   method.highlight 
                     ? 'border-brand-green-500 bg-brand-green-500/5 hover:bg-brand-green-500/10' 
