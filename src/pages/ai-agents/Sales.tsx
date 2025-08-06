@@ -221,7 +221,14 @@ const Sales = () => {
                       <div className="w-full h-16 bg-orange-100 rounded-lg mb-2 flex items-center justify-center">
                         <div className="w-8 h-12 bg-orange-400 rounded"></div>
                       </div>
-                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                      <button 
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors"
+                      >
                         View Item
                       </button>
                     </div>
@@ -230,7 +237,14 @@ const Sales = () => {
                       <div className="w-full h-16 bg-yellow-100 rounded-lg mb-2 flex items-center justify-center">
                         <div className="w-8 h-12 bg-yellow-400 rounded"></div>
                       </div>
-                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                      <button 
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors"
+                      >
                         View Item
                       </button>
                     </div>
@@ -239,7 +253,14 @@ const Sales = () => {
                       <div className="w-full h-16 bg-grey-100 rounded-lg mb-2 flex items-center justify-center">
                         <div className="w-8 h-12 bg-grey-400 rounded"></div>
                       </div>
-                      <button className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors">
+                      <button 
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="w-full bg-brand-green-500 hover:bg-brand-green-600 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors"
+                      >
                         View Item
                       </button>
                     </div>
