@@ -1,12 +1,61 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, Users, TrendingUp, CheckCircle, Zap, Globe, BarChart3, MessageSquare, Heart, Star, Package } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
 
 const Retail = () => {
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    company: '',
+    email: '',
+    jobTitle: '',
+    country: '',
+    phoneCode: '+91',
+    phoneNumber: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/functions/v1/submit-demo-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        const error = await response.json();
+        console.error('Submission error:', error);
+        alert('There was an error submitting your request. Please try again.');
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      alert('There was a network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white scroll-smooth">
       <SEO 
@@ -159,29 +208,38 @@ const Retail = () => {
             </h2>
           </div>
           
-          <form className="bg-white rounded-2xl p-8 shadow-lg">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div>
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First name*"
                   required
+                  value={formData.firstName}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
               <div>
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name*"
                   required
+                  value={formData.lastName}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
               <div>
                 <input
                   type="text"
+                  name="company"
                   placeholder="Your Company name*"
                   required
+                  value={formData.company}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
@@ -191,16 +249,22 @@ const Retail = () => {
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Business Email*"
                   required
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
               <div>
                 <input
                   type="text"
+                  name="jobTitle"
                   placeholder="Job title*"
                   required
+                  value={formData.jobTitle}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
@@ -209,7 +273,10 @@ const Retail = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
                 <select
+                  name="country"
                   required
+                  value={formData.country}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200 bg-white"
                 >
                   <option value="">Select Country*</option>
@@ -223,7 +290,10 @@ const Retail = () => {
               </div>
               <div className="flex gap-2">
                 <select
+                  name="phoneCode"
                   required
+                  value={formData.phoneCode}
+                  onChange={handleInputChange}
                   className="px-3 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200 bg-white"
                 >
                   <option value="+91">+91</option>
@@ -233,8 +303,11 @@ const Retail = () => {
                 </select>
                 <input
                   type="tel"
+                  name="phoneNumber"
                   placeholder="Phone Number*"
                   required
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
                   className="flex-1 px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-brand-green-500 focus:border-transparent outline-none transition-all duration-200"
                 />
               </div>
@@ -243,9 +316,10 @@ const Retail = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-12 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                disabled={isSubmitting}
+                className="inline-flex items-center justify-center px-12 py-4 bg-brand-green-500 hover:bg-brand-green-600 disabled:bg-grey-400 disabled:cursor-not-allowed text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Book a Demo
+                {isSubmitting ? 'Submitting...' : 'Book a Demo'}
               </button>
             </div>
           </form>

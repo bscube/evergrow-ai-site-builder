@@ -43,6 +43,7 @@ import TechBlog from "./pages/TechBlog";
 import ConversationsOnAI from "./pages/ConversationsOnAI";
 import ConversationDetail from "./pages/ConversationDetail";
 import NotFound from "./pages/NotFound";
+import ThankYou from "./pages/ThankYou";
 
 // Company Blog Detail Pages
 import FutureOfCustomerExperience from "./pages/company-blog/FutureOfCustomerExperience";
@@ -87,6 +88,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/cinema-experience" element={<CinemaExperienceCaseStudy />} />
