@@ -192,17 +192,16 @@ const WhatsApp = () => {
             </p>
             
             <div className="flex justify-center mb-8">
-              <a 
-                href="#demo-form" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg scroll-smooth"
-                onClick={(e) => {
-                  e.preventDefault();
+              <Button 
+                size="lg"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg px-8 py-4"
+                onClick={() => {
                   document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 Get a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Button>
             </div>
             
             <div className="flex items-center justify-center gap-6 text-sm text-grey-500">
@@ -625,7 +624,8 @@ const WhatsApp = () => {
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-blue-600 hover:bg-blue-700 disabled:bg-grey-400 text-white px-12 py-4 text-lg font-semibold rounded-lg"
+                size="lg"
+                className="bg-green-500 hover:bg-green-600 disabled:bg-grey-400 text-white px-12 py-4 text-lg font-semibold rounded-lg"
               >
                 {isSubmitting ? 'Submitting...' : 'Get A Demo'}
               </Button>
