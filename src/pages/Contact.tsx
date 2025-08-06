@@ -150,7 +150,7 @@ const Contact = () => {
       title: "WhatsApp",
       description: "Chat with our AI specialist instantly",
       action: "Chat Now",
-      link: "https://wa.me/971123456789",
+      link: "https://wa.me/971554966233",
       highlight: true
     },
     {
