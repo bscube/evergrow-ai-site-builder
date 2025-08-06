@@ -4,18 +4,18 @@ import { CheckCircle, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-32 pb-20 bg-white overflow-hidden">
+    <section className="relative pt-20 pb-20 bg-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-transparent"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-8">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4 mr-2" />
             AI Sales & Support Agents Live in 48 Hours
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="text-grey-900">AI-Powered Sales &</span>
             <br />
             <span className="text-brand-green-500">Support Agents</span>
