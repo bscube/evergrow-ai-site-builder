@@ -4,7 +4,7 @@ import { CheckCircle, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-12 pb-20 bg-white overflow-hidden">
+    <section className="relative pt-8 pb-20 bg-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-transparent"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
