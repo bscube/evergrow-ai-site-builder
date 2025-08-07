@@ -66,12 +66,13 @@ export const trackFormSubmit = (formName: string) => {
   }
 };
 
-// Track CTA clicks
-export const trackCTAClick = (ctaName: string, location: string) => {
+// Track CTA clicks with required thank you URL
+export const trackCTAClick = (ctaName: string, location: string, thankYouUrl: string) => {
   if (window.gtag) {
     window.gtag('event', 'cta_click', {
       cta_name: ctaName,
       cta_location: location,
+      thank_you_url: thankYouUrl,
       engagement_time_msec: Date.now()
     });
   }
