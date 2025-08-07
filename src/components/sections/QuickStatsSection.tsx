@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { trackCTAClick } from '../../utils/performance';
 
 const QuickStatsSection = () => {
   return (
@@ -36,9 +35,8 @@ const QuickStatsSection = () => {
         </div>
         <div className="text-center mt-8">
           <Link 
-            to="/case-studies" 
+            to="/track/case-studies" 
             className="inline-flex items-center text-white hover:text-green-100 font-medium"
-            onClick={() => trackCTAClick('See full results', 'Quick Stats Section', '/thank-you')}
           >
             See full results
             <ArrowRight className="ml-2 h-4 w-4" />

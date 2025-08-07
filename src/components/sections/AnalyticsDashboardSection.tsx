@@ -64,7 +64,7 @@ const AnalyticsDashboardSection = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+          <Link to="/track/analytics-demo" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
             View Analytics Demo
             <BarChart3 className="ml-2 h-5 w-5" />
           </Link>

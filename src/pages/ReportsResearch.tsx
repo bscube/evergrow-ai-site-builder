@@ -244,7 +244,7 @@ const ReportsResearch = () => {
               See how AI agents can revolutionize your operations. Schedule a personalized demo today.
             </p>
             <Link 
-              to="/contact" 
+              to="/track/reports-demo" 
               className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Get a Demo

@@ -588,7 +588,7 @@ export default function CaseStudies() {
             Let's discuss how AI automation can transform your business and deliver measurable results like our featured case studies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+            <Link to="/track/case-study-demo" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

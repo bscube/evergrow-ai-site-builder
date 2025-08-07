@@ -107,7 +107,7 @@ const CustomerShowcase = () => {
                     </div>
 
                     <Link 
-                      to="/contact"
+                      to="/track/showcase-demo"
                       className="inline-flex items-center text-brand-green-600 hover:text-brand-green-700 font-medium text-sm"
                     >
                       Get Similar Results
@@ -130,7 +130,7 @@ const CustomerShowcase = () => {
               Let's discuss how AI agents can transform your business operations and deliver measurable results.
             </p>
             <Link 
-              to="/contact" 
+              to="/track/showcase-demo" 
               className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Start Your Transformation

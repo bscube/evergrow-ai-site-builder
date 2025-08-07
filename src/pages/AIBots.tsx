@@ -137,7 +137,7 @@ const AIBots = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <Link to="/track/ai-bots-demo" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                 Get Custom AI Agent
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -354,7 +354,7 @@ const AIBots = () => {
             Get a custom AI agent built for your business, deployed in 48 hours with guaranteed ROI tracking
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+            <Link to="/track/ai-bots-demo" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Get Your AI Agent
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageSquare } from 'lucide-react';
-import { trackCTAClick } from '../../utils/performance';
 
 const CTASection = () => {
   return (
@@ -16,23 +15,19 @@ const CTASection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            to="/contact#consultation-form" 
+            to="/track/ai-audit-hero" 
             className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-            onClick={() => trackCTAClick('Get Free AI Audit', 'Hero CTA Section', '/thank-you')}
           >
             Get Free AI Audit
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-          <a 
-            href="https://wa.me/971554966233" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <Link 
+            to="/track/whatsapp-hero" 
             className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105"
-            onClick={() => trackCTAClick('Chat on WhatsApp', 'Hero CTA Section', '/thank-you')}
           >
             <MessageSquare className="mr-2 h-5 w-5" />
             Chat on WhatsApp
-          </a>
+          </Link>
         </div>
       </div>
     </section>

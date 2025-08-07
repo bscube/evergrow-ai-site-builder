@@ -270,7 +270,7 @@ const ConversationsOnAI = () => {
               Have insights to share? We're always looking for thought leaders and experts to join our conversations about the future of AI.
             </p>
             <Link 
-              to="/contact" 
+              to="/track/conversations-demo" 
               className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Suggest a Topic

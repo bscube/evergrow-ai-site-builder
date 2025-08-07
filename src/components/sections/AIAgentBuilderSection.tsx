@@ -156,7 +156,7 @@ const AIAgentBuilderSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+          <Link to="/track/ai-builder-demo" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
             Build Your AI Agent
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

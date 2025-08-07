@@ -36,7 +36,7 @@ const FloatingCTA = () => {
             <p className="text-sm text-grey-600 mb-4">Book a free AI audit and discover how we can transform your customer experience.</p>
             <div className="space-y-2">
               <Link
-                to="/contact"
+                to="/track/ai-audit-floating"
                 className="block w-full btn-primary text-center px-4 py-2 rounded-md text-sm font-medium"
                 onClick={() => setIsExpanded(false)}
               >
@@ -65,7 +65,7 @@ const FloatingCTA = () => {
       {/* Sticky Book AI Audit Button */}
       <div className="fixed bottom-6 left-6 z-50">
         <Link
-          to="/contact"
+          to="/track/ai-audit-floating"
           className="btn-primary px-6 py-3 rounded-full shadow-lg text-sm font-medium hover:scale-105 transition-all duration-300 focus-brand"
         >
           Book AI Audit

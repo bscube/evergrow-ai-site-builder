@@ -158,7 +158,7 @@ const AIVoiceAgentsSection = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call Demo Line
               </a>
-              <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300">
+              <Link to="/track/voice-agents-demo" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-brand-green-500 font-semibold rounded-lg transition-colors duration-300">
                 Book Live Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

@@ -170,7 +170,7 @@ const Testimonials = () => {
             Join these successful companies and discover how Haptik can help you achieve similar results.
           </p>
           <Link 
-            to="/contact" 
+            to="/track/testimonials-demo" 
             className="inline-flex items-center px-8 py-4 bg-white text-[#003366] rounded-lg hover:bg-grey-100 transition-colors font-semibold"
           >
             Get Started Today

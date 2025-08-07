@@ -214,7 +214,7 @@ const Webinars = () => {
               Schedule a personalized demo session with our AI experts to see how our solutions can work for your specific use case.
             </p>
             <Link 
-              to="/contact" 
+              to="/track/private-demo" 
               className="inline-flex items-center bg-white text-brand-green-500 hover:bg-grey-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Book Private Demo

@@ -287,7 +287,7 @@ const Navigation = () => {
               Contact
             </Link>
             <Link
-              to="/contact"
+              to="/track/ai-audit-nav"
               className="btn-primary px-4 py-2 rounded-md text-sm font-medium focus-brand flex items-center whitespace-nowrap"
             >
               Book AI Audit
@@ -420,7 +420,7 @@ const Navigation = () => {
             </Link>
 
             <Link
-              to="/contact"
+              to="/track/ai-audit-nav"
               className="btn-primary block px-3 py-2 rounded-md text-base font-medium mt-4 text-center"
               onClick={() => setIsOpen(false)}
             >

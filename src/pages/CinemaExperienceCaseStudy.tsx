@@ -365,7 +365,7 @@ const CinemaExperienceCaseStudy = () => {
           </p>
           
           <div className="flex justify-center mb-8">
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+            <Link to="/track/case-study-demo" className="inline-flex items-center justify-center px-8 py-4 bg-brand-green-500 hover:bg-brand-green-600 text-white font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Get a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

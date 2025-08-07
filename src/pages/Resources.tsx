@@ -531,7 +531,7 @@ const Resources = () => {
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Join hundreds of businesses that have automated their customer experience with intelligent AI agents
           </p>
-          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+          <Link to="/track/resources-demo" className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-grey-50 text-grey-900 font-semibold rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg">
             Start Your AI Journey
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

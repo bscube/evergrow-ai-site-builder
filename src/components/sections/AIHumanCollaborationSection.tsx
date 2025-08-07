@@ -67,7 +67,7 @@ const AIHumanCollaborationSection = () => {
             <p className="text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
               See how AI and human agents work together to deliver exceptional customer experiences across all channels
             </p>
-            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300">
+            <Link to="/track/collaboration-demo" className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-green-500 font-semibold rounded-lg hover:bg-grey-50 transition-colors duration-300">
               Explore Smart Agent Chat
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

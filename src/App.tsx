@@ -68,6 +68,7 @@ import AIAgentImplementationChecklist from "./pages/guides/AIAgentImplementation
 import ROIMeasurementFramework from "./pages/guides/ROIMeasurementFramework";
 import BestPracticesTraining from "./pages/guides/BestPracticesTraining";
 import SecurityComplianceGuide from "./pages/guides/SecurityComplianceGuide";
+import TrackingRedirect from "./pages/TrackingRoutes";
 import TeamCollaboration from "./pages/guides/TeamCollaboration";
 import AdvancedAutomation from "./pages/guides/AdvancedAutomation";
 import IntegrationPlaybook from "./pages/guides/IntegrationPlaybook";
@@ -160,6 +161,9 @@ const App = () => (
             <Route path="/tech-blog/secure-infrastructure" element={<SecureInfrastructure />} />
             <Route path="/tech-blog/llm-fine-tuning" element={<LLMFineTuning />} />
             <Route path="/tech-blog/api-resilience" element={<APIResilience />} />
+            
+            {/* Tracking Routes */}
+            <Route path="/track/:trackingId" element={<TrackingRedirect />} />
             
             {/* Legal and Support Pages */}
             <Route path="/privacy" element={<Privacy />} />
