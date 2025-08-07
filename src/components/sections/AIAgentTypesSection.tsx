@@ -4,7 +4,7 @@ import { Bot, Headphones, ShoppingCart, Calendar, Target, CheckCircle, ChevronRi
 
 const AIAgentTypesSection = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-24 pb-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-brand-green-500/10 rounded-full text-brand-green-600 text-sm font-medium mb-6">
