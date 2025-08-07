@@ -4,7 +4,7 @@ import { stats } from '../../data/indexData';
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-grey-900">
+    <section className="py-8 bg-grey-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
