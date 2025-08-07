@@ -294,7 +294,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Customer Stories */}
-      <section className="py-24 bg-grey-50">
+      <section className="pt-8 pb-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Left Column - Content */}
