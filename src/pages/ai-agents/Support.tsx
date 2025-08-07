@@ -656,7 +656,7 @@ export default function Support() {
       </section>
 
       {/* Cutting-Edge AI Support Agent Section */}
-      <section className="py-24 bg-grey-50">
+      <section className="pt-12 pb-24 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-grey-900 mb-6">
