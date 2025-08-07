@@ -5,6 +5,7 @@ import { ArrowRight, Film, Users, TrendingUp, CheckCircle, Zap, Globe, BarChart3
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
+import mediaEntertainmentHero from '../../assets/media-entertainment-hero.jpg';
 
 const MediaEntertainment = () => {
   return (
@@ -64,8 +65,8 @@ const MediaEntertainment = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1489599316175-781e2c095c4b?w=800&h=600&fit=crop&crop=center" 
-                alt="Media and Entertainment" 
+                src={mediaEntertainmentHero}
+                alt="Media and Entertainment AI Solutions" 
                 className="w-full rounded-2xl shadow-2xl"
                 loading="lazy"
               />
