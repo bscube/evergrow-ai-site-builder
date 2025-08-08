@@ -103,6 +103,11 @@ const TRACKING_ROUTES = {
     destination: '/contact#consultation-form',
     ctaName: 'Get Demo',
     location: 'Reports & Research'
+  },
+  'haptik-partnership-demo': {
+    destination: '/contact#consultation-form',
+    ctaName: 'Explore Partnership Solutions',
+    location: 'Haptik Partnership Section'
   }
 };
 

@@ -17,6 +17,7 @@ import AIHumanCollaborationSection from '../components/sections/AIHumanCollabora
 import AIControlSection from '../components/sections/AIControlSection';
 import FeaturedTestimonialSection from '../components/sections/FeaturedTestimonialSection';
 import PartnerLogosSection from '../components/sections/PartnerLogosSection';
+import HaptikPartnershipSection from '../components/sections/HaptikPartnershipSection';
 import IndustriesSection from '../components/sections/IndustriesSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
 import RecognitionSection from '../components/sections/RecognitionSection';
@@ -47,6 +48,7 @@ const Index = () => {
       <BlogSection />
       
       <PartnerLogosSection />
+      <HaptikPartnershipSection />
       <IndustriesSection />
       <TestimonialsSection />
       <CTASection />
