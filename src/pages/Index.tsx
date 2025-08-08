@@ -1,7 +1,9 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
-
+import LeadCapturePopup from '../components/LeadCapturePopup';
+import MetaVideoAds from '../components/MetaVideoAds';
+import { useLeadCapture } from '../hooks/useLeadCapture';
 import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import QuickStatsSection from '../components/sections/QuickStatsSection';
@@ -27,12 +29,19 @@ import CTASection from '../components/sections/CTASection';
 import FAQSection from '../components/sections/FAQSection';
 
 const Index = () => {
+  const { showPopup, closePopup } = useLeadCapture(15); // Show popup after 15 seconds
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
+      {/* Lead Capture Popup */}
+      <LeadCapturePopup isOpen={showPopup} onClose={closePopup} />
       
       <HeroSection />
+      
+      {/* Meta Video Ad Placement - After Hero */}
+      <MetaVideoAds className="my-8" />
       <QuickStatsSection />
       <StatsSection />
       <AnalyticsDashboardSection />
@@ -49,6 +58,10 @@ const Index = () => {
       
       <PartnerLogosSection />
       <HaptikPartnershipSection />
+      
+      {/* Meta Video Ad Placement - Mid Content */}
+      <MetaVideoAds className="my-12" />
+      
       <IndustriesSection />
       <TestimonialsSection />
       <CTASection />
