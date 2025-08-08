@@ -108,7 +108,7 @@ const HaptikPartnershipSection = () => {
             Ready to leverage the power of Haptik's AI platform for your business?
           </p>
           <a 
-            href="/cta/haptik-partnership-demo" 
+            href="/track/haptik-partnership-demo" 
             className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
             Explore Partnership Solutions
